@@ -2,11 +2,12 @@ import requests
 from bs4 import BeautifulSoup
 import random
 from fake_useragent import UserAgent
-import itertools
+import os
+import csv
+URL_LIST = ['https://www.sslproxies.org/', 'https://www.us-proxy.org/']
 
 
-def proxies_pool():
-    url = 'https://www.sslproxies.org/'
+def proxies_pool(url):
     # Retrieve the site's page. The 'with'(Python closure) is used here in order to automatically close the session when done
     with requests.Session() as res:
         proxies_page = res.get(url)
@@ -33,22 +34,22 @@ def rand_header():
           "Accept": accepts[rand_user[0]]}
     return headers
 
-proxies = proxies_pool()
-link_list = ['https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2',
-             'https://myanimelist.net/anime/44516/Koroshi_Ai',
-             'https://myanimelist.net/anime/48556/Takt_Op_Destiny']
-# for link in link_list:
-#     proxy = random.choice(proxies)
-#     header = rand_header()
-#     page = requests.get(link, proxies={'http': proxy, 'https': proxy}, headers=header, timeout=30)
-# link = 'https://www.itc.tech/web-scraping-with-python-a-to-z/'
-proxy = random.choice(proxies)
-header = rand_header()
-print(proxy)
-print(header)
-# page = requests.get(link, proxies={'http': proxy, 'https': proxy}, headers=header, timeout=30)
-# print(page.content)
-page = requests.get("https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2", proxies={'https': "128.201.138.21:3128"})
+
+def rand_proxy():
+    try:
+        with open('url_list.csv', 'r') as url_list:
+            csv_reader = csv.reader(url_list, delimiter=',')
+            proxy_short_list = [random.choice(row) for row in csv_reader if row != []]
+            return random.choice(proxy_short_list)
+    except FileNotFoundError:
+        with open('url_list.csv', 'w') as url_list:
+            new_writer = csv.writer(url_list, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            for url in URL_LIST:
+                new_writer.writerow(proxies_pool(url))
+        proxy_short_list = [random.choice(proxies_pool(url)) for url in URL_LIST]
+        return random.choice(proxy_short_list)
 
 
-print(page.content)
+
+
+
