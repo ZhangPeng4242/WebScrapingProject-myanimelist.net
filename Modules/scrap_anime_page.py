@@ -40,11 +40,11 @@ def scrap_anime_page(anime_page_link):
         key = key.strip()
 
         if key in ["Genres", "Theme"]:
-            anime_page_info[key] = [genre.strip()[:math.floor(len(genre.strip()) / 2)] for genre in
-                                    value.split(",")]
+            anime_page_info[key] = ", ".join([genre.strip()[:math.floor(len(genre.strip()) / 2)] for genre in
+                                              value.split(",")])
             continue
 
-        anime_page_info[key] = value.strip()
+        anime_page_info[key] = ", ".join(v.strip() for v in value.split(","))
 
     # Scrap alternative and english titles
     alternative_titles = {}
@@ -70,6 +70,7 @@ def scrap_anime_page(anime_page_link):
         if key == "Ranked":
             val_find = re.findall("(?<=#)[0-9]*", val)
             val = val_find[0][:-1] if val_find else None
+            continue
 
         site_stats[key] = val.replace(",", "").replace("#", "").strip()
 

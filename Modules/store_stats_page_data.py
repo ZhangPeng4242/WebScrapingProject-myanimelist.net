@@ -11,7 +11,7 @@ def store_stats_page_data(anime_stats_list):
     if not Path(datas_dir).exists():
         os.mkdir(datas_dir)
 
-    with open(Path(datas_dir) / 'anime_watch_stats.csv', "w") as anime_watch_stats_csv_file:
+    with open(Path(datas_dir) / 'anime_watch_stats.csv', "w", encoding="utf-8") as anime_watch_stats_csv_file:
         field_names = ['anime_id', 'Watching', 'Completed', 'On-Hold', 'Dropped', 'Plan to Watch', 'Total']
         writer = csv.DictWriter(anime_watch_stats_csv_file, fieldnames=field_names)
         writer.writeheader()
@@ -19,7 +19,7 @@ def store_stats_page_data(anime_stats_list):
         for stat in anime_stats_list:
             writer.writerow(stat[0])
 
-    with open(Path(datas_dir) / 'anime_score_stats.csv', "w") as anime_score_stats_csv_file:
+    with open(Path(datas_dir) / 'anime_score_stats.csv', "w", encoding="utf-8") as anime_score_stats_csv_file:
         field_names = ["anime_id"] + [str(num) for num in range(10, 0, -1)]
         writer = csv.DictWriter(anime_score_stats_csv_file, fieldnames=field_names)
         writer.writeheader()

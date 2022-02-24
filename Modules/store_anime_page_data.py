@@ -10,7 +10,7 @@ def store_anime_page(anime_page_data_list):
     if not Path(datas_dir).exists():
         os.mkdir(datas_dir)
 
-    with open(Path(datas_dir) / 'anime_info.csv', "w") as anime_info_csv_file:
+    with open(Path(datas_dir) / 'anime_info.csv', "w", encoding="utf-8") as anime_info_csv_file:
         field_names = ['anime_id', 'Title', 'Type', 'Premiered', 'Studios', 'Source', 'Genres', 'Rating','Theme']
         writer = csv.DictWriter(anime_info_csv_file, fieldnames=field_names)
         writer.writeheader()
@@ -18,7 +18,7 @@ def store_anime_page(anime_page_data_list):
         for stat in anime_page_data_list:
             writer.writerow(stat[0])
 
-    with open(Path(datas_dir) / 'alternative_titles.csv', "w") as alter_title_csv_file:
+    with open(Path(datas_dir) / 'alternative_titles.csv', "w", encoding="utf-8") as alter_title_csv_file:
         field_names = ['anime_id', 'Title', 'English_title']
         writer = csv.DictWriter(alter_title_csv_file, fieldnames=field_names)
         writer.writeheader()
@@ -26,7 +26,7 @@ def store_anime_page(anime_page_data_list):
         for stat in anime_page_data_list:
             writer.writerow(stat[1])
 
-    with open(Path(datas_dir) / 'anime_site_stats.csv', "w") as site_stats_csv_file:
+    with open(Path(datas_dir) / 'anime_site_stats.csv', "w", encoding="utf-8") as site_stats_csv_file:
         field_names = ['anime_id', 'Score', 'Rating_count', 'Ranked', 'Popularity', 'Members', 'Favorites']
         writer = csv.DictWriter(site_stats_csv_file, fieldnames=field_names)
         writer.writeheader()

@@ -45,7 +45,7 @@ def get_rand_proxy():
 
     if not Path(proxy_dir).exists():
         proxy_webs = ['https://www.sslproxies.org/', 'https://www.us-proxy.org/']
-        with open(proxy_dir, "w") as proxy_file:
+        with open(proxy_dir, "w", encoding="utf-8") as proxy_file:
             proxies = []
             for proxy_web in proxy_webs:
                 proxies += proxies_pool(proxy_web)
