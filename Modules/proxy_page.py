@@ -41,12 +41,14 @@ link_list = ['https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_
 #     proxy = random.choice(proxies)
 #     header = rand_header()
 #     page = requests.get(link, proxies={'http': proxy, 'https': proxy}, headers=header, timeout=30)
-link = 'https://www.itc.tech/web-scraping-with-python-a-to-z/'
+# link = 'https://www.itc.tech/web-scraping-with-python-a-to-z/'
 proxy = random.choice(proxies)
 header = rand_header()
 print(proxy)
 print(header)
 # page = requests.get(link, proxies={'http': proxy, 'https': proxy}, headers=header, timeout=30)
 # print(page.content)
-page = requests.get(link, proxies={'http': proxy, 'https': proxy})
+page = requests.get("https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2", proxies={'https': "128.201.138.21:3128"})
+
+
 print(page.content)

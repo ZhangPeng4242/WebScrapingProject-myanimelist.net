@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import random
 
 SUM_STATS_CONTAINERS_COUNT = 6
 
@@ -37,4 +38,16 @@ def scrap_stats_page(stats_link):
     score_stats["anime_id"] = anime_id
 
     print(f"scrap_stats_page: {stats_link}  Success!")
+    # store data
     return (sum_stats, score_stats)
+
+
+def test():
+    test_pool = ["https://myanimelist.net/anime/47161/Shikkakumon_no_Saikyou_Kenja/stats",
+                 "https://myanimelist.net/anime/44961/Platinum_End/stats",
+                 "https://myanimelist.net/anime/18179/Yowamushi_Pedal/stats"]
+    print(scrap_stats_page(random.choice(test_pool)))
+
+
+if __name__ == "__main__":
+    test()
