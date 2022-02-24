@@ -1,10 +1,20 @@
+import random
 import requests
 from bs4 import BeautifulSoup
-
+from get_rand_proxy_headers import get_rand_headers, get_rand_proxy
 
 def get_anime_links(season_link):
     # get urls from seasonal page
-    season_page = requests.get(season_link)
+    with requests.Session() as res:
+        while True:
+            try:
+                season_page = res.get(season_link, proxies={"http": get_rand_proxy()}, headers=get_rand_headers(),
+                                      timeout=40)
+                break
+            except Exception:
+                print("Season_page: Change proxy...")
+                continue
+
     season_soup = BeautifulSoup(season_page.content, 'html.parser')
 
     a_tag_list = season_soup.find_all('a', class_="link-title")
@@ -12,3 +22,13 @@ def get_anime_links(season_link):
 
     print(f"get_anime_links: {season_link}  Success!")
     return anime_link_set
+
+
+def test():
+    test_pool = ["https://myanimelist.net/anime/season/2010/summer", "https://myanimelist.net/anime/season/1986/spring",
+                 "https://myanimelist.net/anime/season/2000/fall", "https://myanimelist.net/anime/season/1996/winter"]
+    print(get_anime_links(random.choice(test_pool)))
+
+
+if __name__ == "__main__":
+    test()

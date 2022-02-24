@@ -1,21 +1,22 @@
+
 import csv
 import os
 from pathlib2 import Path
 
 
-def store_stats_page_data(anime_stats):
+def store_stats_page_data(anime_stats_list):
     cur_path = Path(os.getcwd())
     datas_dir = cur_path.parent / "Datas"
 
     if not Path(datas_dir).exists():
         os.mkdir(datas_dir)
 
-    with open(Path(datas_dir) / 'anime_sum_stats.csv', "w") as anime_sum_stats_csv_file:
+    with open(Path(datas_dir) / 'anime_watch_stats.csv', "w") as anime_watch_stats_csv_file:
         field_names = ['anime_id', 'Watching', 'Completed', 'On-Hold', 'Dropped', 'Plan to Watch', 'Total']
-        writer = csv.DictWriter(anime_sum_stats_csv_file, fieldnames=field_names)
+        writer = csv.DictWriter(anime_watch_stats_csv_file, fieldnames=field_names)
         writer.writeheader()
 
-        for stat in anime_stats:
+        for stat in anime_stats_list:
             writer.writerow(stat[0])
 
     with open(Path(datas_dir) / 'anime_score_stats.csv', "w") as anime_score_stats_csv_file:
@@ -23,7 +24,7 @@ def store_stats_page_data(anime_stats):
         writer = csv.DictWriter(anime_score_stats_csv_file, fieldnames=field_names)
         writer.writeheader()
 
-        for stat in anime_stats:
+        for stat in anime_stats_list:
             writer.writerow(stat[1])
 
     print("Stats data successfully stored!")
