@@ -45,6 +45,7 @@ def scrap_anime_page(anime_page_link):
             continue
 
         anime_page_info[key] = ", ".join(v.strip() for v in value.split(","))
+        anime_page_info['anime_img_url'] = soup.find('img', {"itemprop": "image"})['data-src']
 
     # Scrap alternative and english titles
     alternative_titles = {}

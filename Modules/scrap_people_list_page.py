@@ -28,7 +28,9 @@ def scrap_people_list_page(_crit=math.inf):
         a_tag_list = soup.find_all('a', class_="fs14")
         people_link_list += [link['href'] for link in a_tag_list]
         limit += 1
+        print(f"scrap_people_list_page: https://myanimelist.net/people.php?limit={limit * 50}  Success!")
 
+    print("Successfully get all the links of people page!")
     return people_link_list
 
 

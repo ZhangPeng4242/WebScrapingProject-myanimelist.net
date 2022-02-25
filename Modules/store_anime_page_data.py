@@ -11,7 +11,8 @@ def store_anime_page(anime_page_data_list):
         os.mkdir(datas_dir)
 
     with open(Path(datas_dir) / 'anime_info.csv', "w", encoding="utf-8") as anime_info_csv_file:
-        field_names = ['anime_id', 'Title', 'Type', 'Premiered', 'Studios', 'Source', 'Genres', 'Rating','Theme']
+        field_names = ['anime_id', 'Title', 'Type', 'Premiered', 'Studios', 'Source', 'Genres', 'Rating', 'Theme',
+                       'anime_img_url']
         writer = csv.DictWriter(anime_info_csv_file, fieldnames=field_names)
         writer.writeheader()
 
@@ -45,7 +46,9 @@ def test():
                   {'anime_id': '11757', 'Title': 'Sword Art Online', 'English_title': None},
                   {'anime_id': '11757', 'Score': '7.20', 'Rating_count': '1850653', 'Ranked': '2900', 'Popularity': '5',
                    'Members': '2677417', 'Favorites': '62815'}),
-                 ({'anime_id': '111', 'Title': 'Corrector Yui', 'Type': 'TV', 'Premiered': 'Spring 1999', 'Studios': 'Nippon Animation', 'Source': 'Original', 'Genres': ['Adventure', 'Comedy', 'Sci-Fi'], 'Rating': 'PG - Children'},
+                 ({'anime_id': '111', 'Title': 'Corrector Yui', 'Type': 'TV', 'Premiered': 'Spring 1999',
+                   'Studios': 'Nippon Animation', 'Source': 'Original', 'Genres': ['Adventure', 'Comedy', 'Sci-Fi'],
+                   'Rating': 'PG - Children'},
                   {'anime_id': '111', 'Title': 'Corrector Yui', 'English_title': None},
                   {'anime_id': '111', 'Score': '6.85', 'Rating_count': '5364', 'Ranked': '4416', 'Popularity': '4756',
                    'Members': '13957', 'Favorites': '47'})]

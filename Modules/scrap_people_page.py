@@ -1,54 +1,98 @@
 """
 we create a function to scrap an acotrs page on myanimelist for info.
 """
+import random
+import re
+
 import requests
 from bs4 import BeautifulSoup
 from get_rand_proxy_headers import get_rand_proxy, get_rand_headers
 
 
-def scrap_actor(link):
+# people info: people_id , name  , birthday, member_favorites, img_url
+# staff info:  anime_id, people_id, role
+# voice actor info: character_id, people_id,
+# character info: character_id 1, name, anime_id, role,character_favorites, img_url
+
+def scrap_people_page(people_page_link):
     """
     we receive a link for an actors page on mal.
      we return a dictionary containing the actors id(in the website), name, birthday, numeber of members who chose
      the actor as their favorite, and a list containing all voice acting roles of the actor.
-    :param link: str
+    :param people_page_link: str
     :return: info_dict :dictionary
     """
-    info_dict = {}
+
     # request page using random proxy and header:
     with requests.Session() as res:
         while True:
             try:
-                page = res.get(link, proxies={"http": get_rand_proxy()}, headers=get_rand_headers(),
-                                     timeout=100)
+                people_page = res.get(people_page_link, proxies={"http": get_rand_proxy()}, headers=get_rand_headers(),
+                                      timeout=40)
                 break
             except Exception:
-                print("Anime_page: Change proxy...")
+                print("Scrap_people_page: Change proxy...")
                 continue
-    soup = BeautifulSoup(page.content, 'html.parser')
-    # get cator id:
-    id = soup.find('input', attrs={'name': 'vaid'})['value']
-    info_dict['actor_id'] = id
+
+    soup = BeautifulSoup(people_page.text, 'html.parser')
+
+    ######Get people_info_dict####
+
+    # get people id:
+    people_id = soup.find('input', attrs={'name': 'vaid'})['value']
     # get name:
-    name = soup.find('h1', class_='title-name').text
-    info_dict['actors_name'] = name
+    people_fullname = soup.find('h1', class_='title-name').text.replace(",", "")
     # get birthday:
     birthday = soup.find('span', text='Birthday:').parent.text.replace('Birthday: ', '')
-    info_dict['actors_birthday'] = birthday
     # get member favorites:
-    member_favorites = soup.find('span', text='Member Favorites:').parent.text.replace('Member Favorites: ', '')
-    info_dict['member_favorites'] = member_favorites
-    # get anime list
-    anime_tag_list = soup.find_all('tr', class_='js-people-character')
-    anime_info_list = []
-    for anime in anime_tag_list:
-        anime_name = anime.find('a', class_='js-people-title').text
-        anime_role = anime.find_all('td')[2].find('a').text
-        anime_importance = anime.find_all('td')[2].find_all('div')[1].text.strip()
-        anime_tuple = (anime_name, anime_role, anime_importance)
-        anime_info_list.append(anime_tuple)
-    info_dict['all_roles'] = anime_info_list
-    return info_dict
+    member_favorites = soup.find('span', text='Member Favorites:').parent.text.replace('Member Favorites: ',
+                                                                                       '').replace(',', "")
+    # get people img url
+
+    people_img_url = soup.find('img', {'data-src': re.compile("https://cdn.myanimelist.net/images")})['data-src']
+
+    people_info_dict = {'people_id': people_id, 'people_fullname': people_fullname, 'birthday': birthday,
+                        'member_favorites': member_favorites, 'people_img_url': people_img_url}
+
+    ####Get voice_actor_info & character_info####
+    anime_url_reg_pattern = "(?<=https://myanimelist.net/anime/)[0-9]*"
+    character_url_reg_pattern = "(?<=https://myanimelist.net/character/)[0-9]*"
+
+    voice_actor_info_list = []
+    character_info_list = []
+    voice_acting_tags_list = soup.find_all('tr', class_='js-people-character')
+    for voice_acting_tag in voice_acting_tags_list:
+        anime_url = voice_acting_tag.find('a', {"href": re.compile(anime_url_reg_pattern)})
+        anime_id = re.search(anime_url_reg_pattern, anime_url['href']).group()
+
+        character_url = voice_acting_tag.find('a', {"href": re.compile(character_url_reg_pattern)})
+        character_id = re.search(character_url_reg_pattern, character_url['href']).group()
+        character_fullname = character_url.text.replace(",", "")
+        character_role = character_url.parent.find_next_sibling("div").text.strip()
+        character_favorites = character_url.parent.find_next_sibling("small").text.strip()
+        character_img_url = character_url.parent.find_next("img")['data-src']
+
+        voice_actor_info_dict = {"character_id": character_id, "people_id": people_id}
+        character_info_dict = {"character_id": character_id, "anime_id": anime_id,
+                               "character_fullname": character_fullname, "role": character_role,
+                               "character_favorites": character_favorites, "character_img_url": character_img_url}
+        voice_actor_info_list.append(voice_actor_info_dict)
+        character_info_list.append(character_info_dict)
+
+    ####Get staff_info####
+    staff_info_list = []
+    staff_info_tags_list = soup.find_all('tr', class_="js-people-staff")
+    for staff_info_tag in staff_info_tags_list:
+        anime_url = staff_info_tag.find('a', {"href": re.compile(anime_url_reg_pattern)})
+        anime_id = re.search(anime_url_reg_pattern, anime_url['href']).group()
+
+        staff_role = staff_info_tag.find('small').text
+
+        staff_info_dict = {"anime_id": anime_id, "people_id": people_id, "staff_role": staff_role}
+        staff_info_list.append(staff_info_dict)
+
+    print(f"scrap_people_page: {people_page_link}  Success!")
+    return (people_info_dict, character_info_list, voice_actor_info_list, staff_info_list)
 
 
 def test():
@@ -56,12 +100,11 @@ def test():
     we test our function for several links
     :return:
     """
-    link1 = 'https://myanimelist.net/people/112/Hikaru_Midorikawa'
-    link2 = 'https://myanimelist.net/people/185/Kana_Hanazawa'
-    link3 = 'https://myanimelist.net/people/513/Yuuichi_Nakamura'
-    print(scrap_actor(link1))
-    print(scrap_actor(link2))
-    print(scrap_actor(link3))
+    test_pools = ['https://myanimelist.net/people/112/Hikaru_Midorikawa'
+                  'https://myanimelist.net/people/185/Kana_Hanazawa'
+                  'https://myanimelist.net/people/513/Yuuichi_Nakamura']
+
+    print('\n'.join(str(item) for item in scrap_people_page(random.choice(test_pools))))
 
 
 if __name__ == '__main__':

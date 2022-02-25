@@ -5,6 +5,11 @@ from pathlib2 import Path
 
 
 def store_stats_page_data(anime_stats_list):
+    """
+    Store the data as csv
+    :param anime_stats_list: (Dict,Dict)
+    :return: None
+    """
     cur_path = Path(os.getcwd())
     datas_dir = cur_path.parent / "Datas"
 
@@ -31,6 +36,10 @@ def store_stats_page_data(anime_stats_list):
 
 
 def test():
+    """
+    Run this program directly to test store_stats_page_data function
+    :return: None
+    """
     test_data = [({'Watching': 15062, 'Completed': 128422, 'On-Hold': 9963, 'Dropped': 9028, 'Plan to Watch': 44438,
                    'Total': 206913, 'anime_id': '18179'},
                   {'10': 11259, '9': 22063, '8': 36107, '7': 22906, '6': 7308, '5': 2815, '4': 936, '3': 323, '2': 132,

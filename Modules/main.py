@@ -1,19 +1,21 @@
 from scrap_archive_page import get_season_links
 from scrap_season_page import get_anime_links
-
+from scrap_people_list_page import scrap_people_list_page
+from scrap_people_page import scrap_people_page
 from scrap_stats_page import scrap_stats_page
 from scrap_anime_page import scrap_anime_page
 from store_stats_page_data import store_stats_page_data
 from store_anime_page_data import store_anime_page
+from store_people_page_data import store_people_page_data
 from pathlib2 import Path
 import os
 
 
 def main():
-    # get list of all season links
+    ### get list of all season links ###
     season_links = get_season_links()
 
-    # get list of all anime links
+    #### get list of all anime links ###
     anime_links = set([])
     i = 0
     for link in season_links:
@@ -22,18 +24,7 @@ def main():
         anime_links |= get_anime_links(link)
         i += 1
 
-    # Scrap stats page
-    stats_page_datas = []
-    for anime_link in anime_links:
-        try:
-            stats_page_datas.append(scrap_stats_page(f'{anime_link}/stats'))
-        except Exception as err:
-            err_log.append(f"scrap_stats_page: {anime_link}  {err}")
-            continue
-
-    store_stats_page_data(stats_page_datas)
-
-    # Scrap anime page
+    #### Scrap anime page #####
     anime_page_datas = []
     for anime_link in anime_links:
         try:
@@ -44,6 +35,35 @@ def main():
             continue
 
     store_anime_page(anime_page_datas)
+    anime_page_datas = []  # release memory
+
+    #### Scrap stats page ####
+    stats_page_datas = []
+    for anime_link in anime_links:
+        try:
+            stats_page_datas.append(scrap_stats_page(f'{anime_link}/stats'))
+        except Exception as err:
+            err_log.append(f"scrap_stats_page: {anime_link}  {err}")
+            continue
+
+    store_stats_page_data(stats_page_datas)
+    stats_page_datas = []  # release memory
+
+    #### Get a list of people page links ####
+    people_links = scrap_people_list_page(1)
+
+    #### Scrap people page ####
+    people_page_datas = []
+    for people_link in people_links:
+        try:
+            people_page_datas.append(scrap_people_page(people_link))
+        except Exception as err:
+            err_log.append(f"scrap_people_page: {anime_link}  {err}")
+            continue
+
+    store_people_page_data(people_page_datas)
+    people_page_datas = []  # release memory
+
 
     print("Successfully finished all the scraping!!!Good job!")
 
@@ -53,6 +73,7 @@ if __name__ == "__main__":
     try:
         main()
     except Exception as err:
+        print(f"Main() error: {err}")
         err_log.append(str(err))
     finally:
         # Write err_log:
