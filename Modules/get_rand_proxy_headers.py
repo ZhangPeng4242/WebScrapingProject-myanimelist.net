@@ -37,14 +37,11 @@ def get_rand_headers():
 
 def get_rand_proxy():
     cur_path = Path(os.getcwd())
-    datas_dir = cur_path.parent / "Datas"
-    if not Path(datas_dir).exists():
-        os.mkdir(datas_dir)
-
-    proxy_dir = cur_path.parent/ "Datas" / "proxy_list.txt"
+    proxy_dir = cur_path.parent / "Datas" / "proxy_list.txt"
 
     if not Path(proxy_dir).exists():
-        proxy_webs = ['https://www.sslproxies.org/', 'https://www.us-proxy.org/']
+        proxy_webs = ['https://www.sslproxies.org/', 'https://www.us-proxy.org/', 'https://free-proxy-list.net/',
+                      'https://free-proxy-list.net/uk-proxy.html']
         with open(proxy_dir, "w", encoding="utf-8") as proxy_file:
             proxies = []
             for proxy_web in proxy_webs:
@@ -55,12 +52,14 @@ def get_rand_proxy():
     with open(proxy_dir, "r") as proxy_file:
         proxies_list = proxy_file.read().split("\n")
 
+    random.shuffle(proxies_list)
     return random.choice(proxies_list)
 
 
 def test():
     print(get_rand_proxy())
     print(get_rand_headers())
+
 
 if __name__ == "__main__":
     test()

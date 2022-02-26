@@ -21,9 +21,6 @@ def store_people_page_data(people_stats_list):
     cur_path = Path(os.getcwd())
     datas_dir = cur_path.parent / "Datas"
 
-    if not Path(datas_dir).exists():
-        os.mkdir(datas_dir)
-
     with open(Path(datas_dir) / 'people_info.csv', "w", encoding="utf-8") as people_info_csv_file:
         field_names = ['people_id', 'people_fullname', 'birthday', 'member_favorites', 'people_img_url']
         writer = csv.DictWriter(people_info_csv_file, fieldnames=field_names)

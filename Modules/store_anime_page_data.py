@@ -7,9 +7,6 @@ def store_anime_page(anime_page_data_list):
     cur_path = Path(os.getcwd())
     datas_dir = cur_path.parent / "Datas"
 
-    if not Path(datas_dir).exists():
-        os.mkdir(datas_dir)
-
     with open(Path(datas_dir) / 'anime_info.csv', "w", encoding="utf-8") as anime_info_csv_file:
         field_names = ['anime_id', 'Title', 'Type', 'Premiered', 'Studios', 'Source', 'Genres', 'Rating', 'Theme',
                        'anime_img_url']
@@ -20,7 +17,7 @@ def store_anime_page(anime_page_data_list):
             writer.writerow(stat[0])
 
     with open(Path(datas_dir) / 'alternative_titles.csv', "w", encoding="utf-8") as alter_title_csv_file:
-        field_names = ['anime_id', 'Title', 'English_title']
+        field_names = ['anime_id', 'English_title']
         writer = csv.DictWriter(alter_title_csv_file, fieldnames=field_names)
         writer.writeheader()
 
@@ -35,7 +32,9 @@ def store_anime_page(anime_page_data_list):
         for stat in anime_page_data_list:
             writer.writerow(stat[2])
 
-    print("Successfully stored anime page data!")
+    print("Anime page data successfully stored!")
+
+
 
 
 def test():

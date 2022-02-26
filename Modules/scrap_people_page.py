@@ -3,7 +3,7 @@ we create a function to scrap an acotrs page on myanimelist for info.
 """
 import random
 import re
-
+import time
 import requests
 from bs4 import BeautifulSoup
 from get_rand_proxy_headers import get_rand_proxy, get_rand_headers
@@ -28,10 +28,11 @@ def scrap_people_page(people_page_link):
         while True:
             try:
                 people_page = res.get(people_page_link, proxies={"http": get_rand_proxy()}, headers=get_rand_headers(),
-                                      timeout=40)
+                                      timeout=100)
                 break
             except Exception:
-                print("Scrap_people_page: Change proxy...")
+                print("scrap_people_page: Change proxy...")
+                time.sleep(0.5)
                 continue
 
     soup = BeautifulSoup(people_page.text, 'html.parser')
@@ -49,10 +50,11 @@ def scrap_people_page(people_page_link):
                                                                                        '').replace(',', "")
     # get people img url
 
-    people_img_url = soup.find('img', {'data-src': re.compile("https://cdn.myanimelist.net/images")})['data-src']
+    people_img_url = soup.find('img', {'data-src': re.compile("https://cdn.myanimelist.net/images")})
 
     people_info_dict = {'people_id': people_id, 'people_fullname': people_fullname, 'birthday': birthday,
-                        'member_favorites': member_favorites, 'people_img_url': people_img_url}
+                        'member_favorites': member_favorites,
+                        'people_img_url': people_img_url['data-src'] if people_img_url else None}
 
     ####Get voice_actor_info & character_info####
     anime_url_reg_pattern = "(?<=https://myanimelist.net/anime/)[0-9]*"
@@ -70,12 +72,13 @@ def scrap_people_page(people_page_link):
         character_fullname = character_url.text.replace(",", "")
         character_role = character_url.parent.find_next_sibling("div").text.strip()
         character_favorites = character_url.parent.find_next_sibling("small").text.strip()
-        character_img_url = character_url.parent.find_next("img")['data-src']
+        character_img_url = character_url.parent.find_next("img")
 
         voice_actor_info_dict = {"character_id": character_id, "people_id": people_id}
         character_info_dict = {"character_id": character_id, "anime_id": anime_id,
                                "character_fullname": character_fullname, "role": character_role,
-                               "character_favorites": character_favorites, "character_img_url": character_img_url}
+                               "character_favorites": character_favorites,
+                               "character_img_url": character_img_url['data-src'] if character_url else None}
         voice_actor_info_list.append(voice_actor_info_dict)
         character_info_list.append(character_info_dict)
 
@@ -100,11 +103,11 @@ def test():
     we test our function for several links
     :return:
     """
-    test_pools = ['https://myanimelist.net/people/112/Hikaru_Midorikawa'
-                  'https://myanimelist.net/people/185/Kana_Hanazawa'
-                  'https://myanimelist.net/people/513/Yuuichi_Nakamura']
+    test_pool = ['https://myanimelist.net/people/112/Hikaru_Midorikawa'
+                 'https://myanimelist.net/people/185/Kana_Hanazawa'
+                 'https://myanimelist.net/people/513/Yuuichi_Nakamura']
 
-    print('\n'.join(str(item) for item in scrap_people_page(random.choice(test_pools))))
+    print('\n'.join(str(item) for item in scrap_people_page(random.choice(test_pool))))
 
 
 if __name__ == '__main__':

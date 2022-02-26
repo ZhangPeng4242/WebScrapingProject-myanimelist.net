@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import random
 from get_rand_proxy_headers import get_rand_headers, get_rand_proxy
-
+import time
 SUM_STATS_CONTAINERS_COUNT = 6
 
 
@@ -15,10 +15,11 @@ def scrap_stats_page(stats_link):
         while True:
             try:
                 stats_page = res.get(stats_link, proxies={"http": get_rand_proxy()}, headers=get_rand_headers(),
-                                     timeout=40)
+                                     timeout=100)
                 break
             except Exception:
-                print("Stats_page: Change proxy...")
+                print("scrap_stats_page: Change proxy...")
+                time.sleep(0.5)
                 continue
 
     soup = BeautifulSoup(stats_page.text, "html.parser")

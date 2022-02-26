@@ -2,17 +2,18 @@ import random
 import requests
 from bs4 import BeautifulSoup
 from get_rand_proxy_headers import get_rand_headers, get_rand_proxy
-
+import time
 def get_anime_links(season_link):
     # get urls from seasonal page
     with requests.Session() as res:
         while True:
             try:
                 season_page = res.get(season_link, proxies={"http": get_rand_proxy()}, headers=get_rand_headers(),
-                                      timeout=40)
+                                      timeout=100)
                 break
             except Exception:
-                print("Season_page: Change proxy...")
+                print("scrap_season_page: Change proxy...")
+                time.sleep(0.5)
                 continue
 
     season_soup = BeautifulSoup(season_page.content, 'html.parser')

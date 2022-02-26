@@ -1,18 +1,19 @@
 import math
 import random
 import re
+import time
+
 from bs4 import BeautifulSoup
 import requests
 from get_rand_proxy_headers import get_rand_proxy, get_rand_headers
 
-
-# think of cases where there might have the data, theme, deal with it. Catch error.s
-
+#imge not exists problem, scrap_anime_page: https://myanimelist.net/anime/21607/Picotopia 'NoneType' object is not subscriptable
 def scrap_anime_page(anime_page_link):
     """This function is to scrap all the information we need from the anime page.
     Datasets:
         anime_page_info:
     """
+
     with requests.Session() as res:
         while True:
             try:
@@ -20,7 +21,8 @@ def scrap_anime_page(anime_page_link):
                                      timeout=100)
                 break
             except Exception:
-                print("Anime_page: Change proxy...")
+                print("scrap_anime_page: Change proxy...")
+                time.sleep(0.5)
                 continue
 
     soup = BeautifulSoup(anime_page.text, 'html.parser')
@@ -45,12 +47,12 @@ def scrap_anime_page(anime_page_link):
             continue
 
         anime_page_info[key] = ", ".join(v.strip() for v in value.split(","))
-        anime_page_info['anime_img_url'] = soup.find('img', {"itemprop": "image"})['data-src']
+        img_url = soup.find('img', {"itemprop": "image"})
+        anime_page_info['anime_img_url'] = img_url['data-src'] if img_url else None
 
     # Scrap alternative and english titles
     alternative_titles = {}
     alternative_titles["anime_id"] = anime_page_info["anime_id"]
-    alternative_titles["Title"] = anime_page_info["Title"]
     en_title = soup.find("p", class_="title-english")
     alternative_titles["English_title"] = en_title.text if en_title else None
 
@@ -76,16 +78,13 @@ def scrap_anime_page(anime_page_link):
         site_stats[key] = val.replace(",", "").replace("#", "").strip()
 
     print(f'scrap_anime_page: {anime_page_link}  Success!')
+
     return (anime_page_info, alternative_titles, site_stats)
 
 
 def test():
     test_pool = [
-        "https://myanimelist.net/anime/11757/Sword_Art_Online",
-        "https://myanimelist.net/anime/25063/Anime_Roukyoku_Kikou_Shimizu_no_Jirochouden",
-        "https://myanimelist.net/anime/111/Corrector_Yui",
-        "https://myanimelist.net/anime/38690/Si_Hai_Jing_Qi",
-        "https://myanimelist.net/anime/38469/Hanasaku_Kizuna_no_Romantan"
+        "https://myanimelist.net/anime/30957/Yukidaruma"
     ]
 
     print("\n".join(str(stat) for stat in scrap_anime_page(random.choice(test_pool))))

@@ -13,9 +13,6 @@ def store_stats_page_data(anime_stats_list):
     cur_path = Path(os.getcwd())
     datas_dir = cur_path.parent / "Datas"
 
-    if not Path(datas_dir).exists():
-        os.mkdir(datas_dir)
-
     with open(Path(datas_dir) / 'anime_watch_stats.csv', "w", encoding="utf-8") as anime_watch_stats_csv_file:
         field_names = ['anime_id', 'Watching', 'Completed', 'On-Hold', 'Dropped', 'Plan to Watch', 'Total']
         writer = csv.DictWriter(anime_watch_stats_csv_file, fieldnames=field_names)
