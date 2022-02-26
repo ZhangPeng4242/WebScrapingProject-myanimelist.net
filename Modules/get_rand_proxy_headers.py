@@ -47,7 +47,7 @@ def get_rand_proxy():
             for proxy_web in proxy_webs:
                 proxies += proxies_pool(proxy_web)
             proxy_file.write("\n".join(proxy for proxy in proxies))
-            print("Successfully import")
+            print("Successfully get all the proxies!")
 
     with open(proxy_dir, "r") as proxy_file:
         proxies_list = proxy_file.read().split("\n")

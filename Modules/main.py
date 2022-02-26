@@ -90,22 +90,18 @@ def main():
     stats_page_datas = []  # release memory
 
     #### Get a list of people page links ####
+
     people_links_path = datas_dir / "people_links.txt"
-    people_links = []
     if people_links_path.exists():
         with open(people_links_path, "r", encoding="utf-8") as people_links_file:
             people_links = people_links_file.read().split("\n")
+
     else:
-        for link in list(season_links):
-            people_links += get_people_links(link)
-            # Reducing the request frequency, so that the website would not limit access.
-            time.sleep(round(random.random() * DELAY_AFTER_ONE_REQUEST, 1))
-
+        people_links = get_people_links()
         with open(people_links_path, "w", encoding="utf-8") as people_links_file:
-            people_links_file.write("\n".join(anime_links))
+            people_links_file.write("\n".join(people_links))
 
-    people_links = scrap_people_list_page()
-
+    print("Successfully get all the people links")
     random.shuffle(people_links)
 
     #### Scrap people page ####

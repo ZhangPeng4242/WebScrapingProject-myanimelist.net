@@ -32,7 +32,7 @@ def get_anime_links(_crit=math.inf):
 
         print(f"scrap_anime_list_page: https://myanimelist.net/people.php?limit={limit * 50}  Success!")
         limit += 1
-        time.sleep(round(random.random() * 4, 1))
+        time.sleep(round(random.random() * 2, 1))
 
     print("Successfully get all the links of anime page!")
 
