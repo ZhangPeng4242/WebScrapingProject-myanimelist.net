@@ -25,16 +25,22 @@ def get_anime_links(_crit=math.inf):
         soup = BeautifulSoup(anime_list_page.text, "html.parser")
 
         if not soup.find('tr', class_="ranking-list"):
-            break
+            # If not found, it might be we reached the end, or it might be due to the proxy is blocked, or the proxy activates the mobile version of the web,
+
+            if soup.find('h1', string="404 Not Found"):
+                break
+
+            print(f"scrap_anime_link: Failed https://myanimelist.net/topanime.php?limit={limit * 50}  Rescraping...")
+            continue
 
         a_tag_list = soup.find_all('a', class_="fl-l")
         anime_link_list += [link['href'] for link in a_tag_list]
 
-        print(f"scrap_anime_list_page: https://myanimelist.net/people.php?limit={limit * 50}  Success!")
+        print(f"scrap_anime_list_page: https://myanimelist.net/topanime.php?limit={limit * 50}  Success!")
         limit += 1
-        time.sleep(round(random.random() * 2, 1))
+        time.sleep(round(random.random() * 4, 1))
 
-    print("Successfully get all the links of anime page!")
+    print(f"Successfully get all the links of anime page! Length: {len(anime_link_list)} ")
 
     return anime_link_list
 

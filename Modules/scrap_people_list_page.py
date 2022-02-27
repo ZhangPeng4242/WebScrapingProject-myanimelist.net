@@ -9,6 +9,7 @@ import random
 def get_people_links(_crit=math.inf):
     people_link_list = []
     limit = 0
+    loop = 0
     while limit < _crit:
         with requests.Session() as res:
             while True:
@@ -24,16 +25,23 @@ def get_people_links(_crit=math.inf):
 
         soup = BeautifulSoup(people_list_page.text, "html.parser")
 
-        if not soup.find('td', class_="people"):
-            break
+        if not soup.find('a', class_="fs14"):
+            if loop > 2:
+                break
+            loop += 1
+            print(
+                f"scrap_people_list_page: Failed https://myanimelist.net/people.php?limit={limit * 50} Rescraping...\nAttempt: {loop} ")
+            time.sleep(60)
+            continue
 
         a_tag_list = soup.find_all('a', class_="fs14")
         people_link_list += [link['href'] for link in a_tag_list]
-        limit += 1
         print(f"scrap_people_list_page: https://myanimelist.net/people.php?limit={limit * 50}  Success!")
-        time.sleep(round(random.random() * 2, 1))
+        limit += 1
+        loop = 0
+        time.sleep(round(random.random() * 4, 1))
 
-    print("Successfully get all the links of people page!")
+    print(f"Successfully get all the links of people page! Length: {len(people_link_list)}")
     return people_link_list
 
 

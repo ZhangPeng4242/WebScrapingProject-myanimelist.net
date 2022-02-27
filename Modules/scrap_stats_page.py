@@ -31,7 +31,7 @@ def scrap_stats_page(stats_link):
     sum_stats_containers = soup.find('h2', string='Summary Stats').find_next_siblings('div',
                                                                                       limit=SUM_STATS_CONTAINERS_COUNT)
 
-    sum_stats = {stat[0]: int(stat[1].replace(",", "")) for stat in
+    sum_stats = {stat[0].lower(): int(stat[1].replace(",", "")) for stat in
                  [stat_container.text.split(": ") for stat_container in sum_stats_containers]}
 
     sum_stats["anime_id"] = anime_id

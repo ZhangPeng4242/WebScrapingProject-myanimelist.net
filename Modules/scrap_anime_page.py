@@ -8,6 +8,10 @@ import requests
 from get_rand_proxy_headers import get_rand_proxy, get_rand_headers
 
 #imge not exists problem, scrap_anime_page: https://myanimelist.net/anime/21607/Picotopia 'NoneType' object is not subscriptable
+#only genre, themes prob
+#add aired field
+#filename should we add timestamp?
+
 def scrap_anime_page(anime_page_link):
     """This function is to scrap all the information we need from the anime page.
     Datasets:
@@ -17,7 +21,7 @@ def scrap_anime_page(anime_page_link):
     with requests.Session() as res:
         while True:
             try:
-                anime_page = res.get(anime_page_link, proxies={"http": get_rand_proxy()}, headers=get_rand_headers(),
+                anime_page = res.get(anime_page_link, proxies={"http": "192.177.186.60:3128"}, headers=get_rand_headers(),
                                      timeout=100)
                 break
             except Exception:
@@ -30,9 +34,9 @@ def scrap_anime_page(anime_page_link):
     # Scrap anime_page_info section
     anime_page_info = {}
     anime_page_info["anime_id"] = soup.find('input', {'name': 'aid'})['value']
-    anime_page_info["Title"] = soup.find('h1', class_="title-name").text
+    anime_page_info["title"] = soup.find('h1', class_="title-name").text
 
-    info_containers = soup.find_all('span', string=['Type:', 'Genres:', 'Premiered:', 'Studios:', 'Source:', 'Theme:',
+    info_containers = soup.find_all('span', string=['Type:', 'Genres:', 'Genre:', 'Aired:', 'Premiered:', 'Studios:', 'Source:', 'Theme:',
                                                     'Rating:'])
 
     for info_container in info_containers:
@@ -41,12 +45,15 @@ def scrap_anime_page(anime_page_link):
         key, value = info_list
         key = key.strip()
 
-        if key in ["Genres", "Theme"]:
-            anime_page_info[key] = ", ".join([genre.strip()[:math.floor(len(genre.strip()) / 2)] for genre in
-                                              value.split(",")])
+        if key in ["Genres","Genre", "Theme"]:
+            key = "Genres" if key == "Genre" else key
+            value_a_tags = info_container.parent.find_all('a')
+            value = ", ".join(a_tag.text for a_tag in value_a_tags)
+            anime_page_info[key.lower()] = value
             continue
 
-        anime_page_info[key] = ", ".join(v.strip() for v in value.split(","))
+        anime_page_info[key.lower()] = ", ".join(v.strip() for v in value.split(","))
+
         img_url = soup.find('img', {"itemprop": "image"})
         anime_page_info['anime_img_url'] = img_url['data-src'] if img_url else None
 
@@ -54,15 +61,15 @@ def scrap_anime_page(anime_page_link):
     alternative_titles = {}
     alternative_titles["anime_id"] = anime_page_info["anime_id"]
     en_title = soup.find("p", class_="title-english")
-    alternative_titles["English_title"] = en_title.text if en_title else None
+    alternative_titles["english_title"] = en_title.text if en_title else None
 
     # Scrap anime site stats
     site_stats = {}
     site_stats["anime_id"] = anime_page_info["anime_id"]
 
-    site_stats["Score"] = soup.find('span', class_="score-label").text
-    site_stats["Rating_count"] = soup.find('span', {"itemprop": "ratingCount"}).text if site_stats[
-                                                                                            "Score"] != 'N/A' else None
+    site_stats["score"] = soup.find('span', class_="score-label").text
+    site_stats["rating_count"] = soup.find('span', {"itemprop": "ratingCount"}).text if site_stats[
+                                                                                            "score"] != 'N/A' else None
 
     stats_containers = soup.find_all('span', string=['Ranked:', 'Popularity:', 'Members:', 'Favorites:'])
     for stat_container in stats_containers:
@@ -75,7 +82,7 @@ def scrap_anime_page(anime_page_link):
             val = val_find[0][:-1] if val_find else None
             continue
 
-        site_stats[key] = val.replace(",", "").replace("#", "").strip()
+        site_stats[key.lower()] = val.replace(",", "").replace("#", "").strip()
 
     print(f'scrap_anime_page: {anime_page_link}  Success!')
 
@@ -84,7 +91,7 @@ def scrap_anime_page(anime_page_link):
 
 def test():
     test_pool = [
-        "https://myanimelist.net/anime/30957/Yukidaruma"
+        "https://myanimelist.net/anime/246/Groove_Adventure_Rave"
     ]
 
     print("\n".join(str(stat) for stat in scrap_anime_page(random.choice(test_pool))))

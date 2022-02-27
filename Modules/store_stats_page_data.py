@@ -14,7 +14,7 @@ def store_stats_page_data(anime_stats_list):
     datas_dir = cur_path.parent / "Datas"
 
     with open(Path(datas_dir) / 'anime_watch_stats.csv', "w", encoding="utf-8") as anime_watch_stats_csv_file:
-        field_names = ['anime_id', 'Watching', 'Completed', 'On-Hold', 'Dropped', 'Plan to Watch', 'Total']
+        field_names = ['anime_id', 'watching', 'completed', 'on-hold', 'dropped', 'plan to watch', 'total']
         writer = csv.DictWriter(anime_watch_stats_csv_file, fieldnames=field_names)
         writer.writeheader()
 
