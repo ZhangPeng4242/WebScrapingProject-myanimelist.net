@@ -13,4 +13,9 @@ def get_season_links():
     return season_link_set
 
 
+def test():
+    print(get_season_links())
 
+
+if __name__ == "__main__":
+    test()

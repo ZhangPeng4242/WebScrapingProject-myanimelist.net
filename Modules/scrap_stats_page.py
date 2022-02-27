@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
-
+import random
+from get_rand_proxy_headers import get_rand_headers, get_rand_proxy
+import time
 SUM_STATS_CONTAINERS_COUNT = 6
 
 
@@ -9,8 +11,17 @@ def scrap_stats_page(stats_link):
      summary stats: watching, completed, on-hold, dropped, Plan to Watch, Total
      score stats: 10 - 1 votes
      """
+    with requests.Session() as res:
+        while True:
+            try:
+                stats_page = res.get(stats_link, proxies={"http": get_rand_proxy()}, headers=get_rand_headers(),
+                                     timeout=100)
+                break
+            except Exception:
+                print("scrap_stats_page: Change proxy...")
+                time.sleep(0.5)
+                continue
 
-    stats_page = requests.get(stats_link)
     soup = BeautifulSoup(stats_page.text, "html.parser")
 
     # Get id
@@ -37,4 +48,18 @@ def scrap_stats_page(stats_link):
     score_stats["anime_id"] = anime_id
 
     print(f"scrap_stats_page: {stats_link}  Success!")
+    # store data
     return (sum_stats, score_stats)
+
+
+def test():
+    test_pool = ["https://myanimelist.net/anime/47161/Shikkakumon_no_Saikyou_Kenja/stats",
+                 "https://myanimelist.net/anime/44961/Platinum_End/stats",
+                 "https://myanimelist.net/anime/18179/Yowamushi_Pedal/stats",
+                 "https://myanimelist.net/anime/37987/Violet_Evergarden_Movie/stats"]
+
+    print(scrap_stats_page(random.choice(test_pool)))
+
+
+if __name__ == "__main__":
+    test()
