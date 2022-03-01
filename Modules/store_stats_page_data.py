@@ -1,4 +1,3 @@
-
 import csv
 import os
 from pathlib2 import Path
@@ -13,7 +12,8 @@ def store_stats_page_data(anime_stats_list):
     cur_path = Path(os.getcwd())
     datas_dir = cur_path.parent / "Datas"
 
-    with open(Path(datas_dir) / 'anime_watch_stats.csv', "w", encoding="utf-8") as anime_watch_stats_csv_file:
+    with open(Path(datas_dir) / '2_anime_watch_stats.csv', "w", encoding="utf-8",
+              newline="") as anime_watch_stats_csv_file:
         field_names = ['anime_id', 'watching', 'completed', 'on-hold', 'dropped', 'plan to watch', 'total']
         writer = csv.DictWriter(anime_watch_stats_csv_file, fieldnames=field_names)
         writer.writeheader()
@@ -21,7 +21,8 @@ def store_stats_page_data(anime_stats_list):
         for stat in anime_stats_list:
             writer.writerow(stat[0])
 
-    with open(Path(datas_dir) / 'anime_score_stats.csv', "w", encoding="utf-8") as anime_score_stats_csv_file:
+    with open(Path(datas_dir) / '2_anime_score_stats.csv', "w", encoding="utf-8",
+              newline="") as anime_score_stats_csv_file:
         field_names = ["anime_id"] + [str(num) for num in range(10, 0, -1)]
         writer = csv.DictWriter(anime_score_stats_csv_file, fieldnames=field_names)
         writer.writeheader()
@@ -47,7 +48,6 @@ def test():
                    '1': 438, 'anime_id': '47161'})]
 
     store_stats_page_data(test_data)
-
 
 
 if __name__ == "__main__":

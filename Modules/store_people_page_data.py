@@ -3,25 +3,11 @@ from pathlib2 import Path
 import csv
 
 
-# people
-# staff: id, name, member favorites, staff? voice actor?
-
-# character id, people_id, role,(role favorites)2                                       3333333333333333333
-
-# voice_actor: id, name, role, member favorites
-
-
-# databases:
-# people info: people_id , name  , birthday, member_favorites, img_url
-# staff info:  anime_id, people_id, role
-# voice actor info: character_id, people_id,
-# character info: character_id 1, name, anime_id, role,character_favorites, img_url
-
 def store_people_page_data(people_stats_list):
     cur_path = Path(os.getcwd())
     datas_dir = cur_path.parent / "Datas"
 
-    with open(Path(datas_dir) / 'people_info.csv', "w", encoding="utf-8") as people_info_csv_file:
+    with open(Path(datas_dir) / '3_people_info.csv', "w", encoding="utf-8", newline="") as people_info_csv_file:
         field_names = ['people_id', 'people_fullname', 'birthday', 'member_favorites', 'people_img_url']
         writer = csv.DictWriter(people_info_csv_file, fieldnames=field_names)
         writer.writeheader()
@@ -29,7 +15,8 @@ def store_people_page_data(people_stats_list):
         for stat in people_stats_list:
             writer.writerow(stat[0])
 
-    with open(Path(datas_dir) / 'anime_characters_info.csv', "w", encoding="utf-8") as characters_info_csv_file:
+    with open(Path(datas_dir) / '3_anime_characters_info.csv', "w", encoding="utf-8",
+              newline="") as characters_info_csv_file:
         field_names = ['character_id', 'anime_id', 'character_fullname', 'role', 'character_favorites',
                        'character_img_url']
         writer = csv.DictWriter(characters_info_csv_file, fieldnames=field_names)
@@ -39,7 +26,8 @@ def store_people_page_data(people_stats_list):
             for stat in stat_list[1]:
                 writer.writerow(stat)
 
-    with open(Path(datas_dir) / 'voice_actors_info.csv', "w", encoding="utf-8") as voice_actors_info_csv_file:
+    with open(Path(datas_dir) / '3_voice_actors_info.csv', "w", encoding="utf-8",
+              newline="") as voice_actors_info_csv_file:
         field_names = ['character_id', 'people_id']
         writer = csv.DictWriter(voice_actors_info_csv_file, fieldnames=field_names)
         writer.writeheader()
@@ -48,7 +36,7 @@ def store_people_page_data(people_stats_list):
             for stat in stat_list[2]:
                 writer.writerow(stat)
 
-    with open(Path(datas_dir) / 'staff_info.csv', "w", encoding="utf-8") as staff_info_csv_file:
+    with open(Path(datas_dir) / '3_staff_info.csv', "w", encoding="utf-8", newline="") as staff_info_csv_file:
         field_names = ['anime_id', 'people_id', 'staff_role']
         writer = csv.DictWriter(staff_info_csv_file, fieldnames=field_names)
         writer.writeheader()
@@ -86,6 +74,7 @@ def test():
            {'anime_id': '20919', 'people_id': '112', 'staff_role': 'Theme Song Performance'}]
           )
          ])
+
 
 if __name__ == "__main__":
     test()

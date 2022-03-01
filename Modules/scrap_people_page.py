@@ -9,11 +9,6 @@ from bs4 import BeautifulSoup
 from get_rand_proxy_headers import get_rand_proxy, get_rand_headers
 
 
-# people info: people_id , name  , birthday, member_favorites, img_url
-# staff info:  anime_id, people_id, role
-# voice actor info: character_id, people_id,
-# character info: character_id 1, name, anime_id, role,character_favorites, img_url
-
 def scrap_people_page(people_page_link):
     """
     we receive a link for an actors page on mal.
@@ -49,7 +44,6 @@ def scrap_people_page(people_page_link):
     member_favorites = soup.find('span', text='Member Favorites:').parent.text.replace('Member Favorites: ',
                                                                                        '').replace(',', "")
     # get people img url
-
     people_img_url = soup.find('img', {'data-src': re.compile("https://cdn.myanimelist.net/images")})
 
     people_info_dict = {'people_id': people_id, 'people_fullname': people_fullname, 'birthday': birthday,

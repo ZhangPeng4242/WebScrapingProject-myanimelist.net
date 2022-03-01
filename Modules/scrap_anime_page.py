@@ -7,10 +7,6 @@ from bs4 import BeautifulSoup
 import requests
 from get_rand_proxy_headers import get_rand_proxy, get_rand_headers
 
-#imge not exists problem, scrap_anime_page: https://myanimelist.net/anime/21607/Picotopia 'NoneType' object is not subscriptable
-#only genre, themes prob
-#add aired field
-#filename should we add timestamp?
 
 def scrap_anime_page(anime_page_link):
     """This function is to scrap all the information we need from the anime page.
@@ -21,7 +17,7 @@ def scrap_anime_page(anime_page_link):
     with requests.Session() as res:
         while True:
             try:
-                anime_page = res.get(anime_page_link, proxies={"http": "192.177.186.60:3128"}, headers=get_rand_headers(),
+                anime_page = res.get(anime_page_link, proxies={"http": get_rand_proxy()}, headers=get_rand_headers(),
                                      timeout=100)
                 break
             except Exception:
@@ -36,16 +32,19 @@ def scrap_anime_page(anime_page_link):
     anime_page_info["anime_id"] = soup.find('input', {'name': 'aid'})['value']
     anime_page_info["title"] = soup.find('h1', class_="title-name").text
 
-    info_containers = soup.find_all('span', string=['Type:', 'Genres:', 'Genre:', 'Aired:', 'Premiered:', 'Studios:', 'Source:', 'Theme:',
-                                                    'Rating:'])
+    info_containers = soup.find_all('span',
+                                    string=['Type:', 'Genres:', 'Genre:', 'Aired:', 'Premiered:', 'Studios:', 'Source:',
+                                            'Theme:',
+                                            'Rating:'])
 
     for info_container in info_containers:
-        info_list = info_container.parent.text.split(":")
+
+        info_list = info_container.parent.text.split(":\n")
         # index 0: info key, index 1: info value
         key, value = info_list
         key = key.strip()
 
-        if key in ["Genres","Genre", "Theme"]:
+        if key in ["Genres", "Genre", "Theme"]:
             key = "Genres" if key == "Genre" else key
             value_a_tags = info_container.parent.find_all('a')
             value = ", ".join(a_tag.text for a_tag in value_a_tags)
@@ -80,6 +79,7 @@ def scrap_anime_page(anime_page_link):
         if key == "Ranked":
             val_find = re.findall("(?<=#)[0-9]*", val)
             val = val_find[0][:-1] if val_find else None
+            site_stats['ranked']=val
             continue
 
         site_stats[key.lower()] = val.replace(",", "").replace("#", "").strip()
@@ -91,7 +91,7 @@ def scrap_anime_page(anime_page_link):
 
 def test():
     test_pool = [
-        "https://myanimelist.net/anime/246/Groove_Adventure_Rave"
+        "https://myanimelist.net/anime/36775/Wo_Shi_Jiang_Xiaobai"
     ]
 
     print("\n".join(str(stat) for stat in scrap_anime_page(random.choice(test_pool))))
