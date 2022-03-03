@@ -1,12 +1,17 @@
 """
 we test the scrap_people_list_page library
 """
+import sys
+import os
+from pathlib2 import Path
+src_path = Path(os.getcwd()).parent / "scraping_src_directory"
+sys.path.append(str(src_path))
 import scrap_people_list_page as scr
 
 
 def test():
     """
-    tests get_people_links by checking the number of links taken from the first three people list pages.
+    scraping_test_directory get_people_links by checking the number of links taken from the first three people list pages.
     also print the links of those pages.
     :return:
     """

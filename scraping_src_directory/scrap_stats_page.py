@@ -3,9 +3,10 @@ we create a function that receives a url for an anime stats page in myanimelist 
 """
 import requests
 from bs4 import BeautifulSoup
-import random
 from get_rand_proxy_headers import get_rand_headers, get_rand_proxy
 import time
+from config import config
+
 SUM_STATS_CONTAINERS_COUNT = 6
 
 
@@ -25,8 +26,8 @@ def scrap_stats_page(stats_link):
                                      timeout=100)
                 break
             except Exception:
-                print("scrap_stats_page: Change proxy...")
-                time.sleep(0.5)
+                config.logger.warning(f"scrap_anime_stats_page: Change proxy... {stats_link}")
+                time.sleep(config.proxy_change_delay)
                 continue
 
     soup = BeautifulSoup(stats_page.text, "html.parser")
@@ -54,8 +55,6 @@ def scrap_stats_page(stats_link):
             score = stat.find('td', {"class": "score-label"}).text
             votes = int(stat.find('small').text[1:-7])
             score_stats[score] = votes
-    print(f"scrap_stats_page: {stats_link}  Success!")
+    config.logger.info(f"scrap_anime_stats_page: Success! {stats_link}")
 
-
-    # store data
     return (sum_stats, score_stats)

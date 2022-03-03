@@ -1,6 +1,13 @@
 """
-tests for the scrap_stats_page library
+scraping_test_directory for the scrap_stats_page library
 """
+from test_pool import test_pool
+import sys
+import os
+from pathlib2 import Path
+src_path = Path(os.getcwd()).parent / "scraping_src_directory"
+sys.path.append(str(src_path))
+
 import scrap_stats_page as scr
 
 
@@ -27,13 +34,9 @@ def check_keys(input_tuple):
 
 
 def test():
-    test_pool = [
-        "https://myanimelist.net/anime/19815/No_Game_No_Life/stats",
-        'https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood/stats',
-        'https://myanimelist.net/anime/9253/Steins_Gate/stats']
-    for url in test_pool:
-        print(scr.scrap_stats_page(url))
-        assert check_keys(scr.scrap_stats_page(url))
+    url = test_pool.get_anime_stats_page_link()
+    print(scr.scrap_stats_page(url))
+    assert check_keys(scr.scrap_stats_page(url))
 
 
 if __name__ == "__main__":

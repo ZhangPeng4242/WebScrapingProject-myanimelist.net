@@ -6,7 +6,7 @@ import time
 from bs4 import BeautifulSoup
 import requests
 from get_rand_proxy_headers import get_rand_headers, get_rand_proxy
-import random
+from config import config
 
 
 def get_people_links(_crit=math.inf):
@@ -22,41 +22,40 @@ def get_people_links(_crit=math.inf):
     limit = 0
     loop = 0
     while limit < _crit:
+        people_search_link = "https://myanimelist.net/people.php?limit={limit * 50}"
         with requests.Session() as res:
             # requests page content using random proxy and header
             while True:
                 try:
-                    people_list_page = res.get(f"https://myanimelist.net/people.php?limit={limit * 50}",
+                    people_list_page = res.get(people_search_link,
                                                proxies={"http": get_rand_proxy()}, headers=get_rand_headers(),
                                                timeout=100)
                     break
                 except Exception:
-                    print("scrap_people_list_page: Change proxy...")
-                    time.sleep(0.5)
+                    config.logger.warning(f"scrap_people_list_page: Change proxy... {people_search_link}")
+                    time.sleep(config.proxy_change_delay)
                     continue
 
         # creates beautiful soup object
         soup = BeautifulSoup(people_list_page.text, "html.parser")
 
-        # we check our current page is indeed a people list page
+        # We check we indeed reach the end of the list. Use loops to double confirm that soup not found is not caused by proxy being blocked or requested the mobile version
         if not soup.find('a', class_="fs14"):
-            if loop > 2:
+            if loop > 3:
                 break
             loop += 1
-            print(
-                f"scrap_people_list_page: Failed https://myanimelist.net/people.php?limit={limit * 50} Rescraping...\nAttempt: {loop} ")
-            time.sleep(60)
+            config.logger.error(f"scrap_people_list_page: Failed attempt {loop}, rescraping... {people_search_link}.")
+            time.sleep(10)
             continue
 
         # reaching here means we are scraping a true people list page, and can start getting our main anime page links.
         a_tag_list = soup.find_all('a', class_="fs14")
         people_link_list += [link['href'] for link in a_tag_list]
-        print(f"scrap_people_list_page: https://myanimelist.net/people.php?limit={limit * 50}  Success!")
+        config.logger.info(f"scrap_people_list_page: Success! {people_search_link}")
         limit += 1
         loop = 0
-        time.sleep(round(random.random() * 4, 1))
 
-    print(f"Successfully get all the links of people page! Length: {len(people_link_list)}")
+    config.logger.info(
+        f"Successfully get all the links of people page! Total number of people page links: {len(people_link_list)}")
+
     return people_link_list
-
-

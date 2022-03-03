@@ -1,6 +1,13 @@
 """
-tests for the scrap_people_page library
+scraping_test_directory for the scrap_people_page library
 """
+from test_pool import test_pool
+import sys
+import os
+from pathlib2 import Path
+src_path = Path(os.getcwd()).parent / "scraping_src_directory"
+sys.path.append(str(src_path))
+
 import scrap_people_page as scr
 
 
@@ -35,13 +42,10 @@ def test():
     we test our function for several links
     :return:
     """
-    test_pool = ['https://myanimelist.net/people/112/Hikaru_Midorikawa',
-                 'https://myanimelist.net/people/185/Kana_Hanazawa',
-                 'https://myanimelist.net/people/513/Yuuichi_Nakamura']
+    url = test_pool.get_people_page_link()
 
-    for url in test_pool:
-        print('\n'.join(str(item) for item in scr.scrap_people_page(url)))
-        assert check_keys(scr.scrap_people_page(url))
+    print('\n'.join(str(item) for item in scr.scrap_people_page(url)))
+    assert check_keys(scr.scrap_people_page(url))
 
 
 if __name__ == '__main__':

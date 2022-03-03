@@ -7,6 +7,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 from get_rand_proxy_headers import get_rand_proxy, get_rand_headers
+from config import config
 
 
 def scrap_people_page(people_page_link):
@@ -15,15 +16,16 @@ def scrap_people_page(people_page_link):
     it returns four dictionaries which will later be inserted into the following Datasets:
     people_info_dict: contains people_id, people_full_name, birthday, member_favorites and people_img_url
 
-    anime_characters_info_list: contains a list of info about characters the actor voices.
-    each list entry is a dict containing: character_id, anime_id, character_fullname, role, character_favorites
+    anime_characters_info_list: contains a list of info about characters the actor voices. Each list entry is a dict
+    containing: character_id, anime_id, character_fullname, role, character_favorites
     and character_img_url
 
-    voice_actors_info_list: contains a list of info about each voice acting job in the persons career.
-    ech entry in the list  is a dict containing character_id and people_id.
+    voice_actors_info_list: contains a list of info about each voice acting job in the persons career. Each entry in the list  is a dict
+    containing: character_id , people_id.
 
-    staff_info_list: contains a list of info about all anime related jobs in the persons career.
-     each entry in the list is a dict containing: anime_id, people_id and staff role
+    staff_info_list: contains a list of info about all anime related jobs in the persons career. Each entry in the list is a dict
+    containing: anime_id, people_id and staff role
+
     :param people_page_link: str
     :return: (people_info_dict, character_info_list, voice_actor_info_list, staff_info_list) touple
     """
@@ -36,8 +38,8 @@ def scrap_people_page(people_page_link):
                                       timeout=100)
                 break
             except Exception:
-                print("scrap_people_page: Change proxy...")
-                time.sleep(0.5)
+                config.logger.warning(f"scrap_people_page: Change proxy... {people_page_link}")
+                time.sleep(config.proxy_change_delay)
                 continue
 
     soup = BeautifulSoup(people_page.text, 'html.parser')
@@ -98,5 +100,5 @@ def scrap_people_page(people_page_link):
         staff_info_dict = {"anime_id": anime_id, "people_id": people_id, "staff_role": staff_role}
         staff_info_list.append(staff_info_dict)
 
-    print(f"scrap_people_page: {people_page_link}  Success!")
+    config.logger.info(f"scrap_people_page: Success! {people_page_link}")
     return (people_info_dict, character_info_list, voice_actor_info_list, staff_info_list)

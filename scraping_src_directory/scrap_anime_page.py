@@ -8,6 +8,7 @@ import time
 from bs4 import BeautifulSoup
 import requests
 from get_rand_proxy_headers import get_rand_proxy, get_rand_headers
+from config import config
 
 
 def scrap_anime_page(anime_page_link):
@@ -28,8 +29,8 @@ def scrap_anime_page(anime_page_link):
                                      timeout=100)
                 break
             except Exception:
-                print("scrap_anime_page: Change proxy...")
-                time.sleep(0.5)
+                config.logger.warning(f"scrap_anime_page: Change proxy... {anime_page_link}")
+                time.sleep(config.proxy_change_delay)
                 continue
 
     soup = BeautifulSoup(anime_page.text, 'html.parser')
@@ -86,12 +87,11 @@ def scrap_anime_page(anime_page_link):
         if key == "Ranked":
             val_find = re.findall("(?<=#)[0-9]*", val)
             val = val_find[0][:-1] if val_find else None
-            site_stats['ranked']=val
+            site_stats['ranked'] = val
             continue
 
         site_stats[key.lower()] = val.replace(",", "").replace("#", "").strip()
 
-    print(f'scrap_anime_page: {anime_page_link}  Success!')
+    config.logger.info(f'scrap_anime_page: Success! {anime_page_link}')
 
     return (anime_page_info, alternative_titles, site_stats)
-

@@ -2,12 +2,13 @@
 we create functions that return a random proxy and a random header
 in order to implements the scraping process without being blocked.
 """
+
 import requests
 from bs4 import BeautifulSoup
 import random
 from fake_useragent import UserAgent
-import os
 from pathlib2 import Path
+from config import config
 
 
 def proxies_pool(proxy_web_url):
@@ -56,8 +57,7 @@ def get_rand_proxy():
     the file is only created if it didn't exist before running, saving time for multiple uses.
     :return: random.choice(proxies_list): str
     """
-    cur_path = Path(os.getcwd())
-    proxy_dir = cur_path.parent / "Datas" / "proxy_list.txt"
+    proxy_dir = config.datas_dir / "proxy_list.txt"
 
     if not Path(proxy_dir).exists():
         proxy_webs = ['https://www.sslproxies.org/', 'https://www.us-proxy.org/', 'https://free-proxy-list.net/',
@@ -67,7 +67,7 @@ def get_rand_proxy():
             for proxy_web in proxy_webs:
                 proxies += proxies_pool(proxy_web)
             proxy_file.write("\n".join(proxy for proxy in proxies))
-            print("Successfully get all the proxies!")
+            config.logger.info("Successfully get all the proxies!!")
 
     with open(proxy_dir, "r") as proxy_file:
         proxies_list = proxy_file.read().split("\n")
