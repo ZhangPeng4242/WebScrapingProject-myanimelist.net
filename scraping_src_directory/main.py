@@ -223,16 +223,16 @@ def main():
     anime_links = main_get_and_store_anime_links()
 
     # Step 2: scrap and store all the anime pages data
-    # main_scrap_and_store_anime_pages(anime_links)
+    main_scrap_and_store_anime_pages(anime_links)
 
     # Step 3: scrap and store all the anime stats pages data
     main_scrap_and_store_anime_stats_pages(anime_links)
 
     # Step 4: get and store all the people links
-    # people_links = main_get_and_store_people_links()
+    people_links = main_get_and_store_people_links()
 
     # Step 5: scrap and store all the people pages data
-    # main_scrap_and_store_people_pages(people_links)
+    main_scrap_and_store_people_pages(people_links)
 
     config.logger("Successfully finished all the scraping!!! Good job!")
 
