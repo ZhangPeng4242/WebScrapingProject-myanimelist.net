@@ -1,17 +1,24 @@
+"""
+we create a function that receives a url for an anime main page in myanimelist and scraps it
+"""
 import math
 import random
 import re
 import time
-
 from bs4 import BeautifulSoup
 import requests
 from get_rand_proxy_headers import get_rand_proxy, get_rand_headers
 
 
 def scrap_anime_page(anime_page_link):
-    """This function is to scrap all the information we need from the anime page.
-    Datasets:
-        anime_page_info:
+    """
+    This function scraps all the information we need from the main page of an anime.
+    it returns three dictionaries which will later be inserted into the following Datasets:
+    anime_page_info: contains anime_id, title, type, anime_img_url,aired, premiered, studios, source, genres, rating and theme
+    alternative titles: contains anime_id, and english_title
+    site_stats: contains anime_id, score, rating_count, ranked, popularity, members, and favorites
+    :param anime_page_link: str
+    :return: (anime_page_info, alternative_titles, site_stats): tuple of dictionaries
     """
 
     with requests.Session() as res:
@@ -88,14 +95,3 @@ def scrap_anime_page(anime_page_link):
 
     return (anime_page_info, alternative_titles, site_stats)
 
-
-def test():
-    test_pool = [
-        "https://myanimelist.net/anime/36775/Wo_Shi_Jiang_Xiaobai"
-    ]
-
-    print("\n".join(str(stat) for stat in scrap_anime_page(random.choice(test_pool))))
-
-
-if __name__ == "__main__":
-    test()

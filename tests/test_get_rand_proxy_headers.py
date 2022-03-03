@@ -1,12 +1,17 @@
 """
-tests for get_rand_proxy_And_headers module
+tests for the get_rand_proxy_and_headers library
 """
-import sys
-sys.path.insert(1, 'D:\Pangzhang\Pycharm\Project\webscraping\ITC WebScraping\ITC-WebScraping-Project-Peng-Yam-\Modules\get_rand_proxy_headers.py')
-from get_rand_proxy_headers.py import get_rand_proxy(), get_rand_headers()
+import get_rand_proxy_headers as gr
+import requests
+PAGE_LINK = 'https://myanimelist.net/anime/246/Groove_Adventure_Rave'
+
+
 def test():
-    print(get_rand_proxy())
-    print(get_rand_headers())
+    print(gr.get_rand_proxy())
+    print(gr.get_rand_headers())
+    with requests.Session() as res:
+        page = res.get(PAGE_LINK, proxies={"http": gr.get_rand_proxy()}, headers=gr.get_rand_headers(), timeout=100)
+        assert page.url == PAGE_LINK
 
 
 if __name__ == "__main__":

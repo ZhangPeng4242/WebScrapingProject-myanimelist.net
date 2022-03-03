@@ -1,5 +1,5 @@
 """
-we create a function to scrap an acotrs page on myanimelist for info.
+we create a function to scrap an acotr's page on myanimelist for info.
 """
 import random
 import re
@@ -11,11 +11,21 @@ from get_rand_proxy_headers import get_rand_proxy, get_rand_headers
 
 def scrap_people_page(people_page_link):
     """
-    we receive a link for an actors page on mal.
-     we return a dictionary containing the actors id(in the website), name, birthday, numeber of members who chose
-     the actor as their favorite, and a list containing all voice acting roles of the actor.
+    This function scraps all the information we need from the main page of a person in the anime industry.
+    it returns four dictionaries which will later be inserted into the following Datasets:
+    people_info_dict: contains people_id, people_full_name, birthday, member_favorites and people_img_url
+
+    anime_characters_info_list: contains a list of info about characters the actor voices.
+    each list entry is a dict containing: character_id, anime_id, character_fullname, role, character_favorites
+    and character_img_url
+
+    voice_actors_info_list: contains a list of info about each voice acting job in the persons career.
+    ech entry in the list  is a dict containing character_id and people_id.
+
+    staff_info_list: contains a list of info about all anime related jobs in the persons career.
+     each entry in the list is a dict containing: anime_id, people_id and staff role
     :param people_page_link: str
-    :return: info_dict :dictionary
+    :return: (people_info_dict, character_info_list, voice_actor_info_list, staff_info_list) touple
     """
 
     # request page using random proxy and header:
@@ -90,19 +100,3 @@ def scrap_people_page(people_page_link):
 
     print(f"scrap_people_page: {people_page_link}  Success!")
     return (people_info_dict, character_info_list, voice_actor_info_list, staff_info_list)
-
-
-def test():
-    """
-    we test our function for several links
-    :return:
-    """
-    test_pool = ['https://myanimelist.net/people/112/Hikaru_Midorikawa'
-                 'https://myanimelist.net/people/185/Kana_Hanazawa'
-                 'https://myanimelist.net/people/513/Yuuichi_Nakamura']
-
-    print('\n'.join(str(item) for item in scrap_people_page(random.choice(test_pool))))
-
-
-if __name__ == '__main__':
-    test()

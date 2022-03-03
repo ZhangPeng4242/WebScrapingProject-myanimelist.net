@@ -1,3 +1,7 @@
+"""
+we create functions that return a random proxy and a random header
+in order to implements the scraping process without being blocked.
+"""
 import requests
 from bs4 import BeautifulSoup
 import random
@@ -7,6 +11,11 @@ from pathlib2 import Path
 
 
 def proxies_pool(proxy_web_url):
+    """
+    receives a url of a proxy table website and returns a list containing all proxies in the table.
+    :param proxy_web_url: str
+    :return: proxies: list
+    """
     # Retrieve the site's page. The 'with'(Python closure) is used here in order to automatically close the session when done
     with requests.Session() as res:
         proxies_page = res.get(proxy_web_url)
@@ -22,6 +31,10 @@ def proxies_pool(proxy_web_url):
 
 
 def get_rand_headers():
+    """
+    returns a random header using the fake_useragent module.
+    :return: headers: dict
+    """
     accepts = {"firefox": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
                "safari": "application/xml,application/xhtml+xml,text/html;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5",
                "chrome": "application/xml,application/xhtml+xml,text/html;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5",
@@ -36,6 +49,13 @@ def get_rand_headers():
 
 
 def get_rand_proxy():
+    """
+    scraps four different proxy tables and stores their ip and port in a text file.
+    the function then returns a random proxy out of the proxies it scraped.
+    the file is stored in a new directory called datas created inside the parent directory of our current location.
+    the file is only created if it didn't exist before running, saving time for multiple uses.
+    :return: random.choice(proxies_list): str
+    """
     cur_path = Path(os.getcwd())
     proxy_dir = cur_path.parent / "Datas" / "proxy_list.txt"
 
@@ -54,12 +74,3 @@ def get_rand_proxy():
 
     random.shuffle(proxies_list)
     return random.choice(proxies_list)
-
-
-def test():
-    print(get_rand_proxy())
-    print(get_rand_headers())
-
-
-if __name__ == "__main__":
-    test()

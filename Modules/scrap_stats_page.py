@@ -1,3 +1,6 @@
+"""
+we create a function that receives a url for an anime stats page in myanimelist and scraps it
+"""
 import requests
 from bs4 import BeautifulSoup
 import random
@@ -7,10 +10,14 @@ SUM_STATS_CONTAINERS_COUNT = 6
 
 
 def scrap_stats_page(stats_link):
-    """Data:
-     summary stats: watching, completed, on-hold, dropped, Plan to Watch, Total
-     score stats: 10 - 1 votes
-     """
+    """
+    this function scraps all the informations we need from an anime stats page.
+    it returns two dictionaries which will later be inserted into the following Datasets:
+    sum stats: contains anime_id and num of people who rated the anime 1 - 10
+    score stats: contains anime_id, watching, completed, on-hold, dropped, plan to watch and total
+    :param stats_link: str
+    :return: (sum_stats, score_stats): tuple of dict
+    """
     with requests.Session() as res:
         while True:
             try:
@@ -39,7 +46,8 @@ def scrap_stats_page(stats_link):
     # Scrapping score stats
     score_stats_containers = soup.find('table', {"class": 'score-stats'})
 
-    score_stats = {"anime_id":anime_id}|{str(num):None for num in range(10,0,-1)}
+    score_stats = {str(num): None for num in range(10, 0, -1)}
+    score_stats["anime_id"] = anime_id
 
     if score_stats_containers:
         for stat in score_stats_containers.find_all('tr'):
@@ -51,14 +59,3 @@ def scrap_stats_page(stats_link):
 
     # store data
     return (sum_stats, score_stats)
-
-
-def test():
-    test_pool = [
-                 "https://myanimelist.net/anime/19815/No_Game_No_Life/stats"]
-
-    print(scrap_stats_page(random.choice(test_pool)))
-
-
-if __name__ == "__main__":
-    test()
