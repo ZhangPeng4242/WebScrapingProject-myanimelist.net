@@ -11,7 +11,7 @@ from pathlib2 import Path
 import os
 import time
 
-DELAY_AFTER_ONE_REQUEST = 2
+DELAY_AFTER_ONE_REQUEST = 1
 
 
 def main_get_and_store_anime_links(datas_dir):
@@ -55,7 +55,7 @@ def main_scrap_and_store_anime_pages(anime_links):
     loop = 0
     scrap_count = 0
     print(
-        f"Scraping anime_pages starts! Time estimation: {round(DELAY_AFTER_ONE_REQUEST / 2 * total_count / 3600 * 1.2, 1)} hours.")
+        f"Scraping anime_pages starts! Time estimation: {round(DELAY_AFTER_ONE_REQUEST / 2 * total_count / 3600 * 1.5, 1)} hours.")
 
     while anime_link:
         try:
@@ -91,7 +91,7 @@ def main_scrap_and_store_anime_stats_pages(anime_links):
     loop = 0
     scrap_count = 0
     print(
-        f"Scraping anime_stats_pages starts! Time estimation: {round(DELAY_AFTER_ONE_REQUEST / 2 * total_count / 3600 * 1.2, 1)} hours.")
+        f"Scraping anime_stats_pages starts! Time estimation: {round(DELAY_AFTER_ONE_REQUEST / 2 * total_count / 3600 * 1.5, 1)} hours.")
 
     while anime_link:
         try:
@@ -106,14 +106,14 @@ def main_scrap_and_store_anime_stats_pages(anime_links):
             if loop >= 4:
                 scrap_count += 1
                 print(f"Scrap Error: continue with next...({scrap_count}/{total_count})")
-                err_log.append(f"scrap_anime_stats_page: {anime_link} {str(err)}")
+                err_log.append(f"scrap_anime_stats_page: {anime_link}/stats {str(err)}")
                 anime_link = next(anime_links, None)
                 loop = 0
                 continue
 
             loop += 1
             time.sleep(10)
-            print(f"scrap_anime_stats_page: Failed {anime_link}  Rescraping...\nAttempt: {loop}")
+            print(f"scrap_anime_stats_page: Failed {anime_link}/stats  Rescraping...\nAttempt: {loop}")
             continue
 
     store_stats_page_data(stats_page_datas)
@@ -127,7 +127,7 @@ def main_scrap_and_store_people_pages(people_links):
     loop = 0
     scrap_count = 0
     print(
-        f"Scraping people_pages starts! Time estimation: {round(DELAY_AFTER_ONE_REQUEST / 2 * total_count / 3600 * 1.2, 1)} hours.")
+        f"Scraping people_pages starts! Time estimation: {round(DELAY_AFTER_ONE_REQUEST / 2 * total_count / 3600 * 1.5, 1)} hours.")
 
     while people_link:
         try:

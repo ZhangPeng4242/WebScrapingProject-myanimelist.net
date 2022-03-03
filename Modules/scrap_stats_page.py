@@ -37,26 +37,25 @@ def scrap_stats_page(stats_link):
     sum_stats["anime_id"] = anime_id
 
     # Scrapping score stats
-    score_stats_containers = soup.find('table', {"class": 'score-stats'}).find_all('tr')
-    score_stats = {}
+    score_stats_containers = soup.find('table', {"class": 'score-stats'})
 
-    for stat in score_stats_containers:
-        score = stat.find('td', {"class": "score-label"}).text
-        votes = int(stat.find('small').text[1:-7])
-        score_stats[score] = votes
+    score_stats = {"anime_id":anime_id}|{str(num):None for num in range(10,0,-1)}
 
-    score_stats["anime_id"] = anime_id
-
+    if score_stats_containers:
+        for stat in score_stats_containers.find_all('tr'):
+            score = stat.find('td', {"class": "score-label"}).text
+            votes = int(stat.find('small').text[1:-7])
+            score_stats[score] = votes
     print(f"scrap_stats_page: {stats_link}  Success!")
+
+
     # store data
     return (sum_stats, score_stats)
 
 
 def test():
-    test_pool = ["https://myanimelist.net/anime/47161/Shikkakumon_no_Saikyou_Kenja/stats",
-                 "https://myanimelist.net/anime/44961/Platinum_End/stats",
-                 "https://myanimelist.net/anime/18179/Yowamushi_Pedal/stats",
-                 "https://myanimelist.net/anime/37987/Violet_Evergarden_Movie/stats"]
+    test_pool = [
+                 "https://myanimelist.net/anime/19815/No_Game_No_Life/stats"]
 
     print(scrap_stats_page(random.choice(test_pool)))
 
