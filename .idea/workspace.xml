@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dab77dd-98be-433c-bb57-5b4e5174e107" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="8dab77dd-98be-433c-bb57-5b4e5174e107" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/scraping_src_directory/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_src_directory/get_rand_proxy_headers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_src_directory/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_src_directory/scrap_anime_list_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_src_directory/scrap_anime_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_src_directory/scrap_people_list_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_src_directory/scrap_people_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_src_directory/scrap_stats_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_src_directory/store_anime_page_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_src_directory/store_people_page_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_src_directory/store_stats_page_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_test_directory/test_get_rand_proxy_headers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_test_directory/test_pool.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_test_directory/test_scrap_anime_list_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_test_directory/test_scrap_anime_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_test_directory/test_scrap_people_list_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_test_directory/test_scrap_people_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_test_directory/test_scrap_stats_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_test_directory/test_store_anime_page_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_test_directory/test_store_peple_page_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_test_directory/test_store_stats_page_data.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,18 +44,6 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/scrape_main_page.py" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.scrape_main_page">
     <configuration name="first" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -118,5 +127,16 @@
       <updated>1645194959701</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
