@@ -4,16 +4,16 @@ from src_files.scraping_src_directory.record_exists_check import is_exist, is_ex
 import pandas as pd
 
 
-
 def update_table(df, crit_name, db_name, double=False, insert_only=False):
     db_name = f"`{db_name}`" if db_name == 'character' else db_name
+    # print(df)
     for indx, row in df.iterrows():
-
+        # print(db_name)
         exists = is_exist(crit_name, row[crit_name], db_name) if not double else is_exist_double(
             (crit_name[0], row[crit_name[0]]), (crit_name[1], row[crit_name[1]]), db_name)
         if exists:
             if insert_only or double:
-                break
+                continue
             if not config.connection.open:
                 config.reconnect()
             with config.connection:

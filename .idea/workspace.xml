@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dab77dd-98be-433c-bb57-5b4e5174e107" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/record_exists_check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/scraping.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scraping.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db_myanimelist.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db_myanimelist.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_files/mysql_db_src_directory/update_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/update_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/reformat.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/reformat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/record_exists_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/record_exists_check.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_people_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_people_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_stats_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_stats_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_studio_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_studio_page.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +55,7 @@
       <recent name="$PROJECT_DIR$/_init_datas_" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.scrap_anime_page">
+  <component name="RunManager" selected="Python.scrap_people_page">
     <configuration name="first" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="web_scraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -86,27 +77,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ITC-DataMining-Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_files/scraping_src_directory" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_files/scraping_src_directory/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ITC-DataMining-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -120,6 +90,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="record_exists_check" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ITC-DataMining-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_files/scraping_src_directory" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_files/scraping_src_directory/record_exists_check.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -239,17 +230,17 @@
       <item itemvalue="Python.test" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.scrap_people_page" />
-      <item itemvalue="Python.main (1)" />
       <item itemvalue="Python.update_db" />
       <item itemvalue="Python.scrap_anime_page" />
+      <item itemvalue="Python.record_exists_check" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.scrap_anime_page" />
         <item itemvalue="Python.scrap_people_page" />
+        <item itemvalue="Python.record_exists_check" />
+        <item itemvalue="Python.scrap_anime_page" />
         <item itemvalue="Python.update_db" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.main (1)" />
       </list>
     </recent_temporary>
   </component>

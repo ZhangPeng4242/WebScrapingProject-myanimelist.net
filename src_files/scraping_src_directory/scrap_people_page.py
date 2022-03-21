@@ -9,7 +9,7 @@ from get_rand_proxy_headers import get_rand_proxy, get_rand_headers
 from src_files.config import config
 import reformat
 from record_exists_check import is_exist
-import scrap_anime_page
+from scrap_anime_page import scrap_anime_page
 from src_files.mysql_db_src_directory.update_db import update_table
 
 
@@ -131,5 +131,4 @@ def scrap_people_page(people_page_link):
     return (people_info_dict, character_info_list, voice_actor_info_list, staff_info_list)
 
 
-result = scrap_people_page("https://myanimelist.net/people/47086/Hinata_Tadokoro")
-
+result = scrap_people_page("https://myanimelist.net/people/51422/Centimillimental")

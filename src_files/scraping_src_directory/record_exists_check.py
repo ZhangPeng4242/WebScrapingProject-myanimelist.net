@@ -1,5 +1,3 @@
-import pandas as pd
-import sqlalchemy
 from src_files.config import config
 
 
@@ -30,7 +28,9 @@ def is_exist_double(crit1, crit2, db_name):
         with connection.cursor() as cursor:
             cursor.execute("USE db_myanimelist")
             cursor.execute(sql)
-            if not int(cursor.fetchall()[0]["result"]):
+            res = cursor.fetchall()[0]["result"]
+            # print(crit1,crit2,res)
+            if not int(res):
                 return False
             else:
                 return True

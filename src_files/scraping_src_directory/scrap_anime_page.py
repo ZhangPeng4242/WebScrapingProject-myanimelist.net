@@ -13,8 +13,6 @@ from scrap_studio_page import scrap_studio_page
 import numpy as np
 import reformat
 import pandas as pd
-from src_files.mysql_db_src_directory.db_info import db_info
-import sqlalchemy
 from record_exists_check import is_exist
 
 
@@ -155,5 +153,5 @@ def scrap_anime_page(anime_page_link):
         formatted_studio_anime_data)
 
 
-result = scrap_anime_page("https://myanimelist.net/anime/43601")
+# result = scrap_anime_page("https://myanimelist.net/anime/43601")
 
