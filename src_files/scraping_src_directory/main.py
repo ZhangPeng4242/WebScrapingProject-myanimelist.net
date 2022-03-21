@@ -10,6 +10,8 @@ from store_stats_page_data import store_stats_page_data
 from store_anime_page_data import store_anime_page_data
 from store_people_page_data import store_people_page_data
 from scrap_anime_list_page import get_anime_links
+from scrap_studio_list_page import scrap_studio_info
+from store_studios_info_data import store_studios_info_data
 import time
 from src_files.config import config
 
@@ -145,7 +147,7 @@ def main_scrap_and_store_anime_stats_pages(anime_links):
             loop = 0
             scrap_count += 1
             config.logger.info(f"scraping_progress: ({scrap_count}/{total_count})")
-            time.sleep(round(random.random() * config.delay_after_a_request , 1))
+            time.sleep(round(random.random() * config.delay_after_a_request, 1))
 
         # in case of an error, it tries running with a different proxy 5 times before giving up and logging the error
         except Exception as err:
@@ -213,28 +215,36 @@ def main_scrap_and_store_people_pages(people_links):
     store_people_page_data(people_page_datas)
 
 
+def main_scrap_and_store_studio_pages():
+    config.logger.info("Start scraping studio pages.")
+
+    studios_info_list = scrap_studio_info()
+    store_studios_info_data(studios_info_list)
+
+
 def main():
     """
     creates the data directory to hold all files (if it doesn't exist).
     uses all previous functons to scrap and store all data
     :return:
     """
-    # Step 1: get and store all the anime links
-    anime_links = main_get_and_store_anime_links()
+    # # Step 1: get and store all the anime links
+    # anime_links = main_get_and_store_anime_links()
+    #
+    # # Step 2: scrap and store all the anime pages data
+    # main_scrap_and_store_anime_pages(anime_links)
+    #
+    # # Step 3: scrap and store all the anime stats pages data
+    # main_scrap_and_store_anime_stats_pages(anime_links)
+    #
+    # # Step 4: get and store all the people links
+    # people_links = main_get_and_store_people_links()
+    #
+    # # Step 5: scrap and store all the people pages data
+    # main_scrap_and_store_people_pages(people_links)
+    # main_scrap_and_store_studio_pages()
 
-    # Step 2: scrap and store all the anime pages data
-    main_scrap_and_store_anime_pages(anime_links)
-
-    # Step 3: scrap and store all the anime stats pages data
-    main_scrap_and_store_anime_stats_pages(anime_links)
-
-    # Step 4: get and store all the people links
-    people_links = main_get_and_store_people_links()
-
-    # Step 5: scrap and store all the people pages data
-    main_scrap_and_store_people_pages(people_links)
-
-    config.logger("Successfully finished all the scraping!!! Good job!")
+    # config.logger("Successfully finished all the scraping!!! Good job!")
 
 
 if __name__ == "__main__":

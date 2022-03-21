@@ -4,7 +4,7 @@ we test the scrap_anime_list_page library
 import sys
 import os
 from pathlib2 import Path
-src_path = Path(os.getcwd()).parent / "scraping_src_directory"
+src_path = Path(os.getcwd()) / "scraping_src_directory"
 sys.path.append(str(src_path))
 from scrap_anime_list_page import get_anime_links
 

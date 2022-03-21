@@ -3,56 +3,84 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="/_init_datas_/1_anime_info.csv">
+        <entry key="/_init_datas_/anime.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/_init_datas_/1_anime_info_test.csv">
+        <entry key="/_init_datas_/anime_character.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/_init_datas_/1_anime_site_stats.csv">
+        <entry key="/_init_datas_/anime_general_stats.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/_init_datas_/1_anime_site_stats_test.csv">
+        <entry key="/_init_datas_/anime_genre.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/_init_datas_/2_anime_score_stats.csv">
+        <entry key="/_init_datas_/anime_watch_stats.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/_init_datas_/2_anime_watch_stats.csv">
+        <entry key="/_init_datas_/character.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/_init_datas_/3_staff_info.csv">
+        <entry key="/_init_datas_/genre.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/_init_datas_/3_voice_actors_info.csv">
+        <entry key="/_init_datas_/people.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/_init_datas_/staff.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/_init_datas_/studio.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/_init_datas_/studio_anime.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/_init_datas_/voice_actor.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

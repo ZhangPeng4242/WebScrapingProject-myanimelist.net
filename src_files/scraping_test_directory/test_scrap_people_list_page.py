@@ -4,7 +4,7 @@ we test the scrap_people_list_page library
 import sys
 import os
 from pathlib2 import Path
-src_path = Path(os.getcwd()).parent / "scraping_src_directory"
+src_path = Path(os.getcwd()) / "scraping_src_directory"
 sys.path.append(str(src_path))
 import scrap_people_list_page as scr
 

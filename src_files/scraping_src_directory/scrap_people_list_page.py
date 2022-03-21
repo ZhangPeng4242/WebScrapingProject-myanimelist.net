@@ -22,7 +22,7 @@ def get_people_links(_crit=math.inf):
     limit = 0
     loop = 0
     while limit < _crit:
-        people_search_link = "https://myanimelist.net/people.php?limit={limit * 50}"
+        people_search_link = f"https://myanimelist.net/people.php?limit={limit * 50}"
         with requests.Session() as res:
             # requests page content using random proxy and header
             while True:
@@ -44,8 +44,9 @@ def get_people_links(_crit=math.inf):
             if loop > 3:
                 break
             loop += 1
-            config.logger.error(f"scrap_people_list_page: Failed attempt {loop}, rescraping... {people_search_link}.")
-            time.sleep(10)
+            config.logger.info(
+                f"scrap_people_list_page: Search end check, attempt: {loop}, rescraping... {people_search_link}.")
+            time.sleep(5)
             continue
 
         # reaching here means we are scraping a true people list page, and can start getting our main anime page links.

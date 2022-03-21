@@ -5,9 +5,8 @@ from .pool_for_test import test_pool
 import sys
 import os
 from pathlib2 import Path
-import pytest
 
-src_path = Path(os.getcwd()).parent / "scraping_src_directory"
+src_path = Path(os.getcwd()) / "scraping_src_directory"
 sys.path.append(str(src_path))
 from get_rand_proxy_headers import get_rand_proxy, get_rand_headers
 import requests

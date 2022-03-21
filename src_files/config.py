@@ -2,6 +2,8 @@ import logging
 import os
 import sys
 from pathlib2 import Path
+import pymysql
+from pymysql import cursors
 
 
 class Configuration:
@@ -12,6 +14,18 @@ class Configuration:
         self.proxy_change_delay = config_dict['proxy_change_delay']
         self.rescrap_delay = config_dict['rescrap_delay']
         self.mysql_connection = config_dict['mysql_connection']
+        self.connection = self._get_connection()
+
+    def _get_connection(self):
+        return pymysql.connect(host=self.mysql_connection["host"], user=self.mysql_connection["user"],
+                               password=self.mysql_connection["password"],
+                               cursorclass=pymysql.cursors.DictCursor)
+
+    def is_connected(self):
+        return self.connection.open
+
+    def reconnect(self):
+        self.connection = self._get_connection()
 
 
 def get_datas_dir():
@@ -20,11 +34,13 @@ def get_datas_dir():
         os.mkdir(datas_dir)
     return datas_dir
 
+
 def get_logs_dir():
     logs_dir = Path(os.getcwd()).parent.parent / "logs"
     if not Path(logs_dir).exists():
         os.mkdir(logs_dir)
     return logs_dir
+
 
 def get_logger():
     logger = logging.getLogger("web_scraping")

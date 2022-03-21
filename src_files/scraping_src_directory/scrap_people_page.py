@@ -7,10 +7,13 @@ import requests
 from bs4 import BeautifulSoup
 from get_rand_proxy_headers import get_rand_proxy, get_rand_headers
 from src_files.config import config
-
+import reformat
+from src_files.mysql_db_src_directory.update_db import update_people_page_data
 
 def scrap_people_page(people_page_link):
     """
+    [people],[character],[staff],[voice_actor],["anime_character"]
+
     This function scraps all the information we need from the main page of a person in the anime industry.
     it returns four dictionaries which will later be inserted into the following Datasets:
     people_info_dict: contains people_id, people_full_name, birthday, member_favorites and people_img_url
@@ -46,14 +49,14 @@ def scrap_people_page(people_page_link):
     ######Get people_info_dict####
 
     # get people id:
-    people_id = soup.find('input', attrs={'name': 'vaid'})['value']
+    people_id = int(soup.find('input', attrs={'name': 'vaid'})['value'])
     # get name:
     people_fullname = soup.find('h1', class_='title-name').text.replace(",", "")
     # get birthday:
     birthday = soup.find('span', text='Birthday:').parent.text.replace('Birthday: ', '')
     # get member favorites:
-    member_favorites = soup.find('span', text='Member Favorites:').parent.text.replace('Member Favorites: ',
-                                                                                       '').replace(',', "")
+    member_favorites = int(soup.find('span', text='Member Favorites:').parent.text.replace('Member Favorites: ',
+                                                                                       '').replace(',', ""))
     # get people img url
     people_img_url = soup.find('img', {'data-src': re.compile("https://cdn.myanimelist.net/images")})
 
@@ -70,13 +73,13 @@ def scrap_people_page(people_page_link):
     voice_acting_tags_list = soup.find_all('tr', class_='js-people-character')
     for voice_acting_tag in voice_acting_tags_list:
         anime_url = voice_acting_tag.find('a', {"href": re.compile(anime_url_reg_pattern)})
-        anime_id = re.search(anime_url_reg_pattern, anime_url['href']).group()
+        anime_id = int(re.search(anime_url_reg_pattern, anime_url['href']).group())
 
         character_url = voice_acting_tag.find('a', {"href": re.compile(character_url_reg_pattern)})
-        character_id = re.search(character_url_reg_pattern, character_url['href']).group()
+        character_id = int(re.search(character_url_reg_pattern, character_url['href']).group())
         character_fullname = character_url.text.replace(",", "")
         character_role = character_url.parent.find_next_sibling("div").text.strip()
-        character_favorites = character_url.parent.find_next_sibling("small").text.strip()
+        character_favorites = int(character_url.parent.find_next_sibling("small").text.strip())
         character_img_url = character_url.parent.find_next("img")
 
         voice_actor_info_dict = {"character_id": character_id, "people_id": people_id}
@@ -99,5 +102,20 @@ def scrap_people_page(people_page_link):
         staff_info_dict = {"anime_id": anime_id, "people_id": people_id, "staff_role": staff_role}
         staff_info_list.append(staff_info_dict)
 
+    formatted_people_data = reformat.format_people_data(people_info_dict)
+    formatted_character_data = reformat.format_character_data(character_info_list)
+    formatted_staff_data = reformat.format_staff_data(staff_info_list)
+    # formatted_voice_actor_data = reformat.format_voice_actor_data(voice_actor_info_list)
+    # formatted_anime_character_data = reformat.format_anime_character_data(character_info_list)
+
+    update_people_page_data(formatted_people_data,formatted_character_data, formatted_staff_data)
+
+
     config.logger.info(f"scrap_people_page: Success! {people_page_link}")
     return (people_info_dict, character_info_list, voice_actor_info_list, staff_info_list)
+
+
+result = scrap_people_page("https://myanimelist.net/people/21971/Daiki_Yamashita")
+
+for i in range(4):
+    print(result[i])
