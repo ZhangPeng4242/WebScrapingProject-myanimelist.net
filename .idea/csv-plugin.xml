@@ -31,6 +31,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/_init_datas_/anime_score_stats.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/_init_datas_/anime_watch_stats.csv">
           <value>
             <Attribute>

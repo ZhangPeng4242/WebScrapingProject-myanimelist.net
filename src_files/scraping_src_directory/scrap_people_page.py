@@ -8,7 +8,10 @@ from bs4 import BeautifulSoup
 from get_rand_proxy_headers import get_rand_proxy, get_rand_headers
 from src_files.config import config
 import reformat
-from src_files.mysql_db_src_directory.update_db import update_people_page_data
+from record_exists_check import is_exist
+import scrap_anime_page
+from src_files.mysql_db_src_directory.update_db import update_table
+
 
 def scrap_people_page(people_page_link):
     """
@@ -56,7 +59,7 @@ def scrap_people_page(people_page_link):
     birthday = soup.find('span', text='Birthday:').parent.text.replace('Birthday: ', '')
     # get member favorites:
     member_favorites = int(soup.find('span', text='Member Favorites:').parent.text.replace('Member Favorites: ',
-                                                                                       '').replace(',', ""))
+                                                                                           '').replace(',', ""))
     # get people img url
     people_img_url = soup.find('img', {'data-src': re.compile("https://cdn.myanimelist.net/images")})
 
@@ -95,27 +98,38 @@ def scrap_people_page(people_page_link):
     staff_info_tags_list = soup.find_all('tr', class_="js-people-staff")
     for staff_info_tag in staff_info_tags_list:
         anime_url = staff_info_tag.find('a', {"href": re.compile(anime_url_reg_pattern)})
-        anime_id = re.search(anime_url_reg_pattern, anime_url['href']).group()
+        anime_id = int(re.search(anime_url_reg_pattern, anime_url['href']).group())
 
         staff_role = staff_info_tag.find('small').text
 
         staff_info_dict = {"anime_id": anime_id, "people_id": people_id, "staff_role": staff_role}
         staff_info_list.append(staff_info_dict)
 
+    # # check recode
+    # for staff in staff_info_list:
+    #     if not is_anime_exist(staff["anime_id"]):
+    #         scrap_anime_page(f"https://myanimelist.net/anime/{staff['anime_id']}")
+
+    for staff in staff_info_list:
+        if not is_exist("id", staff["anime_id"], "anime"):
+            scrap_anime_page(f"https://myanimelist.net/anime/{staff['anime_id']}")
+
     formatted_people_data = reformat.format_people_data(people_info_dict)
     formatted_character_data = reformat.format_character_data(character_info_list)
     formatted_staff_data = reformat.format_staff_data(staff_info_list)
-    # formatted_voice_actor_data = reformat.format_voice_actor_data(voice_actor_info_list)
-    # formatted_anime_character_data = reformat.format_anime_character_data(character_info_list)
+    formatted_voice_actor_data = reformat.format_voice_actor_data(voice_actor_info_list)
+    formatted_anime_character_data = reformat.format_anime_character_data(character_info_list)
+    # update_people_page_data(formatted_people_data,formatted_character_data, formatted_staff_data)
 
-    update_people_page_data(formatted_people_data,formatted_character_data, formatted_staff_data)
-
-
+    update_table(formatted_people_data, "id", "people")
+    update_table(formatted_character_data, "id", "`character`")
+    update_table(formatted_staff_data, ("people_id", "anime_id"), "staff", double=True)
+    update_table(formatted_voice_actor_data, ("character_id", "people_id"), "voice_actor", double=True)
+    update_table(formatted_anime_character_data, ("anime_id", "character_id"), "anime_character", double=True)
     config.logger.info(f"scrap_people_page: Success! {people_page_link}")
+
     return (people_info_dict, character_info_list, voice_actor_info_list, staff_info_list)
 
 
-result = scrap_people_page("https://myanimelist.net/people/21971/Daiki_Yamashita")
+result = scrap_people_page("https://myanimelist.net/people/47086/Hinata_Tadokoro")
 
-for i in range(4):
-    print(result[i])

@@ -5,6 +5,7 @@ from get_rand_proxy_headers import get_rand_headers, get_rand_proxy
 import time
 from src_files.config import config
 import reformat
+from src_files.mysql_db_src_directory.update_db import update_table
 
 
 def scrap_studio_page(studio_link):
@@ -24,9 +25,11 @@ def scrap_studio_page(studio_link):
     studio_info["studio_id"] = int(re.findall("(?<=https://myanimelist.net/anime/producer/)[0-9]*", studio_link)[0])
     studio_info["studio_name"] = soup.find('h1', class_='h1').text
     studio_info["rank"] = None
-    studio_info["studio_favorites"] = int(soup.find('span', string="Member Favorites:").parent.text.split(": ")[1].strip().replace(",",""))
-    studio_info["studio_img_url"] = soup.find('img',{"data-src": re.compile("https://cdn.myanimelist.net/img")})['data-src']
+    studio_info["studio_favorites"] = int(
+        soup.find('span', string="Member Favorites:").parent.text.split(": ")[1].strip().replace(",", ""))
+    studio_info["studio_img_url"] = soup.find('img', {"data-src": re.compile("https://cdn.myanimelist.net/img")})[
+        'data-src']
 
     formatted_studio_data = reformat.format_studio_data([studio_info])
+    update_table(formatted_studio_data, "id", "studio")
     return formatted_studio_data
-

@@ -7,7 +7,7 @@ from get_rand_proxy_headers import get_rand_headers, get_rand_proxy
 import time
 from src_files.config import config
 import reformat
-from src_files.mysql_db_src_directory.update_db import update_anime_stats_page_data
+from src_files.mysql_db_src_directory.update_db import update_table
 
 SUM_STATS_CONTAINERS_COUNT = 6
 
@@ -64,8 +64,8 @@ def scrap_stats_page(stats_link):
 
     formatted_anime_watch_stats_data = reformat.format_anime_watch_stats_data(watch_stats)
     formatted_anime_score_stats_data = reformat.format_anime_score_stats_data(score_stats)
-
-    update_anime_stats_page_data(formatted_anime_watch_stats_data, formatted_anime_score_stats_data)
+    update_table(formatted_anime_watch_stats_data, "anime_id", "anime_watch_stats")
+    update_table(formatted_anime_score_stats_data, "anime_id", "anime_score_stats")
 
     config.logger.info(f"scrap_anime_stats_page: Success! {stats_link}")
     return (formatted_anime_watch_stats_data, formatted_anime_score_stats_data)

@@ -2,47 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dab77dd-98be-433c-bb57-5b4e5174e107" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/db_info.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db_myanimelist.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/sqlqueries.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/update_db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/reformat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_studio_list_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_studio_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/store_studios_info_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/record_exists_check.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/1_alternative_titles.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/1_alternative_titles_test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/1_anime_info.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/1_anime_info_test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/1_anime_site_stats.csv" beforeDir="false" afterPath="$PROJECT_DIR$/_init_datas_/anime_general_stats.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/1_anime_site_stats_test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/2_anime_score_stats.csv" beforeDir="false" afterPath="$PROJECT_DIR$/_init_datas_/anime_score_stats.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/2_anime_watch_stats.csv" beforeDir="false" afterPath="$PROJECT_DIR$/_init_datas_/anime_watch_stats.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/3_anime_characters_info.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/3_people_info.csv" beforeDir="false" afterPath="$PROJECT_DIR$/_init_datas_/people.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/3_staff_info.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/3_voice_actors_info.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/scraping.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scraping.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_files/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/mysql_db_src_directory/myanimelist_init_db.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db_myanimelist.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db_myanimelist.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_files/mysql_db_src_directory/update_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/update_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/reformat.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/reformat.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_people_list_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_people_list_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_people_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_people_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_stats_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_stats_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_get_rand_proxy_headers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_test_directory/test_get_rand_proxy_headers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_scrap_anime_list_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_test_directory/test_scrap_anime_list_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_scrap_anime_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_test_directory/test_scrap_anime_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_scrap_people_list_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_test_directory/test_scrap_people_list_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_scrap_people_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_test_directory/test_scrap_people_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_scrap_stats_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_test_directory/test_scrap_stats_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_store_anime_page_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_test_directory/test_store_anime_page_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_store_peple_page_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_test_directory/test_store_peple_page_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_store_stats_page_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_test_directory/test_store_stats_page_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_studio_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_studio_page.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,16 +54,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="exceleditor.install" value="true" />
+    <property name="exceleditor.install" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/scrape_main_page.py" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src_files/mysql_db_src_directory" />
+      <recent name="$PROJECT_DIR$/src_files/scraping_src_directory" />
       <recent name="$PROJECT_DIR$/_init_datas_" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.init_db">
+  <component name="RunManager" selected="Python.scrap_anime_page">
     <configuration name="first" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="web_scraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -111,28 +86,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="init_db" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ITC-DataMining-Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_files/mysql_db_src_directory" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="reformat" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ITC-DataMining-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -144,7 +98,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_files/scraping_src_directory/reformat.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_files/scraping_src_directory/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ITC-DataMining-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -195,27 +170,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scrap_stats_page" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ITC-DataMining-Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_files/scraping_src_directory" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_stats_page.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="scrape_main_page" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="web_scraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -258,23 +212,44 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="update_db" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ITC-DataMining-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_files/mysql_db_src_directory" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_files/mysql_db_src_directory/update_db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.first" />
       <item itemvalue="Python.scrape_main_page" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.scrap_anime_page" />
-      <item itemvalue="Python.reformat" />
-      <item itemvalue="Python.scrap_stats_page" />
-      <item itemvalue="Python.init_db" />
+      <item itemvalue="Python.main" />
       <item itemvalue="Python.scrap_people_page" />
+      <item itemvalue="Python.main (1)" />
+      <item itemvalue="Python.update_db" />
+      <item itemvalue="Python.scrap_anime_page" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.init_db" />
-        <item itemvalue="Python.scrap_people_page" />
         <item itemvalue="Python.scrap_anime_page" />
-        <item itemvalue="Python.reformat" />
-        <item itemvalue="Python.scrap_stats_page" />
+        <item itemvalue="Python.scrap_people_page" />
+        <item itemvalue="Python.update_db" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.main (1)" />
       </list>
     </recent_temporary>
   </component>

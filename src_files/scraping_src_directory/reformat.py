@@ -2,11 +2,6 @@ from src_files.mysql_db_src_directory.db_info import db_info
 import pandas as pd
 import numpy as np
 from src_files.config import config
-from pathlib2 import Path
-import sqlalchemy
-from scrap_studio_page import scrap_studio_page
-
-ENGINE = sqlalchemy.create_engine('mysql+pymysql://root:zp2543765@localhost/db_myanimelist?charset=utf8')
 
 
 def make_data_integrity(df, db_name):
@@ -18,7 +13,6 @@ def make_data_integrity(df, db_name):
 
     df = df[db_cols]
     return df
-
 
 def format_anime_general_stats_data(site_stats):
     df_anime_general_stats = pd.DataFrame([site_stats])
@@ -33,19 +27,11 @@ def format_anime_genre_data(anime_page_info):
     if "genres" not in anime_page_info.keys():
         df_anime_genre = make_data_integrity(pd.DataFrame(), "anime_genre")
         return df_anime_genre
-
+    df_genre = pd.read_sql_table("genre", config.engine)
     genre_names = anime_page_info["genres"].split(", ")
-    df_genre = pd.read_sql_table("genre", ENGINE)
     genre_ids = []
-
-    for name in genre_names:
-        if not (df_genre["name"] == name).any():
-            new_record = pd.DataFrame([{"id": len(df_genre["id"].index) + 1, "name": name}])
-            new_record.to_sql('genre', ENGINE, if_exists="append", index=False)
-            df_genre = pd.read_sql_table("genre", ENGINE)
-
-        genre_ids.append(df_genre[df_genre["name"] == name]["id"].values.tolist()[0])
-
+    for g_name in genre_names:
+        genre_ids.append(df_genre[df_genre["name"] == g_name]["id"].values.tolist()[0])
     df_anime_genre = pd.DataFrame(
         [{"anime_id": anime_page_info["id"], "genre_id": int(genre_id)} for genre_id in genre_ids])
     df_anime_genre = make_data_integrity(df_anime_genre, "anime_genre")
@@ -56,13 +42,6 @@ def format_anime_genre_data(anime_page_info):
 
 
 def format_studio_anime_data(anime_page_info):
-    # should check if studio id exists
-    df_studio = pd.read_sql_table('studio', ENGINE)
-    for studio_id in anime_page_info["studios"]:
-        if not (df_studio["id"] == studio_id).any():
-            df_studio = scrap_studio_page(f"https://myanimelist.net/anime/producer/{studio_id}")
-            df_studio.to_sql('studio', ENGINE, if_exists="append", index=False)
-
     df_studio_anime = pd.DataFrame(
         [{"anime_id": anime_page_info["id"], "studio_id": int(studio_id)} for studio_id in anime_page_info["studios"]])
     df_studio_anime = make_data_integrity(df_studio_anime, "studio_anime")
@@ -81,7 +60,7 @@ def format_anime_data(anime_page_info):
     df_anime_page_info["start_air"].replace({np.nan: None}, inplace=True)
     df_anime_page_info["end_air"] = air_date[1]
     df_anime_page_info["end_air"] = df_anime_page_info["end_air"].map(lambda x: pd.to_datetime(x)).astype("object")
-    df_anime_page_info["end_air"].replace({np.nan:None},inplace=True)
+    df_anime_page_info["end_air"].replace({np.nan: None}, inplace=True)
     df_anime_page_info["id"] = df_anime_page_info["id"].astype("int64")
     df_anime = make_data_integrity(df_anime_page_info, "anime")
     # df_anime_page_info = df_anime_page_info[["id", "title", "english_title", "type", "source", "start_air", "end_air", "season_premier", "theme",
@@ -105,11 +84,9 @@ def format_anime_score_stats_data(score_stats):
     return df_anime_score_stats
 
 
-# format_anime_genre_data({"id": "1234", "genres": "Advet"})
-
 def format_people_data(people_info_dict):
     df_people = pd.DataFrame([people_info_dict])
-    df_people.rename(columns={"people_id": "id", "people_fullname": "fullname", "member_favorites": "favorites",
+    df_people.rename(columns={"people_id": "id", "people_fullname": "full_name", "member_favorites": "favorites",
                               "people_img_url": "img_url"}, inplace=True)
     df_people = make_data_integrity(df_people, "people")
     # print(df_people)
@@ -127,11 +104,7 @@ def format_character_data(character_info_list):
 
 
 def format_staff_data(staff_info_list):
-    #should consider if anime not existed
-    df_anime = pd.read_sql_table("anime",ENGINE)
-    for staff in staff_info_list:
-        if not (df_anime["id"]== staff["anime_id"]).any():
-
+    # should consider if anime not existed
     df_staff = pd.DataFrame(staff_info_list)
     df_staff.rename(columns={"staff_role": "role"}, inplace=True)
     df_staff = make_data_integrity(df_staff, "staff")

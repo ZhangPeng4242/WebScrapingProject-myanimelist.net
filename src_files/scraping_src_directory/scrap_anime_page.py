@@ -7,10 +7,15 @@ from bs4 import BeautifulSoup
 import requests
 from get_rand_proxy_headers import get_rand_proxy, get_rand_headers
 from src_files.config import config
-import reformat
-from src_files.mysql_db_src_directory.update_db import update_anime_page_data
+from src_files.mysql_db_src_directory.update_db import update_table
 from scrap_stats_page import scrap_stats_page
+from scrap_studio_page import scrap_studio_page
 import numpy as np
+import reformat
+import pandas as pd
+from src_files.mysql_db_src_directory.db_info import db_info
+import sqlalchemy
+from record_exists_check import is_exist
 
 
 def scrap_anime_page(anime_page_link):
@@ -99,6 +104,30 @@ def scrap_anime_page(anime_page_link):
 
         site_stats[key.lower()] = val.replace(",", "").replace("#", "").strip()
 
+    # #check data integrity
+    # genre_names = anime_page_info["genres"].split(", ")
+    # for g_name in genre_names:
+    #     if not is_genre_exist(g_name):
+    #         new_record = pd.DataFrame([{"id": len(df_genre["id"].index) + 1, "name": g_name}])
+    #         new_record.to_sql('genre', ENGINE, if_exists="append", index=False)
+    #         df_genre = pd.read_sql_table("genre", ENGINE)
+    # for studio_id in anime_page_info["studios"]:
+    #     if not is_studio_exist(studio_id):
+    #         df_studio = scrap_studio_page(f"https://myanimelist.net/anime/producer/{studio_id}")
+    #         df_studio.to_sql('studio', ENGINE, if_exists="append", index=False)
+    #         # todo: change this when updaye scrap studio
+    # checkdata integrity
+    genre_names = anime_page_info["genres"].split(", ") if anime_page_info.get("genres") else ""
+    for g_name in genre_names:
+        if not is_exist('name', g_name, 'genre'):
+            new_record = pd.DataFrame([{"id": len(df_genre["id"].index) + 1, "name": g_name}])
+            new_record.to_sql('genre', config.engine, if_exists="append", index=False)
+            df_genre = pd.read_sql_table("genre", config.engine)
+
+    for studio_id in anime_page_info["studios"]:
+        if not is_exist("id", studio_id, "studio"):
+            scrap_studio_page(f"https://myanimelist.net/anime/producer/{studio_id}")
+
     # Now, we have all the information we need.
     # The next step is to format all the datas into the database format.
 
@@ -106,20 +135,25 @@ def scrap_anime_page(anime_page_link):
     formatted_anime_general_stats_data = reformat.format_anime_general_stats_data(site_stats)
     formatted_anime_genre_data = reformat.format_anime_genre_data(anime_page_info)
     formatted_studio_anime_data = reformat.format_studio_anime_data(anime_page_info)
-    # if not exists then
-    update_anime_page_data(formatted_anime_data, formatted_anime_general_stats_data, formatted_anime_genre_data,
-                           formatted_studio_anime_data)
 
-    config.logger.info(f'scrap_anime_page: Success! {anime_page_link}')
+    update_table(formatted_anime_data, "id", "anime")
 
-    #update stats link as well
-    scrap_stats_page(anime_page_link + '/stats')
+    update_table(formatted_anime_general_stats_data, "anime_id", "anime_general_stats")
+    update_table(formatted_anime_genre_data, "anime_id", "anime_genre", insert_only=True)
+    update_table(formatted_studio_anime_data, "anime_id", "studio_anime", insert_only=True)
+
+    # update_anime_page_data(formatted_anime_data, formatted_anime_general_stats_data, formatted_anime_genre_data,
+    #                        formatted_studio_anime_data)
+
+    # update stats link as well
+    anime_full_link = soup.find('a', string="Details")['href']
+    config.logger.info(f'scrap_anime_page: Success! {anime_full_link}')
+    scrap_stats_page(anime_full_link + '/stats')
 
     return (
         formatted_anime_data, formatted_anime_general_stats_data, formatted_anime_genre_data,
         formatted_studio_anime_data)
 
 
-result = scrap_anime_page("https://myanimelist.net/anime/40834/Ousama_Ranking")
+result = scrap_anime_page("https://myanimelist.net/anime/43601")
 
-# print(result[0])
