@@ -13,17 +13,24 @@ class Configuration:
         self.project_dir = get_project_folder_dir()
         self.datas_dir = config_dict['datas_dir']
         self.logs_dir = config_dict['logs_dir']
-        self.logger = config_dict['logger']
+        self.logger = get_logger()
         self.proxy_change_delay = config_dict['proxy_change_delay']
+        self.delay_after_request = config_dict['delay_after_request']
         self.rescrap_delay = config_dict['rescrap_delay']
         self.mysql_connection = config_dict['mysql_connection']
         self.connection = self._get_connection()
         self.engine = self._get_engine()
 
     def _get_connection(self):
-        return pymysql.connect(host=self.mysql_connection["host"], user=self.mysql_connection["user"],
+        try:
+            return pymysql.connect(host=self.mysql_connection["host"], user=self.mysql_connection["user"],
                                password=self.mysql_connection["password"],
                                cursorclass=pymysql.cursors.DictCursor)
+        except RuntimeError:
+            self.connection = None
+        except pymysql.err.OperationalError:
+            self.connection = None
+
 
     def _get_engine(self):
         return sqlalchemy.create_engine(
@@ -35,24 +42,38 @@ class Configuration:
     def reconnect(self):
         self.connection = self._get_connection()
 
-    def set_sql_connection(self, name, password):
+    def set_sql_connection(self, name, password, host='localhost'):
         self.mysql_connection["user"] = name
         self.mysql_connection["password"] = password
-        self.reconnect()
+        self.mysql_connection["host"] = host
+        try:
+            self.reconnect()
+        except RuntimeError:
+            self.connection = None
+        except pymysql.err.OperationalError:
+                self.connection = None
 
     def get_params(self):
-        config_path = Path(os.getcwd()) / 'config.json'
+        config_path = Path(get_project_folder_dir()) / 'config.json'
         if Path(config_path).exists():
             with open(config_path, "r") as config_file:
                 config_json = json.load(config_file)
             self.datas_dir = config_json["datas_dir"]
             self.logs_dir = config_json["logs_dir"]
+            self.delay_after_request = config_json["delay_after_request"]
             self.proxy_change_delay = config_json['proxy_change_delay']
             self.rescrap_delay = config_json['rescrap_delay']
             self.mysql_connection["user"] = config_json["mysql_connection"]["user"]
             self.mysql_connection["password"] = config_json["mysql_connection"]["password"]
-            self.engine = self._get_engine()
-            self.reconnect()
+            self.mysql_connection["host"] = config_json["mysql_connection"]["host"]
+            try:
+                self.reconnect()
+            except RuntimeError:
+                self.connection = None
+            except pymysql.err.OperationalError:
+                self.connection = None
+
+            self.engine = self._get_engine() if self.connection else None
 
     def get_json(self):
         return {
@@ -79,14 +100,14 @@ def get_datas_dir():
     datas_dir = Path(get_project_folder_dir()) / "_init_datas_"
     if not Path(datas_dir).exists():
         os.mkdir(datas_dir)
-    return datas_dir
+    return str(datas_dir).replace('\\', '/')
 
 
 def get_logs_dir():
     logs_dir = Path(get_project_folder_dir()) / "logs"
     if not Path(logs_dir).exists():
         os.mkdir(logs_dir)
-    return logs_dir
+    return str(logs_dir).replace('\\', '/')
 
 
 def get_logger():
@@ -113,20 +134,20 @@ def get_logger():
 
     return logger
 
-
-config_dict = {
-    "datas_dir": get_datas_dir(),
-    "logs_dir": get_logs_dir(),
-    "logger": get_logger(),
-    "delay_after_a_request": 0,
-    "proxy_change_delay": 2,
-    "rescrap_delay": 5,
-    "mysql_connection": {
-        "host": "127.0.0.1",
-        "user": "root",
-        "password": "zp2543765"
+def create_config_dict(user='user', password='111', host='localhost'):
+    config_dict = {
+        "datas_dir": get_datas_dir(),
+        "logs_dir": get_logs_dir(),
+        "delay_after_request": 0,
+        "proxy_change_delay": 2,
+        "rescrap_delay": 5,
+        "mysql_connection": {
+            "host": host,
+            "user": user,
+            "password": password
+            }
     }
-}
+    return config_dict
 
-config = Configuration(config_dict)
+config = Configuration(create_config_dict())
 config.get_params()

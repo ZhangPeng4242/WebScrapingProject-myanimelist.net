@@ -1,0 +1,1 @@
+{"datas_dir": "C:/Users/user/Desktop/Networks/web_scraper/ITC-DataMining-Project/_init_datas_", "logs_dir": "C:/Users/user/Desktop/Networks/web_scraper/ITC-DataMining-Project/logs", "delay_after_request": 0, "proxy_change_delay": 2, "rescrap_delay": 5, "mysql_connection": {"host": "localhost", "user": "root", "password": "yam100247"}}
