@@ -10,8 +10,8 @@ import sqlalchemy
 
 class Configuration:
     def __init__(self, config_dict):
-        self.project_dir = get_project_folder_dir()
-        self.datas_dir = config_dict['datas_dir']
+        self.project_dir = Path(get_project_folder_dir())
+        self.datas_dir = Path(config_dict['datas_dir'])
         self.logs_dir = config_dict['logs_dir']
         self.logger = get_logger()
         self.proxy_change_delay = config_dict['proxy_change_delay']
