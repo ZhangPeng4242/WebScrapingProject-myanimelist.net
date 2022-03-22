@@ -3,10 +3,10 @@ we create a function that receives a url for an anime stats page in myanimelist 
 """
 import requests
 from bs4 import BeautifulSoup
-from get_rand_proxy_headers import get_rand_headers, get_rand_proxy
+from src_files.scraping_src_directory.get_rand_proxy_headers import get_rand_headers, get_rand_proxy
 import time
 from src_files.config import config
-import reformat
+import src_files.scraping_src_directory.reformat as reformat
 from src_files.mysql_db_src_directory.update_db import update_table
 
 SUM_STATS_CONTAINERS_COUNT = 6

@@ -5,11 +5,11 @@ import re
 import time
 import requests
 from bs4 import BeautifulSoup
-from get_rand_proxy_headers import get_rand_proxy, get_rand_headers
+from src_files.scraping_src_directory.get_rand_proxy_headers import get_rand_proxy, get_rand_headers
 from src_files.config import config
-import reformat
-from record_exists_check import is_exist
-from scrap_anime_page import scrap_anime_page
+import src_files.scraping_src_directory.reformat as reformat
+from src_files.scraping_src_directory.record_exists_check import is_exist
+from src_files.scraping_src_directory.scrap_anime_page import scrap_anime_page
 from src_files.mysql_db_src_directory.update_db import update_table
 
 
@@ -113,6 +113,9 @@ def scrap_people_page(people_page_link):
     for staff in staff_info_list:
         if not is_exist("id", staff["anime_id"], "anime"):
             scrap_anime_page(f"https://myanimelist.net/anime/{staff['anime_id']}")
+    for character in character_info_list:
+        if not is_exist("id", character["anime_id"], "anime"):
+            scrap_anime_page(f"https://myanimelist.net/anime/{character['anime_id']}")
 
     formatted_people_data = reformat.format_people_data(people_info_dict)
     formatted_character_data = reformat.format_character_data(character_info_list)
@@ -131,4 +134,4 @@ def scrap_people_page(people_page_link):
     return (people_info_dict, character_info_list, voice_actor_info_list, staff_info_list)
 
 
-result = scrap_people_page("https://myanimelist.net/people/51422/Centimillimental")
+# result = scrap_people_page("https://myanimelist.net/people/51422/Centimillimental")

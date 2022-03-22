@@ -57,7 +57,7 @@ def get_rand_proxy():
     the file is only created if it didn't exist before running, saving time for multiple uses.
     :return: random.choice(proxies_list): str
     """
-    proxy_dir = config.datas_dir / "proxy_list.txt"
+    proxy_dir = Path(config.datas_dir) / "proxy_list.txt"
 
     if not Path(proxy_dir).exists():
         proxy_webs = ['https://www.sslproxies.org/', 'https://www.us-proxy.org/', 'https://free-proxy-list.net/',

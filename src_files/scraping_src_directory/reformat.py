@@ -14,6 +14,7 @@ def make_data_integrity(df, db_name):
     df = df[db_cols]
     return df
 
+
 def format_anime_general_stats_data(site_stats):
     df_anime_general_stats = pd.DataFrame([site_stats])
     df_anime_general_stats.rename(columns={"id": "anime_id"}, inplace=True)

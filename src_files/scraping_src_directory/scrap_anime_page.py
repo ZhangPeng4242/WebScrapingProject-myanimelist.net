@@ -5,15 +5,15 @@ import re
 import time
 from bs4 import BeautifulSoup
 import requests
-from get_rand_proxy_headers import get_rand_proxy, get_rand_headers
+from src_files.scraping_src_directory.get_rand_proxy_headers import get_rand_proxy, get_rand_headers
 from src_files.config import config
 from src_files.mysql_db_src_directory.update_db import update_table
-from scrap_stats_page import scrap_stats_page
-from scrap_studio_page import scrap_studio_page
+from src_files.scraping_src_directory.scrap_stats_page import scrap_stats_page
+from src_files.scraping_src_directory.scrap_studio_page import scrap_studio_page
 import numpy as np
-import reformat
+import src_files.scraping_src_directory.reformat as reformat
 import pandas as pd
-from record_exists_check import is_exist
+from src_files.scraping_src_directory.record_exists_check import is_exist
 
 
 def scrap_anime_page(anime_page_link):

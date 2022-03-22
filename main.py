@@ -1,9 +1,15 @@
-
 import argparse
 import json
+import logging
+
 import pymysql
-from src_files.config import *
+from src_files.config import config
 from src_files.mysql_db_src_directory.init_db import init_db
+from pathlib2 import Path
+from src_files.argparser_config import get_parser
+from src_files.scraping_src_directory.get_links_by_commands import *
+from src_files.scraping_src_directory.scrap_anime_page import scrap_anime_page
+from src_files.scraping_src_directory.scrap_people_page import scrap_people_page
 
 
 def main():
@@ -11,134 +17,117 @@ def main():
     We wrap our code using argparse and execute it using all the modules we created thus far.
     :return: None
     """
-
-    # create a parser
-    parser = argparse.ArgumentParser(description='welcome to the myanimelist webscarper! '
-                                                 'fisrt choose to either init- for storing the data initially'
-                                                 ' or scrap- to update the existing database.'
-                                                 ' for additional help use -h after init or scarp.'
-                                                 'when first running the program, please choose the init option.')
-
-    # create  subparser to decide if we init- set up the database for the first time or scrap- update the database
-    # based on some property.
-    subparsers = parser.add_subparsers(help='init or scrap', dest='main')
-
-    init_parser = subparsers.add_parser("init", help='run the program for the first time, set up data either locally '
-                                                     'or globally (choose local or remote). after choosing location,'
-                                                     ' provide mysql user and password (and optionally host)'
-                                        , description='init sets up the database and selects wheather to store it '
-                                                       'locally or globaly. after chooseing provide mysql username'
-                                                       ' and password (and optionally host).')
-    scrap_parser = subparsers.add_parser("scrap", help='scrap the web to update data, can choose to partially update'
-                                                       '(choose anime, people, or leave empty to update the whole database). '
-                                         , description='scarp allows the user to update the data either fully or '
-                                                       'partially based on some category. to completely update the data'
-                                                       ' enter the key "all" or simply run without any further keys. '
-                                                       'to update by category look at the list of other optional flags.'
-                                                        )
-
-    init_parser.add_argument('location', help='choose weather to store data locally or remotely'
-                             , choices=['local', 'remote'])
-
-    # add arguments to allow the program to take username and password for mysql account of user
-    # locally or remotely
-
-    init_parser.add_argument('username', type=str, help='username for sql connection')
-    init_parser.add_argument('password', type=str, help='password for sql connection')
-    init_parser.add_argument('--host', type=str, help='host for sql connection', default='localhost')
-
-
-    # create four subparsers to decide what type of info we want to update
-    scrap_subparser = scrap_parser.add_subparsers(help='how to scrap (anime, people, all)', dest='type')
-    anime_parser = scrap_subparser.add_parser('anime', help='updates based on anime info'
-                                              , description='updates based on anime info, '
-                                                            'can add more specific criteria for updates,'
-                                                            ' see full description below. '
-                                                            'if no other criteria specified, updates all anime.')
-    people_parser = scrap_subparser.add_parser('people', help='updates based on people info'
-                                               , description='updates based on people info '
-                                                             'can add more specific criteria for updates,'
-                                                             ' see full description below.'
-                                                             'if no other criteria specified, updates all people.')
-
-    # add arguments to parser to decide on even more specific data to update
-    by_group = anime_parser.add_mutually_exclusive_group()
-    by_group.add_argument("--name", help='scrap by name', type=str)
-    by_group.add_argument("--rank", help='scrap by rank', type=int)
-    by_group.add_argument("--year", help='scrap by year', type=int)
-    by_group.add_argument("--genre", help='scrap by genre', type=str)
-    by_group.add_argument("--studio", help='scrap by studio', type=str)
-
-    by_group = people_parser.add_mutually_exclusive_group()
-    by_group.add_argument("--anime", help='scrap by anime', type=str)
-    by_group.add_argument("--rank", help='scrap by rank', type=int)
-    by_group.add_argument("--name", help='scrap by  name', type=str)
-
+    parser = get_parser()
     args = parser.parse_args()
+    # print(args)
 
     if args.main == 'init':
-        print('init')
+        config.logger.info("Start initiating the project...")
 
-        print(args.username, args.password, args.host)
-        config_dict = create_config_dict(args.username, args.password, args.host)
+        # 1. Setting up config
+        config.set_sql_connection(args.username, args.password, args.host, args.port)
 
-        with open("config.json", "w") as write_file:
-            json.dump(config_dict, write_file)
+        with open(Path(config.project_dir) / "config.json", "w") as write_file:
+            json.dump(config.get_json(), write_file, indent=4)
+        config.logger.info(f"Successfully created config.json at {config.project_dir}/config.json")
         config.get_params()
+
+        # 2. Init Database
+        init_db()
+
         if not config.connection:
-            parser.error('could not log in to mysql with current information')
+            parser.error('Could not log in to mysql with the given parameters. Please confirm and try it again.')
 
-        # init_db()
-
+        config.logger.info(
+            "Congratulations! You have successfully initiated the project. Run it again for other commands.")
         # print(config.connection)
-        if args.location == 'remote':
-            print('remote')
-
-        elif args.location == 'local':
-            print('local')
-
-        else:
-            if not args.help:
-                parser.error('please choose where to store data')
+        # if args.location == 'remote':
+        #     pass
+        #     print('remote')
+        #
+        # elif args.location == 'local':
+        #     pass
+        # print('local')
+        #
+        # else:
+        #     if not args.help:
+        #         parser.error('please choose where to store data')
 
     elif args.main == 'scrap':
-        print('scrap')
+        config.logger.info("Start scraping...")
         if not config.connection:
-            parser.error('please run init first')
+            parser.error(
+                'Please initiate the project first. Using: init local|remote db_username db_password [--host] [--port]')
 
-        if args.type =='anime':
-            print('anime')
-
+        if args.type == 'anime':
+            # print('anime')
             if args.name:
-                print(args.name)
+                anime_link_list = get_anime_link_by_name(args.name)
+                for anime_link in anime_link_list:
+                    scrap_anime_page(anime_link)
             elif args.rank:
-                print(args.rank)
+                anime_link_list = get_anime_link_by_rank(args.rank)
+                for anime_link in anime_link_list:
+                    scrap_anime_page(anime_link)
             elif args.year:
-                print(args.year)
+                anime_link_list = get_anime_link_by_year(args.year)
+                for anime_link in anime_link_list:
+                    scrap_anime_page(anime_link)
             elif args.genre:
-                print(args.genre)
+                anime_link_list = get_anime_link_by_genre(args.genre)
+                for anime_link in anime_link_list:
+                    scrap_anime_page(anime_link)
             elif args.studio:
-                print(args.studio)
+                anime_link_list = get_anime_link_by_studio(args.studio)
+                for anime_link in anime_link_list:
+                    scrap_anime_page(anime_link)
             else:
-                print('all anime')
+                config.logger.warning("Start scraping all anime pages, this process might take over 15 hours to complete.")
+
+                anime_link_list = get_anime_links()
+                for anime_link in anime_link_list:
+                    scrap_anime_page(anime_link)
 
         elif args.type == 'people':
-            print('people')
+            # print('people')
             if args.anime:
-                print(args.anime)
+                people_link_list = get_people_link_by_anime_name(args.anime)
+                for people_link in people_link_list:
+                    scrap_people_page(people_link)
             elif args.name:
-                print(args.name)
+                people_link_list = get_people_link_by_name(args.name)
+                for people_link in people_link_list:
+                    scrap_people_page(people_link)
             elif args.rank:
-                print(args.rank)
+                people_link_list = get_people_link_by_rank(args.rank)
+                for people_link in people_link_list:
+                    scrap_people_page(people_link)
             else:
-                print('all people')
+                config.logger.warning("Start scraping all people pages, this process might take over 12 hours to complete.")
+
+                people_link_list = get_people_links()
+                for people_link in people_link_list:
+                    scrap_people_page(people_link)
 
         else:
-            print('all')
+            config.logger.warning("Start scraping all the pages, this process might take over 30 hours to complete.")
+
+            anime_link_list = get_anime_links()
+            for anime_link in anime_link_list:
+                scrap_anime_page(anime_link)
+            people_link_list = get_people_links()
+            for people_link in people_link_list:
+                scrap_people_page(people_link)
 
     else:
         parser.error('please choose scrap or init (choose init if this is your first time running)')
 
 
 if __name__ == "__main__":
+    try:
         main()
+        config.logger.info(
+            "You have successfully scrap and updated everything! Run the program again for another action.")
+    except KeyboardInterrupt:
+        config.logger.warning(
+            "You have manually stopped the program, all the scrapping process conducted has been updated in the database.")

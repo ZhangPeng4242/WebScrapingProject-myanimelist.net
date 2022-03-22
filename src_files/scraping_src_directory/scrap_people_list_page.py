@@ -5,7 +5,7 @@ import math
 import time
 from bs4 import BeautifulSoup
 import requests
-from get_rand_proxy_headers import get_rand_headers, get_rand_proxy
+from src_files.scraping_src_directory.get_rand_proxy_headers import get_rand_headers, get_rand_proxy
 from src_files.config import config
 
 
