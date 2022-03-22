@@ -71,6 +71,8 @@ def get_anime_link_by_year(year):
 # print(get_anime_link_by_year(1998))
 
 def get_anime_by_rank(rank):
+    if rank < 0 :
+        return []
     anime_link_list = []
     limit = 0
     _crit = 1 + rank // 50
@@ -121,7 +123,11 @@ def get_anime_by_genre(genre):
     # genre_link = genre_links_dict[genre]
 
     df = pd.read_sql_table("genre", config.engine)
-    genre_id = list(df[df['name'] == genre]['id'])[0]
+    id_list = list(df[df['name'] == genre]['id'])
+    if id_list:
+        genre_id = id_list[0]
+    else:
+        return []
     df = pd.read_sql_table("anime_genre", config.engine)
     genre_links = [f'https://myanimelist.net/anime/{id}' for id in  df[df['genre_id'] == genre_id]['anime_id']]
     return genre_links
@@ -129,9 +135,12 @@ def get_anime_by_genre(genre):
 
 def get_anime_by_studio(studio):
     df = pd.read_sql_table("studio", config.engine)
-    studio_id = list(df[df['name'] == studio]['id'])[0]
+    id_list = list(df[df['name'] == studio]['id'])
+    if id_list:
+        studio_id = id_list[0]
+    else:
+        return []
     df = pd.read_sql_table("studio_anime", config.engine)
     studio_links = [f'https://myanimelist.net/anime/{id}' for id in df[df['studio_id'] == studio_id]['anime_id']]
     return studio_links
 
-print(get_anime_by_studio('A-1 Pictures'))
