@@ -59,11 +59,11 @@ Partial Explanations(table - column):
 Below is a summary map of how to use the commands. The commands will be updated as we will add more functions and
 features to this program.\
 \
-![img.png](_init_datas_/img.png)
+![commands_map](_init_datas_/img1.png)
 
 ### First Positional Argument:
 
-For now, there are two possible choices for the first positional argument:
+For now, there are two possible choicesgt for the first positional argument:
 
 - **init** - This argument is used to set up the configuration and database either loacally or remotely(currently
   unavailabe). note: **When running main for the first time this argument must be used** also note that while running
