@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dab77dd-98be-433c-bb57-5b4e5174e107" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_init_datas_/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_init_datas_/img2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_init_datas_/myanimelist_db_eer_diagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_files/argparser_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/store_db_to_csv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/scraping.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scraping.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/get_links.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/get_links_by_commands.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/Untitled.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/get_rand_proxy_headers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/get_rand_proxy_headers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/(not using)main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/record_exists_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/record_exists_check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/reformat.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/reformat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_list_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_list_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_people_list_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_people_list_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_people_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_people_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_stats_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_stats_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_studio_list_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_studio_list_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_studio_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_studio_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/store_anime_page_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/(not using)store_anime_page_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/store_people_page_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/(not using)store_people_page_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/store_stats_page_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/(not using)store_stats_page_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/store_studios_info_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/(not using)store_studios_info_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webscraper_readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/webscraper_readme.md" afterDir="false" />
-    </list>
+    <list default="true" id="8dab77dd-98be-433c-bb57-5b4e5174e107" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
