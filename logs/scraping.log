@@ -151,3 +151,231 @@
 2022-03-24 12:12:36,814 INFO: Database update success! Table: anime_score_stats, ID: 48583
 2022-03-24 12:12:36,815 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2/stats
 2022-03-24 12:12:36,815 INFO: You have successfully scrap and updated everything! Run the program again for another action.
+2022-03-24 15:11:37,645 INFO: Start scraping...
+2022-03-24 15:11:37,646 INFO: Start scraping anime links: attack on titans
+2022-03-24 15:11:57,507 INFO: Start scraping...
+2022-03-24 15:11:57,508 INFO: Start scraping anime links: attack on titans
+2022-03-24 15:12:05,989 INFO: Start scraping...
+2022-03-24 15:12:05,989 INFO: Start scraping anime links: attack on titan
+2022-03-24 15:12:41,431 INFO: Start scraping...
+2022-03-24 15:12:41,432 INFO: Start scraping anime links: attack on titan
+2022-03-24 15:13:29,880 INFO: Start scraping...
+2022-03-24 15:13:29,882 INFO: Start scraping anime links: attack on titan
+2022-03-24 15:15:13,157 INFO: Start scraping...
+2022-03-24 15:15:13,158 INFO: Start scraping anime links: attack on titan
+2022-03-24 15:15:29,913 INFO: Start scraping...
+2022-03-24 15:15:29,913 INFO: Start scraping top 5 anime links...
+2022-03-24 15:15:31,034 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-03-24 15:15:31,035 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-03-24 15:15:31,035 INFO: Successfully retreived all the top 5 anime links.
+2022-03-24 15:15:32,869 INFO: Database update success! Table: anime, ID: 5114
+2022-03-24 15:15:32,907 INFO: Database update success! Table: anime_general_stats, ID: 5114
+2022-03-24 15:15:32,947 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-03-24 15:15:33,520 INFO: Database insert new record! Table: anime_watch_stats, ID: 5114
+2022-03-24 15:15:33,533 INFO: Database insert new record! Table: anime_score_stats, ID: 5114
+2022-03-24 15:15:33,533 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood/stats
+2022-03-24 15:15:35,245 INFO: Database update success! Table: anime, ID: 28977
+2022-03-24 15:15:35,284 INFO: Database update success! Table: anime_general_stats, ID: 28977
+2022-03-24 15:15:35,309 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/28977/Gintama°
+2022-03-24 15:15:38,538 INFO: Database update success! Table: anime_watch_stats, ID: 28977
+2022-03-24 15:15:38,548 INFO: Database update success! Table: anime_score_stats, ID: 28977
+2022-03-24 15:15:38,549 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/28977/Gintama°/stats
+2022-03-24 15:15:39,631 INFO: Database update success! Table: anime, ID: 9253
+2022-03-24 15:15:39,640 INFO: Database update success! Table: anime_general_stats, ID: 9253
+2022-03-24 15:15:39,655 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/9253/Steins_Gate
+2022-03-24 15:15:42,314 INFO: Database update success! Table: anime_watch_stats, ID: 9253
+2022-03-24 15:15:42,333 INFO: Database update success! Table: anime_score_stats, ID: 9253
+2022-03-24 15:15:42,333 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/9253/Steins_Gate/stats
+2022-03-24 15:15:43,465 INFO: Database update success! Table: anime, ID: 38524
+2022-03-24 15:15:43,479 INFO: Database update success! Table: anime_general_stats, ID: 38524
+2022-03-24 15:15:43,505 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
+2022-03-24 15:15:46,738 INFO: Database update success! Table: anime_watch_stats, ID: 38524
+2022-03-24 15:15:46,750 INFO: Database update success! Table: anime_score_stats, ID: 38524
+2022-03-24 15:15:46,750 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2/stats
+2022-03-24 15:15:47,953 INFO: Database update success! Table: anime, ID: 48583
+2022-03-24 15:15:47,964 INFO: Database update success! Table: anime_general_stats, ID: 48583
+2022-03-24 15:15:48,013 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2
+2022-03-24 15:15:49,195 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-03-24 15:15:51,933 INFO: Start scraping...
+2022-03-24 15:15:51,933 INFO: Start scraping anime links: attack on titans
+2022-03-24 15:16:34,005 INFO: Start scraping...
+2022-03-24 15:16:34,005 INFO: Start scraping anime links: attack on titans
+2022-03-24 15:16:47,875 INFO: Start scraping...
+2022-03-24 15:16:47,875 INFO: Start scraping anime links: attack on titans
+2022-03-24 15:17:47,348 INFO: Start scraping...
+2022-03-24 15:17:47,349 INFO: Start scraping anime links: attack on titans
+2022-03-24 15:17:56,511 INFO: Successfully retreived all attack on titans links, total number: 0
+2022-03-24 15:17:56,515 INFO: You have successfully scrap and updated everything! Run the program again for another action.
+2022-03-24 15:18:28,605 INFO: Start scraping...
+2022-03-24 15:18:28,608 INFO: Start scraping anime links: attack on titans
+2022-03-24 15:18:35,524 INFO: Successfully retreived all attack on titans links, total number: 0
+2022-03-24 15:18:35,553 INFO: You have successfully scrap and updated everything! Run the program again for another action.
+2022-03-24 15:29:24,080 INFO: Start scraping...
+2022-03-24 15:29:24,083 INFO: Start scraping people links that has participated in attack on titans
+2022-03-24 15:29:24,118 WARNING: Anime name not found, please input a valid full name!
+2022-03-24 15:29:24,118 INFO: You have successfully scrap and updated everything! Run the program again for another action.
+2022-03-24 15:29:40,644 INFO: Start scraping...
+2022-03-24 15:29:40,645 INFO: Start scraping people links that has participated in Attack on Titans
+2022-03-24 15:29:40,659 WARNING: Anime name not found, please input a valid full name!
+2022-03-24 15:29:40,659 INFO: You have successfully scrap and updated everything! Run the program again for another action.
+2022-03-24 15:30:16,309 INFO: Start scraping...
+2022-03-24 15:30:16,310 INFO: Start scraping people links that has participated in The Promised Neverland
+2022-03-24 15:30:16,572 INFO: Successfully retreived all the people links that has participated in The Promised Neverland. Total number: 69
+2022-03-24 15:30:18,129 INFO: Database update success! Table: people, ID: 6759
+2022-03-24 15:30:18,343 INFO: scrap_people_page: Success! https://myanimelist.net/people/6759
+2022-03-24 15:30:49,923 INFO: Start scraping...
+2022-03-24 15:30:49,924 INFO: Start scraping people links that has participated in The Promised Neverland
+2022-03-24 15:30:49,962 INFO: Successfully retreived all the people links that has participated in The Promised Neverland. Total number: 69
+2022-03-24 15:30:51,738 INFO: Database update success! Table: people, ID: 6759
+2022-03-24 15:30:51,831 INFO: scrap_people_page: Success! https://myanimelist.net/people/6759
+2022-03-24 15:30:52,769 INFO: Database update success! Table: people, ID: 30777
+2022-03-24 15:30:52,772 INFO: scrap_people_page: Success! https://myanimelist.net/people/30777
+2022-03-24 15:30:53,986 INFO: Database update success! Table: people, ID: 39065
+2022-03-24 15:30:54,064 INFO: scrap_people_page: Success! https://myanimelist.net/people/39065
+2022-03-24 15:30:54,935 INFO: Database update success! Table: people, ID: 6608
+2022-03-24 15:30:54,974 INFO: scrap_people_page: Success! https://myanimelist.net/people/6608
+2022-03-24 15:30:55,530 INFO: Database update success! Table: people, ID: 51059
+2022-03-24 15:30:55,575 INFO: scrap_people_page: Success! https://myanimelist.net/people/51059
+2022-03-24 15:30:56,303 INFO: Database update success! Table: people, ID: 48115
+2022-03-24 15:30:56,343 INFO: scrap_people_page: Success! https://myanimelist.net/people/48115
+2022-03-24 15:30:57,521 INFO: Database update success! Table: people, ID: 48132
+2022-03-24 15:30:57,541 INFO: scrap_people_page: Success! https://myanimelist.net/people/48132
+2022-03-24 15:30:59,005 INFO: Database update success! Table: people, ID: 281
+2022-03-24 15:30:59,013 INFO: Database update success! Table: `character`, ID: 199610
+2022-03-24 15:30:59,018 INFO: Database update success! Table: `character`, ID: 172024
+2022-03-24 15:30:59,024 INFO: Database update success! Table: `character`, ID: 161152
+2022-03-24 15:30:59,029 INFO: Database update success! Table: `character`, ID: 161489
+2022-03-24 15:30:59,033 INFO: Database update success! Table: `character`, ID: 161152
+2022-03-24 15:30:59,041 INFO: Database update success! Table: `character`, ID: 424
+2022-03-24 15:30:59,047 INFO: Database update success! Table: `character`, ID: 150926
+2022-03-24 15:30:59,057 INFO: Database update success! Table: `character`, ID: 19089
+2022-03-24 15:30:59,063 INFO: Database update success! Table: `character`, ID: 132557
+2022-03-24 15:30:59,066 INFO: Database update success! Table: `character`, ID: 424
+2022-03-24 15:30:59,070 INFO: Database update success! Table: `character`, ID: 140226
+2022-03-24 15:30:59,074 INFO: Database update success! Table: `character`, ID: 9465
+2022-03-24 15:30:59,077 INFO: Database update success! Table: `character`, ID: 84931
+2022-03-24 15:30:59,080 INFO: Database update success! Table: `character`, ID: 7230
+2022-03-24 15:30:59,084 INFO: Database update success! Table: `character`, ID: 132557
+2022-03-24 15:30:59,088 INFO: Database update success! Table: `character`, ID: 96715
+2022-03-24 15:30:59,091 INFO: Database update success! Table: `character`, ID: 84931
+2022-03-24 15:30:59,096 INFO: Database update success! Table: `character`, ID: 87691
+2022-03-24 15:30:59,100 INFO: Database update success! Table: `character`, ID: 96715
+2022-03-24 15:30:59,103 INFO: Database update success! Table: `character`, ID: 8882
+2022-03-24 15:30:59,107 INFO: Database update success! Table: `character`, ID: 101853
+2022-03-24 15:30:59,110 INFO: Database update success! Table: `character`, ID: 87691
+2022-03-24 15:30:59,115 INFO: Database update success! Table: `character`, ID: 96715
+2022-03-24 15:30:59,121 INFO: Database update success! Table: `character`, ID: 1694
+2022-03-24 15:30:59,124 INFO: Database update success! Table: `character`, ID: 1694
+2022-03-24 15:30:59,128 INFO: Database update success! Table: `character`, ID: 1694
+2022-03-24 15:30:59,131 INFO: Database update success! Table: `character`, ID: 31465
+2022-03-24 15:30:59,135 INFO: Database update success! Table: `character`, ID: 31017
+2022-03-24 15:30:59,140 INFO: Database update success! Table: `character`, ID: 43368
+2022-03-24 15:30:59,144 INFO: Database update success! Table: `character`, ID: 245
+2022-03-24 15:30:59,148 INFO: Database update success! Table: `character`, ID: 1694
+2022-03-24 15:30:59,152 INFO: Database update success! Table: `character`, ID: 31429
+2022-03-24 15:30:59,155 INFO: Database update success! Table: `character`, ID: 31017
+2022-03-24 15:30:59,157 INFO: Database update success! Table: `character`, ID: 9465
+2022-03-24 15:30:59,160 INFO: Database update success! Table: `character`, ID: 1694
+2022-03-24 15:30:59,164 INFO: Database update success! Table: `character`, ID: 9061
+2022-03-24 15:30:59,168 INFO: Database update success! Table: `character`, ID: 2926
+2022-03-24 15:30:59,171 INFO: Database update success! Table: `character`, ID: 245
+2022-03-24 15:30:59,176 INFO: Database update success! Table: `character`, ID: 1095
+2022-03-24 15:30:59,180 INFO: Database update success! Table: `character`, ID: 3595
+2022-03-24 15:30:59,183 INFO: Database update success! Table: `character`, ID: 1694
+2022-03-24 15:30:59,186 INFO: Database update success! Table: `character`, ID: 3595
+2022-03-24 15:30:59,190 INFO: Database update success! Table: `character`, ID: 14591
+2022-03-24 15:30:59,193 INFO: Database update success! Table: `character`, ID: 1188
+2022-03-24 15:30:59,196 INFO: Database update success! Table: `character`, ID: 245
+2022-03-24 15:30:59,199 INFO: Database update success! Table: `character`, ID: 1095
+2022-03-24 15:30:59,202 INFO: Database update success! Table: `character`, ID: 1694
+2022-03-24 15:30:59,206 INFO: Database update success! Table: `character`, ID: 2689
+2022-03-24 15:30:59,210 INFO: Database update success! Table: `character`, ID: 3430
+2022-03-24 15:30:59,214 INFO: Database update success! Table: `character`, ID: 1694
+2022-03-24 15:30:59,217 INFO: Database update success! Table: `character`, ID: 1188
+2022-03-24 15:30:59,220 INFO: Database update success! Table: `character`, ID: 245
+2022-03-24 15:30:59,225 INFO: Database update success! Table: `character`, ID: 1095
+2022-03-24 15:30:59,229 INFO: Database update success! Table: `character`, ID: 28668
+2022-03-24 15:30:59,234 INFO: Database update success! Table: `character`, ID: 8382
+2022-03-24 15:30:59,237 INFO: Database update success! Table: `character`, ID: 14591
+2022-03-24 15:30:59,241 INFO: Database update success! Table: `character`, ID: 3397
+2022-03-24 15:30:59,249 INFO: Database update success! Table: `character`, ID: 11568
+2022-03-24 15:30:59,253 INFO: Database update success! Table: `character`, ID: 4974
+2022-03-24 15:30:59,256 INFO: Database update success! Table: `character`, ID: 9061
+2022-03-24 15:30:59,261 INFO: Database update success! Table: `character`, ID: 11568
+2022-03-24 15:30:59,266 INFO: Database update success! Table: `character`, ID: 9533
+2022-03-24 15:30:59,269 INFO: Database update success! Table: `character`, ID: 2926
+2022-03-24 15:30:59,274 INFO: Database update success! Table: `character`, ID: 9061
+2022-03-24 15:30:59,277 INFO: Database update success! Table: `character`, ID: 1520
+2022-03-24 15:30:59,282 INFO: Database update success! Table: `character`, ID: 839
+2022-03-24 15:30:59,288 INFO: Database update success! Table: `character`, ID: 22858
+2022-03-24 15:30:59,292 INFO: Database update success! Table: `character`, ID: 245
+2022-03-24 15:30:59,295 INFO: Database update success! Table: `character`, ID: 1095
+2022-03-24 15:30:59,301 INFO: Database update success! Table: `character`, ID: 1311
+2022-03-24 15:30:59,305 INFO: Database update success! Table: `character`, ID: 10415
+2022-03-24 15:30:59,310 INFO: Database update success! Table: `character`, ID: 1613
+2022-03-24 15:30:59,315 INFO: Database update success! Table: `character`, ID: 71339
+2022-03-24 15:30:59,319 INFO: Database update success! Table: `character`, ID: 31445
+2022-03-24 15:30:59,326 INFO: Database update success! Table: `character`, ID: 839
+2022-03-24 15:30:59,330 INFO: Database update success! Table: `character`, ID: 219
+2022-03-24 15:30:59,333 INFO: Database update success! Table: `character`, ID: 21602
+2022-03-24 15:30:59,336 INFO: Database update success! Table: `character`, ID: 12440
+2022-03-24 15:30:59,339 INFO: Database update success! Table: `character`, ID: 46605
+2022-03-24 15:30:59,344 INFO: Database update success! Table: `character`, ID: 2212
+2022-03-24 15:30:59,347 INFO: Database update success! Table: `character`, ID: 47389
+2022-03-24 15:30:59,350 INFO: Database update success! Table: `character`, ID: 219
+2022-03-24 15:30:59,353 INFO: Database update success! Table: `character`, ID: 2680
+2022-03-24 15:30:59,357 INFO: Database update success! Table: `character`, ID: 10555
+2022-03-24 15:30:59,360 INFO: Database update success! Table: `character`, ID: 18255
+2022-03-24 15:30:59,365 INFO: Database update success! Table: `character`, ID: 15
+2022-03-24 15:30:59,368 INFO: Database update success! Table: `character`, ID: 278
+2022-03-24 15:30:59,371 INFO: Database update success! Table: `character`, ID: 31754
+2022-03-24 15:30:59,375 INFO: Database update success! Table: `character`, ID: 16374
+2022-03-24 15:30:59,378 INFO: Database update success! Table: `character`, ID: 1694
+2022-03-24 15:30:59,381 INFO: Database update success! Table: `character`, ID: 2680
+2022-03-24 15:30:59,384 INFO: Database update success! Table: `character`, ID: 136028
+2022-03-24 15:30:59,388 INFO: Database update success! Table: `character`, ID: 13467
+2022-03-24 15:30:59,392 INFO: Database update success! Table: `character`, ID: 1887
+2022-03-24 15:30:59,396 INFO: Database update success! Table: `character`, ID: 4060
+2022-03-24 15:30:59,399 INFO: Database update success! Table: `character`, ID: 6397
+2022-03-24 15:30:59,402 INFO: Database update success! Table: `character`, ID: 5858
+2022-03-24 15:30:59,405 INFO: Database update success! Table: `character`, ID: 328
+2022-03-24 15:30:59,410 INFO: Database update success! Table: `character`, ID: 436
+2022-03-24 15:30:59,413 INFO: Database update success! Table: `character`, ID: 10555
+2022-03-24 15:30:59,416 INFO: Database update success! Table: `character`, ID: 18255
+2022-03-24 15:30:59,419 INFO: Database update success! Table: `character`, ID: 15954
+2022-03-24 15:30:59,422 INFO: Database update success! Table: `character`, ID: 7569
+2022-03-24 15:30:59,426 INFO: Database update success! Table: `character`, ID: 69623
+2022-03-24 15:30:59,430 INFO: Database update success! Table: `character`, ID: 7441
+2022-03-24 15:30:59,434 INFO: Database update success! Table: `character`, ID: 15
+2022-03-24 15:30:59,439 INFO: Database update success! Table: `character`, ID: 7115
+2022-03-24 15:30:59,444 INFO: Database update success! Table: `character`, ID: 3077
+2022-03-24 15:30:59,448 INFO: Database update success! Table: `character`, ID: 3613
+2022-03-24 15:30:59,452 INFO: Database update success! Table: `character`, ID: 131962
+2022-03-24 15:30:59,456 INFO: Database update success! Table: `character`, ID: 131953
+2022-03-24 15:30:59,460 INFO: Database update success! Table: `character`, ID: 35916
+2022-03-24 15:30:59,465 INFO: Database update success! Table: `character`, ID: 3807
+2022-03-24 15:30:59,471 INFO: Database update success! Table: `character`, ID: 3502
+2022-03-24 15:30:59,476 INFO: Database update success! Table: `character`, ID: 1324
+2022-03-24 15:30:59,480 INFO: Database update success! Table: `character`, ID: 18632
+2022-03-24 15:30:59,484 INFO: Database update success! Table: `character`, ID: 3502
+2022-03-24 15:30:59,488 INFO: Database update success! Table: `character`, ID: 23687
+2022-03-24 15:30:59,492 INFO: Database update success! Table: `character`, ID: 131471
+2022-03-24 15:30:59,496 INFO: Database update success! Table: `character`, ID: 7570
+2022-03-24 15:30:59,500 INFO: Database update success! Table: `character`, ID: 4109
+2022-03-24 15:30:59,504 INFO: Database update success! Table: `character`, ID: 5116
+2022-03-24 15:30:59,508 INFO: Database update success! Table: `character`, ID: 1324
+2022-03-24 15:30:59,512 INFO: Database update success! Table: `character`, ID: 6322
+2022-03-24 15:30:59,516 INFO: Database update success! Table: `character`, ID: 521
+2022-03-24 15:30:59,520 INFO: Database update success! Table: `character`, ID: 5117
+2022-03-24 15:30:59,524 INFO: Database update success! Table: `character`, ID: 5116
+2022-03-24 15:30:59,528 INFO: Database update success! Table: `character`, ID: 521
+2022-03-24 15:30:59,532 INFO: Database update success! Table: `character`, ID: 8882
+2022-03-24 15:30:59,535 INFO: Database update success! Table: `character`, ID: 14340
+2022-03-24 15:31:00,124 INFO: scrap_people_page: Success! https://myanimelist.net/people/281
+2022-03-24 15:31:01,129 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-03-24 15:35:18,594 INFO: Start scraping...
+2022-03-24 15:35:18,597 INFO: Start scraping people links that has participated in The Promised Neverland
+2022-03-24 15:35:18,678 INFO: Successfully retreived all the people links that has participated in The Promised Neverland. Total number: 69
+2022-03-24 15:35:26,137 INFO: Database update success! Table: people, ID: 6759
+2022-03-24 15:35:26,252 INFO: scrap_people_page: Success! https://myanimelist.net/people/6759
+2022-03-24 15:35:30,192 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.

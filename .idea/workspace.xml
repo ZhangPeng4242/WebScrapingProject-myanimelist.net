@@ -2,29 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dab77dd-98be-433c-bb57-5b4e5174e107" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/error.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/scraping.log" beforeDir="false" afterPath="$PROJECT_DIR$/_init_datas_/scraping.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/scraping.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scraping.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scraping.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_files/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/record_exists_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/record_exists_check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/pool_for_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/pool_for_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_get_rand_proxy_headers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_get_rand_proxy_headers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_scrap_anime_list_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_scrap_anime_list_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_scrap_anime_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_scrap_anime_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_scrap_people_list_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_scrap_people_list_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_scrap_people_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_scrap_people_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_scrap_stats_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_scrap_stats_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_store_anime_page_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_store_anime_page_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_store_peple_page_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_store_peple_page_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_test_directory/test_store_stats_page_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_store_stats_page_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/get_links_by_commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/get_links_by_commands.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +132,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="scrap anime --rank 5" />
+      <option name="PARAMETERS" value="scrap people --anime &quot;The Promised Neverland&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />

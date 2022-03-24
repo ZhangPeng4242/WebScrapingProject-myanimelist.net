@@ -65,7 +65,7 @@ class Configuration:
             self.mysql_connection["password"] = config_json["mysql_connection"]["password"]
             self.mysql_connection["host"] = config_json["mysql_connection"]["host"]
             self.mysql_connection["port"] = config_json["mysql_connection"]["port"]
-            self.engine = self._get_engine() if self.connection else None
+            self.engine = self._get_engine()
 
     def get_json(self):
         return {

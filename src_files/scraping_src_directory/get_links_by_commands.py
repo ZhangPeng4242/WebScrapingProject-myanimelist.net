@@ -126,7 +126,7 @@ def get_anime_link_by_studio(studio):
 
 
 def run_sql(sql):
-    if not config.connection.open:
+    if not config.is_connected():
         config.reconnect()
     with config.connection as connection:
         with connection.cursor() as cursor:
@@ -151,6 +151,7 @@ def get_people_link_by_anime_name(anime_name):
     config.logger.info(f'Start scraping people links that has participated in {anime_name}')
     sql1 = f"SELECT id, title FROM anime WHERE title = '{anime_name}' OR english_title = '{anime_name}'"
     result = run_sql(sql1)
+
     if not len(result):
         config.logger.warn("Anime name not found, please input a valid full name!")
         return []
@@ -163,6 +164,7 @@ def get_people_link_by_anime_name(anime_name):
         people_id_list += [res["people_id"] for res in result]
     sql3 = f"""SELECT p.id AS people_id FROM people p LEFT JOIN voice_actor v ON p.id = v.people_id LEFT JOIN anime_character a ON a.character_id = v.character_id WHERE a.anime_id = {anime_id} GROUP BY p.id;"""
     result = run_sql(sql3)
+
     if len(result):
         people_id_list += [res["people_id"] for res in result]
 

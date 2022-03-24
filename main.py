@@ -126,6 +126,9 @@ def main():
             for people_link in people_link_list:
                 scrap_people_page(people_link)
 
+        config.logger.info(
+            "Program End! Run the program again for another action.")
+
     else:
         parser.error('please choose scrap or init (choose init if this is your first time running)')
 
@@ -133,8 +136,6 @@ def main():
 if __name__ == "__main__":
     try:
         main()
-        config.logger.info(
-            "You have successfully scrap and updated everything! Run the program again for another action.")
     except KeyboardInterrupt:
         config.logger.warning(
             "You have manually stopped the program, all the scrapping process conducted has been updated in the database.")
