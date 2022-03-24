@@ -135,7 +135,6 @@ def scrap_anime_page(anime_page_link):
     formatted_studio_anime_data = reformat.format_studio_anime_data(anime_page_info)
 
     update_table(formatted_anime_data, "id", "anime")
-
     update_table(formatted_anime_general_stats_data, "anime_id", "anime_general_stats")
     update_table(formatted_anime_genre_data, "anime_id", "anime_genre", insert_only=True)
     update_table(formatted_studio_anime_data, "anime_id", "studio_anime", insert_only=True)

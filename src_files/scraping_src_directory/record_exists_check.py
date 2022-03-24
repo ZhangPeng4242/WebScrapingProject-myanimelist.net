@@ -3,7 +3,7 @@ from src_files.config import config
 
 def is_exist(crit_name, crit_value, db_name):
     sql = f"""SELECT EXISTS( SELECT * FROM {db_name} WHERE {crit_name} = {f"'{crit_value}'" if type(crit_value) != int else crit_value}) AS result"""
-    if not config.connection.open:
+    if not config.is_connected():
         config.reconnect()
 
     with config.connection as connection:

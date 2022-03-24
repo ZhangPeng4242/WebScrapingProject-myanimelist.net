@@ -1,0 +1,153 @@
+2022-03-24 11:28:51,038 INFO: Start initiating the project...
+2022-03-24 11:28:51,046 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project//config.json
+2022-03-24 11:28:56,347 INFO: Start initiating the project...
+2022-03-24 11:28:56,359 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project//config.json
+2022-03-24 11:30:17,275 INFO: Start initiating the project...
+2022-03-24 11:30:17,288 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project//config.json
+2022-03-24 11:31:36,571 INFO: Start initiating the project...
+2022-03-24 11:31:36,578 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project//config.json
+2022-03-24 11:32:11,625 INFO: Start initiating the project...
+2022-03-24 11:32:11,632 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
+2022-03-24 11:35:35,438 INFO: Start initiating the project...
+2022-03-24 11:35:35,440 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
+2022-03-24 11:51:10,440 INFO: Start initiating the project...
+2022-03-24 11:51:10,457 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
+2022-03-24 11:51:12,454 INFO: Database successfully created!
+2022-03-24 11:51:14,526 INFO: Successfully initiated table: anime
+2022-03-24 11:51:15,318 INFO: Successfully initiated table: people
+2022-03-24 11:51:16,465 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-03-24 11:51:19,989 INFO: Start initiating the project...
+2022-03-24 11:51:19,997 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
+2022-03-24 11:51:20,452 INFO: Database successfully created!
+2022-03-24 11:51:22,019 INFO: Successfully initiated table: anime
+2022-03-24 11:51:22,742 INFO: Successfully initiated table: people
+2022-03-24 11:51:29,644 INFO: Successfully initiated table: character
+2022-03-24 11:51:29,796 INFO: Successfully initiated table: genre
+2022-03-24 11:51:29,906 INFO: Successfully initiated table: studio
+2022-03-24 11:51:32,269 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-03-24 11:52:32,669 INFO: Start initiating the project...
+2022-03-24 11:52:32,685 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
+2022-03-24 11:52:33,244 INFO: Database successfully created!
+2022-03-24 11:52:34,765 INFO: Successfully initiated table: anime
+2022-03-24 11:52:35,397 INFO: Successfully initiated table: people
+2022-03-24 11:52:38,107 INFO: Successfully initiated table: character
+2022-03-24 11:52:38,121 INFO: Successfully initiated table: genre
+2022-03-24 11:52:38,185 INFO: Successfully initiated table: studio
+2022-03-24 11:52:44,741 INFO: Successfully initiated table: voice_actor
+2022-03-24 11:52:45,565 INFO: Successfully initiated table: anime_genre
+2022-03-24 11:52:45,918 INFO: Successfully initiated table: studio_anime
+2022-03-24 11:52:53,270 INFO: Successfully initiated table: anime_character
+2022-03-24 11:52:53,902 INFO: Successfully initiated table: anime_watch_stats
+2022-03-24 11:52:54,783 INFO: Successfully initiated table: anime_score_stats
+2022-03-24 11:52:55,447 INFO: Successfully initiated table: anime_general_stats
+2022-03-24 11:52:57,594 INFO: Successfully initiated table: staff
+2022-03-24 11:52:57,595 INFO: Successfully initiated database: db_myanimelist!
+2022-03-24 11:52:57,595 INFO: Congratulations! You have successfully initiated the project. Run it again for other commands.
+2022-03-24 11:52:57,595 INFO: You have successfully scrap and updated everything! Run the program again for another action.
+2022-03-24 11:55:47,266 INFO: Start scraping...
+2022-03-24 11:55:47,267 INFO: Start scraping top 5 anime links...
+2022-03-24 11:55:48,805 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-03-24 11:55:48,805 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-03-24 11:55:48,806 INFO: Successfully retreived all the top 5 anime links.
+2022-03-24 12:08:01,055 INFO: Start scraping...
+2022-03-24 12:08:01,057 INFO: Start scraping top 5 anime links...
+2022-03-24 12:08:02,230 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-03-24 12:08:02,230 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-03-24 12:08:02,230 INFO: Successfully retreived all the top 5 anime links.
+2022-03-24 12:09:17,784 INFO: Start scraping...
+2022-03-24 12:09:17,784 INFO: Start scraping top 5 anime links...
+2022-03-24 12:09:18,658 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-03-24 12:09:18,658 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-03-24 12:09:18,658 INFO: Successfully retreived all the top 5 anime links.
+2022-03-24 12:10:15,058 INFO: Start scraping...
+2022-03-24 12:10:15,059 INFO: Start scraping top 5 anime links...
+2022-03-24 12:10:15,896 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-03-24 12:10:15,896 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-03-24 12:10:15,896 INFO: Successfully retreived all the top 5 anime links.
+2022-03-24 12:10:32,004 INFO: Start scraping...
+2022-03-24 12:10:32,004 INFO: Start scraping top 5 anime links...
+2022-03-24 12:10:33,366 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-03-24 12:10:33,366 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-03-24 12:10:33,366 INFO: Successfully retreived all the top 5 anime links.
+2022-03-24 12:10:50,853 INFO: Start scraping...
+2022-03-24 12:10:50,853 INFO: Start scraping top 5 anime links...
+2022-03-24 12:10:51,820 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-03-24 12:10:51,820 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-03-24 12:10:51,820 INFO: Successfully retreived all the top 5 anime links.
+2022-03-24 12:11:49,139 INFO: Start scraping...
+2022-03-24 12:11:49,139 INFO: Start scraping top 5 anime links...
+2022-03-24 12:11:50,519 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-03-24 12:11:50,519 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-03-24 12:11:50,520 INFO: Successfully retreived all the top 5 anime links.
+2022-03-24 12:12:10,243 INFO: Start scraping...
+2022-03-24 12:12:10,244 INFO: Start scraping top 5 anime links...
+2022-03-24 12:12:11,640 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-03-24 12:12:11,640 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-03-24 12:12:11,640 INFO: Successfully retreived all the top 5 anime links.
+2022-03-24 12:12:12,964 INFO: Database update success! Table: anime, ID: 5114
+2022-03-24 12:12:13,021 INFO: Database update success! Table: anime_general_stats, ID: 5114
+2022-03-24 12:12:13,071 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-03-24 12:12:13,985 INFO: Database insert new record! Table: anime_watch_stats, ID: 5114
+2022-03-24 12:12:14,008 INFO: Database insert new record! Table: anime_score_stats, ID: 5114
+2022-03-24 12:12:14,008 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood/stats
+2022-03-24 12:12:15,139 INFO: Database update success! Table: anime, ID: 28977
+2022-03-24 12:12:15,155 INFO: Database update success! Table: anime_general_stats, ID: 28977
+2022-03-24 12:12:15,181 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/28977/Gintama°
+2022-03-24 12:12:19,286 INFO: Database update success! Table: anime_watch_stats, ID: 28977
+2022-03-24 12:12:19,299 INFO: Database update success! Table: anime_score_stats, ID: 28977
+2022-03-24 12:12:19,299 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/28977/Gintama°/stats
+2022-03-24 12:12:20,974 INFO: Database update success! Table: anime, ID: 9253
+2022-03-24 12:12:20,989 INFO: Database update success! Table: anime_general_stats, ID: 9253
+2022-03-24 12:12:21,011 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/9253/Steins_Gate
+2022-03-24 12:12:24,271 INFO: Start scraping...
+2022-03-24 12:12:24,271 INFO: Start scraping top 5 anime links...
+2022-03-24 12:12:25,298 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-03-24 12:12:25,298 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-03-24 12:12:25,298 INFO: Successfully retreived all the top 5 anime links.
+2022-03-24 12:12:26,053 INFO: Database update success! Table: anime_watch_stats, ID: 9253
+2022-03-24 12:12:26,071 INFO: Database update success! Table: anime_score_stats, ID: 9253
+2022-03-24 12:12:26,071 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/9253/Steins_Gate/stats
+2022-03-24 12:12:26,406 INFO: Database update success! Table: anime, ID: 5114
+2022-03-24 12:12:26,416 INFO: Database update success! Table: anime_general_stats, ID: 5114
+2022-03-24 12:12:26,457 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-03-24 12:12:27,143 INFO: Database update success! Table: anime, ID: 38524
+2022-03-24 12:12:27,163 INFO: Database update success! Table: anime_general_stats, ID: 38524
+2022-03-24 12:12:27,196 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
+2022-03-24 12:12:27,482 INFO: Database update success! Table: anime_watch_stats, ID: 5114
+2022-03-24 12:12:27,491 INFO: Database update success! Table: anime_score_stats, ID: 5114
+2022-03-24 12:12:27,491 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood/stats
+2022-03-24 12:12:28,738 INFO: Database update success! Table: anime, ID: 28977
+2022-03-24 12:12:28,754 INFO: Database update success! Table: anime_general_stats, ID: 28977
+2022-03-24 12:12:28,777 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/28977/Gintama°
+2022-03-24 12:12:29,159 INFO: Database update success! Table: anime_watch_stats, ID: 38524
+2022-03-24 12:12:29,173 INFO: Database update success! Table: anime_score_stats, ID: 38524
+2022-03-24 12:12:29,173 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2/stats
+2022-03-24 12:12:29,587 INFO: Database update success! Table: anime_watch_stats, ID: 28977
+2022-03-24 12:12:29,596 INFO: Database update success! Table: anime_score_stats, ID: 28977
+2022-03-24 12:12:29,596 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/28977/Gintama°/stats
+2022-03-24 12:12:30,480 INFO: Database update success! Table: anime, ID: 48583
+2022-03-24 12:12:30,499 INFO: Database update success! Table: anime_general_stats, ID: 48583
+2022-03-24 12:12:30,582 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2
+2022-03-24 12:12:31,119 INFO: Database update success! Table: anime, ID: 9253
+2022-03-24 12:12:31,127 INFO: Database update success! Table: anime_general_stats, ID: 9253
+2022-03-24 12:12:31,145 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/9253/Steins_Gate
+2022-03-24 12:12:31,471 INFO: Database update success! Table: anime_watch_stats, ID: 48583
+2022-03-24 12:12:31,482 INFO: Database update success! Table: anime_score_stats, ID: 48583
+2022-03-24 12:12:31,483 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2/stats
+2022-03-24 12:12:31,483 INFO: You have successfully scrap and updated everything! Run the program again for another action.
+2022-03-24 12:12:32,025 INFO: Database update success! Table: anime_watch_stats, ID: 9253
+2022-03-24 12:12:32,033 INFO: Database update success! Table: anime_score_stats, ID: 9253
+2022-03-24 12:12:32,033 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/9253/Steins_Gate/stats
+2022-03-24 12:12:33,636 INFO: Database update success! Table: anime, ID: 38524
+2022-03-24 12:12:33,642 INFO: Database update success! Table: anime_general_stats, ID: 38524
+2022-03-24 12:12:33,663 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
+2022-03-24 12:12:34,412 INFO: Database update success! Table: anime_watch_stats, ID: 38524
+2022-03-24 12:12:34,419 INFO: Database update success! Table: anime_score_stats, ID: 38524
+2022-03-24 12:12:34,419 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2/stats
+2022-03-24 12:12:35,408 INFO: Database update success! Table: anime, ID: 48583
+2022-03-24 12:12:35,416 INFO: Database update success! Table: anime_general_stats, ID: 48583
+2022-03-24 12:12:35,436 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2
+2022-03-24 12:12:36,803 INFO: Database update success! Table: anime_watch_stats, ID: 48583
+2022-03-24 12:12:36,814 INFO: Database update success! Table: anime_score_stats, ID: 48583
+2022-03-24 12:12:36,815 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2/stats
+2022-03-24 12:12:36,815 INFO: You have successfully scrap and updated everything! Run the program again for another action.

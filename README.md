@@ -4,7 +4,7 @@
 
 ![img.png](_init_datas_/img.png)
 
-**The project scrapes, stores and updates data from the website [MyAnimeList](https://www.myanimelist.net).**
+**The project scraps, stores and updates data from the website [MyAnimeList](https://www.myanimelist.net).**
 
 
 ## DATA

@@ -1,6 +1,7 @@
 import argparse
 import json
 import logging
+import os
 
 import pymysql
 from src_files.config import config
@@ -24,12 +25,15 @@ def main():
     if args.main == 'init':
         config.logger.info("Start initiating the project...")
 
+        if Path(Path(config.project_dir) / "config.json").exists():
+            os.remove(Path(config.project_dir) / "config.json")
+
         # 1. Setting up config
         config.set_sql_connection(args.username, args.password, args.host, args.port)
 
         with open(Path(config.project_dir) / "config.json", "w") as write_file:
             json.dump(config.get_json(), write_file, indent=4)
-        config.logger.info(f"Successfully created config.json at {config.project_dir}/config.json")
+        config.logger.info(f"Successfully created config.json at {config.project_dir}config.json")
         config.get_params()
 
         # 2. Init Database
@@ -54,11 +58,12 @@ def main():
         #         parser.error('please choose where to store data')
 
     elif args.main == 'scrap':
-        config.logger.info("Start scraping...")
-        if not config.connection:
+
+        if not Path(Path(config.project_dir) / "config.json").exists():
             parser.error(
                 'Please initiate the project first. Using: init local|remote db_username db_password [--host] [--port]')
 
+        config.logger.info("Start scraping...")
         if args.type == 'anime':
             # print('anime')
             if args.name:
@@ -82,7 +87,8 @@ def main():
                 for anime_link in anime_link_list:
                     scrap_anime_page(anime_link)
             else:
-                config.logger.warning("Start scraping all anime pages, this process might take over 15 hours to complete.")
+                config.logger.warning(
+                    "Start scraping all anime pages, this process might take over 15 hours to complete.")
 
                 anime_link_list = get_anime_links()
                 for anime_link in anime_link_list:
@@ -103,7 +109,8 @@ def main():
                 for people_link in people_link_list:
                     scrap_people_page(people_link)
             else:
-                config.logger.warning("Start scraping all people pages, this process might take over 12 hours to complete.")
+                config.logger.warning(
+                    "Start scraping all people pages, this process might take over 12 hours to complete.")
 
                 people_link_list = get_people_links()
                 for people_link in people_link_list:

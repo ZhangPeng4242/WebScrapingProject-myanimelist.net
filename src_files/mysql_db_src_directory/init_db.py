@@ -30,6 +30,7 @@ def insert_init_data():
         config.logger.info(f"Successfully initiated table: {file_name[:-4]}")
 
 
+
 def init_db():
     create_db()
     insert_init_data()

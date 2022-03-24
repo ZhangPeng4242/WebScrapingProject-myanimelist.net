@@ -23,19 +23,22 @@ class Configuration:
 
     def _get_connection(self):
         try:
-            return pymysql.connect(host=self.mysql_connection["host"], user=self.mysql_connection["user"],
-                                   password=self.mysql_connection["password"], port=self.mysql_connection["port"],
-                                   cursorclass=pymysql.cursors.DictCursor)
-        except RuntimeError:
-            self.connection = None
-        except pymysql.err.OperationalError:
-            self.connection = None
+            if self.mysql_connection["password"] and self.mysql_connection["user"]:
+                return pymysql.connect(host=self.mysql_connection["host"], user=self.mysql_connection["user"],
+                                       password=self.mysql_connection["password"], port=self.mysql_connection["port"],
+                                       cursorclass=pymysql.cursors.DictCursor)
+
+        except Exception:
+            print("Error: Database connection error! Please check your connection/username/password is correct!")
+            os._exit(0)
 
     def _get_engine(self):
         return sqlalchemy.create_engine(
             f'mysql+pymysql://{self.mysql_connection["user"]}:{self.mysql_connection["password"]}@{self.mysql_connection["host"]}:{self.mysql_connection["port"]}/db_myanimelist?charset=utf8')
 
     def is_connected(self):
+        self.get_params()
+        self.reconnect()
         return self.connection.open
 
     def reconnect(self):
@@ -45,12 +48,8 @@ class Configuration:
         self.mysql_connection["user"] = name
         self.mysql_connection["password"] = password
         self.mysql_connection["host"] = host
-        try:
-            self.reconnect()
-        except RuntimeError:
-            self.connection = None
-        except pymysql.err.OperationalError:
-            self.connection = None
+        self.mysql_connection["port"] = port
+        self.reconnect()
 
     def get_params(self):
         config_path = Path(get_project_folder_dir()) / 'config.json'
@@ -66,13 +65,6 @@ class Configuration:
             self.mysql_connection["password"] = config_json["mysql_connection"]["password"]
             self.mysql_connection["host"] = config_json["mysql_connection"]["host"]
             self.mysql_connection["port"] = config_json["mysql_connection"]["port"]
-            try:
-                self.reconnect()
-            except RuntimeError:
-                self.connection = None
-            except pymysql.err.OperationalError:
-                self.connection = None
-
             self.engine = self._get_engine() if self.connection else None
 
     def get_json(self):
@@ -115,7 +107,8 @@ def get_logs_dir():
     logs_dir = Path(get_project_folder_dir()) / "logs"
     if not Path(logs_dir).exists():
         os.mkdir(logs_dir)
-    return get_datas_dir()
+
+    return logs_dir
 
 
 def get_logger():
@@ -124,7 +117,6 @@ def get_logger():
     formatter_info = logging.Formatter("%(asctime)s %(levelname)s: %(message)s")
     formatter_error = logging.Formatter(
         '%(asctime)s-%(levelname)s-FILE:%(filename)s-FUNC:%(funcName)s-LINE:%(lineno)d-%(message)s')
-
     file_handler1 = logging.FileHandler(Path(get_logs_dir()) / "scraping.log")
     file_handler1.setLevel(logging.DEBUG)
     file_handler1.setFormatter(formatter_info)
@@ -159,4 +151,3 @@ config_dict = {
 
 config = Configuration(config_dict)
 config.get_params()
-
