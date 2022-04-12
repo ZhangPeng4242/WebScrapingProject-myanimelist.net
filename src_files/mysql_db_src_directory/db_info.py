@@ -1,3 +1,7 @@
+"""This module is to create a dictionary which marks the table names, column names and orders in the database.
+This will be handy to check the data integrity when inserting / updating the database.
+:export: db_info"""
+
 db_info = {
     "anime": {
         "order": ["id", "title", "english_title", "type", "source", "start_air", "end_air", "season_premier", "theme",
@@ -36,6 +40,14 @@ db_info = {
     },
     "studio": {
         "order": ["id", "name", "rank", "favorites", "img_url"]
+    },
+    "api_imdb": {
+        "order": ["anime_id", "imdb_id", "imdb_title", "score", "year","imdb_url"]
+    },
+    "api_description_sentiment_analysis": {
+        "order": ["anime_id", "synopsis_sentiment", "confidence"]
+    },
+    "description": {
+        "order": ["anime_id", "description"]
     }
-
 }

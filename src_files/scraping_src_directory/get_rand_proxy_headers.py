@@ -1,6 +1,7 @@
 """
-we create functions that return a random proxy and a random header
+This module create functions that return a random proxy and a random header
 in order to implements the scraping process without being blocked.
+:export: get_rand_headers(), get_rand_proxy()
 """
 
 import requests
@@ -21,9 +22,9 @@ def proxies_pool(proxy_web_url):
     with requests.Session() as res:
         proxies_page = res.get(proxy_web_url)
 
-    # Create a BeutifulSoup object and find the table element which consists of all proxies
     soup = BeautifulSoup(proxies_page.content, 'html.parser')
     proxies_table = soup.find('table', class_='table table-striped table-bordered')
+
     # Go through all rows in the proxies table and store them in the right format (IP:port) in our proxies list
     proxies = []
     for row in proxies_table.tbody.find_all('tr'):

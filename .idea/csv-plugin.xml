@@ -45,7 +45,28 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/_init_datas_/api_description_sentiment_analysis.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/_init_datas_/api_imdb.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/_init_datas_/character.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/_init_datas_/description.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -88,6 +109,27 @@
           </value>
         </entry>
         <entry key="/_init_datas_/voice_actor.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/db_data/anime_watch_stats.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/db_data/api_description_sentiment_analysis.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/db_data/api_imdb.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

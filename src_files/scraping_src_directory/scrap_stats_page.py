@@ -1,5 +1,6 @@
 """
-we create a function that receives a url for an anime stats page in myanimelist and scraps it
+This module is to scrap data from the anime stats page on myanimelist.net
+:export: scrap_stats_page
 """
 import requests
 from bs4 import BeautifulSoup
@@ -7,26 +8,23 @@ from src_files.scraping_src_directory.get_rand_proxy_headers import get_rand_hea
 import time
 from src_files.config import config
 import src_files.scraping_src_directory.reformat as reformat
-from src_files.mysql_db_src_directory.update_db import update_table
 
 SUM_STATS_CONTAINERS_COUNT = 6
 
 
 def scrap_stats_page(stats_link):
     """
-    this function scraps all the informations we need from an anime stats page.
-    [anime_score_stats],[anime_watch_stats]
-    it returns two dictionaries which will later be inserted into the following Datasets:
-    sum stats: contains anime_id and num of people who rated the anime 1 - 10
-    score stats: contains anime_id, watching, completed, on-hold, dropped, plan to watch and total
-    :param stats_link: str
-    :return: (watch_stats, score_stats): tuple of dict
+    This function is to scrap all the information we need on the stats page of the anime with the given link.
+    Also it formats the data according to the database table requirements.
+    Relavant tables: anime_watch_stats, anime_score_stats
+    :param stats_link: the link for the anime stats page
+    :return: DataFrame: formatted_anime_watch_stats_data, formatted_anime_score_stats_data
     """
     with requests.Session() as res:
         while True:
             try:
                 stats_page = res.get(stats_link, proxies={"http": get_rand_proxy()}, headers=get_rand_headers(),
-                                     timeout=100)
+                                     timeout=config.timeout)
                 break
             except Exception:
                 config.logger.warning(f"scrap_anime_stats_page: Change proxy... {stats_link}")
@@ -64,12 +62,6 @@ def scrap_stats_page(stats_link):
 
     formatted_anime_watch_stats_data = reformat.format_anime_watch_stats_data(watch_stats)
     formatted_anime_score_stats_data = reformat.format_anime_score_stats_data(score_stats)
-    update_table(formatted_anime_watch_stats_data, "anime_id", "anime_watch_stats")
-    update_table(formatted_anime_score_stats_data, "anime_id", "anime_score_stats")
 
     config.logger.info(f"scrap_anime_stats_page: Success! {stats_link}")
     return (formatted_anime_watch_stats_data, formatted_anime_score_stats_data)
-
-# result = scrap_stats_page(
-#     "https://myanimelist.net/anime/16498/Shingeki_no_Kyojin/stats")
-# # print(result[0], "\n", result[1])

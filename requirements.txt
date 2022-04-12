@@ -28,3 +28,5 @@ SQLAlchemy==1.4.32
 sqlparse==0.4.2
 tomli==2.0.1
 urllib3==1.26.8
+monkeylearn==3.6.0
+google==3.0.0

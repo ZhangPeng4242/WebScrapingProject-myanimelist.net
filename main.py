@@ -1,27 +1,68 @@
-import argparse
+"""This is the main function for the project, and the only python file the user should run."""
 import json
-import logging
 import os
-
-import pymysql
-from src_files.config import config
 from src_files.mysql_db_src_directory.init_db import init_db
 from pathlib2 import Path
 from src_files.argparser_config import get_parser
 from src_files.scraping_src_directory.get_links_by_commands import *
-from src_files.scraping_src_directory.scrap_anime_page import scrap_anime_page
-from src_files.scraping_src_directory.scrap_people_page import scrap_people_page
+from src_files.mysql_db_src_directory.export_db_to_csv import export_db_to_csv
+from src_files.scraping_src_directory.scrap_and_update import scrap_and_update_people, scrap_and_update_anime
+from src_files.api_src_directory.get_imdb_score import get_imdb_score
+from src_files.mysql_db_src_directory.update_db import update_table
+from src_files.api_src_directory.get_synopsis_sentiment import get_synopsis_sentiment
+
+
+def get_anime_link_list(args):
+    """
+    This function is to assign different get_anime_link functions according to different args
+    :param args:
+    :return: anime_link_list: list
+    """
+    if args.name:
+        anime_link_list = get_anime_link_by_name(args.name)
+    elif args.rank:
+        anime_link_list = get_anime_link_by_rank(args.rank)
+    elif args.year:
+        anime_link_list = get_anime_link_by_year(args.year)
+    elif args.genre:
+        anime_link_list = get_anime_link_by_genre(args.genre)
+    elif args.studio:
+        anime_link_list = get_anime_link_by_studio(args.studio)
+    else:
+        config.logger.warning(
+            "Start scraping all anime pages, this process might take over 15 hours to complete.")
+        anime_link_list = get_anime_links()
+    return anime_link_list
+
+
+def get_people_link_list(args):
+    """
+    This function is to assign different get_people_link functions according to different args
+    :param args:
+    :return: people_link_list: list
+    """
+    if args.anime:
+        people_link_list = get_people_link_by_anime_name(args.anime)
+    elif args.name:
+        people_link_list = get_people_link_by_name(args.name)
+    elif args.rank:
+        people_link_list = get_people_link_by_rank(args.rank)
+    else:
+        config.logger.warning(
+            "Start scraping all people pages, this process might take over 12 hours to complete.")
+        people_link_list = get_people_links()
+    return people_link_list
 
 
 def main():
     """
-    We wrap our code using argparse and execute it using all the modules we created thus far.
+    Main function for the project, handle different kind of commands.
     :return: None
     """
     parser = get_parser()
     args = parser.parse_args()
-    # print(args)
 
+    # init
     if args.main == 'init':
         config.logger.info("Start initiating the project...")
 
@@ -44,90 +85,71 @@ def main():
 
         config.logger.info(
             "Congratulations! You have successfully initiated the project. Run it again for other commands.")
-        # print(config.connection)
-        # if args.location == 'remote':
-        #     pass
-        #     print('remote')
-        #
-        # elif args.location == 'local':
-        #     pass
-        # print('local')
-        #
-        # else:
-        #     if not args.help:
-        #         parser.error('please choose where to store data')
 
+    # scrap
     elif args.main == 'scrap':
-
         if not Path(Path(config.project_dir) / "config.json").exists():
             parser.error(
                 'Please initiate the project first. Using: init local|remote db_username db_password [--host] [--port]')
 
         config.logger.info("Start scraping...")
-        if args.type == 'anime':
-            # print('anime')
-            if args.name:
-                anime_link_list = get_anime_link_by_name(args.name)
-                for anime_link in anime_link_list:
-                    scrap_anime_page(anime_link)
-            elif args.rank:
-                anime_link_list = get_anime_link_by_rank(args.rank)
-                for anime_link in anime_link_list:
-                    scrap_anime_page(anime_link)
-            elif args.year:
-                anime_link_list = get_anime_link_by_year(args.year)
-                for anime_link in anime_link_list:
-                    scrap_anime_page(anime_link)
-            elif args.genre:
-                anime_link_list = get_anime_link_by_genre(args.genre)
-                for anime_link in anime_link_list:
-                    scrap_anime_page(anime_link)
-            elif args.studio:
-                anime_link_list = get_anime_link_by_studio(args.studio)
-                for anime_link in anime_link_list:
-                    scrap_anime_page(anime_link)
-            else:
-                config.logger.warning(
-                    "Start scraping all anime pages, this process might take over 15 hours to complete.")
 
-                anime_link_list = get_anime_links()
-                for anime_link in anime_link_list:
-                    scrap_anime_page(anime_link)
+        if args.type == 'anime':
+            anime_link_list = get_anime_link_list(args)
+            for anime_link in anime_link_list:
+                try:
+                    scrap_and_update_anime(anime_link)
+                except Exception as exc1:
+                    config.logger.error(f"{exc1}: {args.main} {args.type} {anime_link}")
 
         elif args.type == 'people':
-            # print('people')
-            if args.anime:
-                people_link_list = get_people_link_by_anime_name(args.anime)
-                for people_link in people_link_list:
-                    scrap_people_page(people_link)
-            elif args.name:
-                people_link_list = get_people_link_by_name(args.name)
-                for people_link in people_link_list:
-                    scrap_people_page(people_link)
-            elif args.rank:
-                people_link_list = get_people_link_by_rank(args.rank)
-                for people_link in people_link_list:
-                    scrap_people_page(people_link)
-            else:
-                config.logger.warning(
-                    "Start scraping all people pages, this process might take over 12 hours to complete.")
-
-                people_link_list = get_people_links()
-                for people_link in people_link_list:
-                    scrap_people_page(people_link)
+            people_link_list = get_people_link_list(args)
+            for people_link in people_link_list:
+                try:
+                    scrap_and_update_people(people_link)
+                except Exception as exc1:
+                    config.logger.error(f"{exc1}: {args.main} {args.type} {people_link}")
 
         else:
             config.logger.warning("Start scraping all the pages, this process might take over 30 hours to complete.")
-
             anime_link_list = get_anime_links()
             for anime_link in anime_link_list:
-                scrap_anime_page(anime_link)
+                try:
+                    scrap_and_update_anime(anime_link)
+                except Exception as exc1:
+                    config.logger.error(f"{exc1}: {args.main} {args.type} {anime_link}")
+
             people_link_list = get_people_links()
             for people_link in people_link_list:
-                scrap_people_page(people_link)
+                try:
+                    scrap_and_update_people(people_link)
+                except Exception as exc1:
+                    config.logger.error(f"{exc1}: {args.main} {args.type} {people_link}")
+    # api
+    elif args.main == 'api':
+        if args.type == 'imdb':
+            anime_link_list = get_anime_link_list(args)
+            for anime_link in anime_link_list:
+                try:
+                    df_imdb_score = get_imdb_score(anime_link)
+                    update_table(df_imdb_score, "anime_id", "api_imdb")
+                except Exception as exc1:
+                    config.logger.error(f"{exc1}: {args.main} {args.type} {anime_link}")
 
-        config.logger.info(
-            "Program End! Run the program again for another action.")
+        elif args.type == 'sentiment_analysis':
+            anime_link_list = get_anime_link_list(args)
+            try:
+                df_synopsis_sentiment = get_synopsis_sentiment(anime_link_list)
+                update_table(df_synopsis_sentiment, "anime_id", "api_description_sentiment_analysis")
+            except Exception as exc1:
+                config.logger.error(f"{exc1}: {args.main} {args.type}")
+
+        else:
+            config.logger.error(f"Api commands incorrect")
+
+    # export
+    elif args.main == 'export':
+        export_db_to_csv()
 
     else:
         parser.error('please choose scrap or init (choose init if this is your first time running)')
@@ -136,6 +158,10 @@ def main():
 if __name__ == "__main__":
     try:
         main()
+        config.logger.info(
+            "Program has ended! Run the main.py again for another action.")
     except KeyboardInterrupt:
         config.logger.warning(
             "You have manually stopped the program, all the scrapping process conducted has been updated in the database.")
+    except Exception as exc:
+        config.logger.error(exc)

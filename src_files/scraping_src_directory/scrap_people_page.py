@@ -1,5 +1,6 @@
 """
-we create a function to scrap an acotr's page on myanimelist for info.
+This module is to scrap data from the people main page on myanimelist.net
+:export: scrap_people_page
 """
 import re
 import time
@@ -10,37 +11,23 @@ from src_files.config import config
 import src_files.scraping_src_directory.reformat as reformat
 from src_files.scraping_src_directory.record_exists_check import is_exist
 from src_files.scraping_src_directory.scrap_anime_page import scrap_anime_page
-from src_files.mysql_db_src_directory.update_db import update_table
 
 
 def scrap_people_page(people_page_link):
     """
-    [people],[character],[staff],[voice_actor],["anime_character"]
-
-    This function scraps all the information we need from the main page of a person in the anime industry.
-    it returns four dictionaries which will later be inserted into the following Datasets:
-    people_info_dict: contains people_id, people_full_name, birthday, member_favorites and people_img_url
-
-    anime_characters_info_list: contains a list of info about characters the actor voices. Each list entry is a dict
-    containing: character_id, anime_id, character_fullname, role, character_favorites
-    and character_img_url
-
-    voice_actors_info_list: contains a list of info about each voice acting job in the persons career. Each entry in the list  is a dict
-    containing: character_id , people_id.
-
-    staff_info_list: contains a list of info about all anime related jobs in the persons career. Each entry in the list is a dict
-    containing: anime_id, people_id and staff role
-
-    :param people_page_link: str
-    :return: (people_info_dict, character_info_list, voice_actor_info_list, staff_info_list) touple
+    This function is to scrap all the information we need on the main info page of the people with the given link.
+    Also it formats the data according to the database table requirements.
+    Relavant tables: people, character, staff, voice_actor, anime_character
+    :param people_page_link: the link for the main people info page
+    :return: DataFrame: formatted_people_data, formatted_character_data, formatted_staff_data, formatted_voice_actor_data,
+            formatted_anime_character_data
     """
-
     # request page using random proxy and header:
     with requests.Session() as res:
         while True:
             try:
                 people_page = res.get(people_page_link, proxies={"http": get_rand_proxy()}, headers=get_rand_headers(),
-                                      timeout=100)
+                                      timeout=config.timeout)
                 break
             except Exception:
                 config.logger.warning(f"scrap_people_page: Change proxy... {people_page_link}")
@@ -105,11 +92,6 @@ def scrap_people_page(people_page_link):
         staff_info_dict = {"anime_id": anime_id, "people_id": people_id, "staff_role": staff_role}
         staff_info_list.append(staff_info_dict)
 
-    # # check recode
-    # for staff in staff_info_list:
-    #     if not is_anime_exist(staff["anime_id"]):
-    #         scrap_anime_page(f"https://myanimelist.net/anime/{staff['anime_id']}")
-
     for staff in staff_info_list:
         if not is_exist("id", staff["anime_id"], "anime"):
             scrap_anime_page(f"https://myanimelist.net/anime/{staff['anime_id']}")
@@ -122,16 +104,8 @@ def scrap_people_page(people_page_link):
     formatted_staff_data = reformat.format_staff_data(staff_info_list)
     formatted_voice_actor_data = reformat.format_voice_actor_data(voice_actor_info_list)
     formatted_anime_character_data = reformat.format_anime_character_data(character_info_list)
-    # update_people_page_data(formatted_people_data,formatted_character_data, formatted_staff_data)
 
-    update_table(formatted_people_data, "id", "people")
-    update_table(formatted_character_data, "id", "`character`")
-    update_table(formatted_staff_data, ("people_id", "anime_id"), "staff", double=True)
-    update_table(formatted_voice_actor_data, ("character_id", "people_id"), "voice_actor", double=True)
-    update_table(formatted_anime_character_data, ("anime_id", "character_id"), "anime_character", double=True)
     config.logger.info(f"scrap_people_page: Success! {people_page_link}")
 
-    return (people_info_dict, character_info_list, voice_actor_info_list, staff_info_list)
-
-
-# result = scrap_people_page("https://myanimelist.net/people/51422/Centimillimental")
+    return (formatted_people_data, formatted_character_data, formatted_staff_data, formatted_voice_actor_data,
+            formatted_anime_character_data)
