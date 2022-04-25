@@ -9,9 +9,9 @@
 
 ## DATA
 
-**Database EDR Diagram:**
+**Database ERD:**
 
-![myanimelist_db_ERR_diagram](_init_datas_/db_EDR.png)
+![myanimelist_db_ERR_diagram](_init_datas_/db_ERD.png)
 
 Tables and Columns:
 

@@ -22,6 +22,7 @@ def update_table(df, crit_name, tb_name, double=False, insert_only=False, update
     #todo: reduce the logging for update
 
     tb_name = f"`{tb_name}`" if tb_name == 'character' else tb_name
+
     sql_keywords = ['name', 'rank']
     # Check if the record already exisits.
     for indx, row in df.iterrows():
@@ -39,7 +40,7 @@ def update_table(df, crit_name, tb_name, double=False, insert_only=False, update
                 with config.connection.cursor() as cursor:
                     sql = f"""UPDATE {tb_name} SET {', '.join([f"{f'`{col}`' if col.isnumeric() else col} = %s" for col in db_info[tb_name.strip("`")]['order']])} WHERE {crit_name} = {row[crit_name]}"""
                     sql_value = [None if pd.isna(val) else val for val in row]
-                    cursor.execute("USE db_myanimelist")
+                    # cursor.execute("USE db_myanimelist")
                     cursor.execute(sql, sql_value)
                     config.connection.commit()
                     if update_logging:
@@ -50,7 +51,7 @@ def update_table(df, crit_name, tb_name, double=False, insert_only=False, update
                 with config.connection.cursor() as cursor:
                     sql = f"""INSERT INTO {tb_name} ({', '.join([f"{f'`{col}`' if col.isnumeric() or col in sql_keywords else col}" for col in db_info[tb_name.strip("`")]['order']])}) VALUES ({', '.join(['%s' for i in range(len(db_info[tb_name.strip("`")]['order']))])})"""
                     sql_value = [None if pd.isna(val) else val for val in row]
-                    cursor.execute("USE db_myanimelist")
+                    # cursor.execute("USE db_myanimelist")
                     cursor.execute(sql, sql_value)
                     config.connection.commit()
                     config.logger.info(f"Insert new record! Table: {tb_name}, ID: {row[0]}")

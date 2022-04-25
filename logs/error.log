@@ -1,79 +1,14 @@
-2022-04-12 17:51:53,176-ERROR-FILE:main.py-FUNC:main-LINE:125-'NoneType' object has no attribute 'find': api imdb https://myanimelist.net/anime/4218
-2022-04-12 17:52:54,848-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/2809
-2022-04-12 17:53:02,550-ERROR-FILE:main.py-FUNC:main-LINE:125-: api imdb https://myanimelist.net/anime/3196
-2022-04-12 17:53:04,350-ERROR-FILE:main.py-FUNC:main-LINE:125-: api imdb https://myanimelist.net/anime/3294
-2022-04-12 17:53:08,626-ERROR-FILE:main.py-FUNC:main-LINE:125-: api imdb https://myanimelist.net/anime/3800
-2022-04-12 17:53:19,435-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/4218
-2022-04-12 17:53:39,166-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/7027
-2022-04-12 17:53:41,944-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/7771
-2022-04-12 17:53:43,936-ERROR-FILE:main.py-FUNC:main-LINE:125-: api imdb https://myanimelist.net/anime/8375
-2022-04-12 17:53:48,351-ERROR-FILE:main.py-FUNC:main-LINE:125-: api imdb https://myanimelist.net/anime/9279
-2022-04-12 17:53:51,467-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/9781
-2022-04-12 17:53:54,377-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/9856
-2022-04-12 17:54:14,676-ERROR-FILE:main.py-FUNC:main-LINE:125-: api imdb https://myanimelist.net/anime/16566
-2022-04-12 17:54:23,226-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/20115
-2022-04-12 17:54:26,280-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/20125
-2022-04-12 17:54:29,031-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/20183
-2022-04-12 17:54:32,267-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/24861
-2022-04-12 17:54:35,837-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/29629
-2022-04-12 17:54:42,948-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/30207
-2022-04-12 17:54:45,309-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/30530
-2022-04-12 17:54:48,901-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/32252
-2022-04-12 17:54:54,739-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/39626
-2022-04-12 17:54:59,425-ERROR-FILE:main.py-FUNC:main-LINE:125-: api imdb https://myanimelist.net/anime/40840
-2022-04-12 17:55:03,645-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/43391
-2022-04-12 17:55:07,114-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/43392
-2022-04-12 17:55:13,444-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/43395
-2022-04-12 17:58:52,678-ERROR-FILE:main.py-FUNC:main-LINE:125-'Configuration' object has no attribute 'error': api imdb https://myanimelist.net/anime/1069
-2022-04-12 17:59:00,428-ERROR-FILE:main.py-FUNC:main-LINE:125-'Configuration' object has no attribute 'error': api imdb https://myanimelist.net/anime/2200
-2022-04-12 17:59:07,209-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB: api imdb https://myanimelist.net/anime/2809
-2022-04-12 17:59:36,620-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB: api imdb https://myanimelist.net/anime/2809
-2022-04-12 17:59:50,344-ERROR-FILE:get_imdb_score.py-FUNC:get_imdb_score-LINE:34-No anime search result on IMDB. https://myanimelist.net/anime/3435
-2022-04-12 17:59:50,345-ERROR-FILE:main.py-FUNC:main-LINE:125-local variable 'imdb_link' referenced before assignment: api imdb https://myanimelist.net/anime/3435
-2022-04-12 18:00:06,061-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB: api imdb https://myanimelist.net/anime/4218
-2022-04-12 18:00:06,801-ERROR-FILE:get_imdb_score.py-FUNC:get_imdb_score-LINE:34-No anime search result on IMDB. https://myanimelist.net/anime/4339
-2022-04-12 18:00:06,801-ERROR-FILE:main.py-FUNC:main-LINE:125-local variable 'imdb_link' referenced before assignment: api imdb https://myanimelist.net/anime/4339
-2022-04-12 18:00:24,047-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB: api imdb https://myanimelist.net/anime/7027
-2022-04-12 18:00:26,948-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB: api imdb https://myanimelist.net/anime/7771
-2022-04-12 18:00:39,854-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB: api imdb https://myanimelist.net/anime/9781
-2022-04-12 18:00:42,749-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB: api imdb https://myanimelist.net/anime/9856
-2022-04-12 18:00:50,641-ERROR-FILE:get_imdb_score.py-FUNC:get_imdb_score-LINE:34-No anime search result on IMDB. https://myanimelist.net/anime/11561
-2022-04-12 18:00:50,641-ERROR-FILE:main.py-FUNC:main-LINE:125-local variable 'imdb_link' referenced before assignment: api imdb https://myanimelist.net/anime/11561
-2022-04-12 18:01:02,422-ERROR-FILE:get_imdb_score.py-FUNC:get_imdb_score-LINE:34-No anime search result on IMDB. https://myanimelist.net/anime/16566
-2022-04-12 18:01:02,422-ERROR-FILE:main.py-FUNC:main-LINE:125-local variable 'imdb_link' referenced before assignment: api imdb https://myanimelist.net/anime/16566
-2022-04-12 18:01:12,444-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB: api imdb https://myanimelist.net/anime/20115
-2022-04-12 18:01:15,376-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB: api imdb https://myanimelist.net/anime/20125
-2022-04-12 18:01:17,327-ERROR-FILE:get_imdb_score.py-FUNC:get_imdb_score-LINE:34-No anime search result on IMDB. https://myanimelist.net/anime/20183
-2022-04-12 18:01:17,327-ERROR-FILE:main.py-FUNC:main-LINE:125-local variable 'imdb_link' referenced before assignment: api imdb https://myanimelist.net/anime/20183
-2022-04-12 18:01:21,048-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB: api imdb https://myanimelist.net/anime/24861
-2022-04-12 18:01:24,359-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB: api imdb https://myanimelist.net/anime/29629
-2022-04-12 18:01:32,475-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB: api imdb https://myanimelist.net/anime/30207
-2022-04-12 18:01:36,202-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB: api imdb https://myanimelist.net/anime/30530
-2022-04-12 18:02:03,118-ERROR-FILE:get_imdb_score.py-FUNC:get_imdb_score-LINE:34-No anime search result on IMDB. https://myanimelist.net/anime/2809
-2022-04-12 18:02:03,119-ERROR-FILE:main.py-FUNC:main-LINE:125-'NoneType' object has no attribute 'iterrows': api imdb https://myanimelist.net/anime/2809
-2022-04-12 18:02:48,720-ERROR-FILE:main.py-FUNC:main-LINE:125-Anime not found on IMDB: api imdb https://myanimelist.net/anime/2809
-2022-04-12 18:02:56,117-ERROR-FILE:main.py-FUNC:main-LINE:125-No anime search result on IMDB. https://myanimelist.net/anime/3196: api imdb https://myanimelist.net/anime/3196
-2022-04-12 18:02:56,816-ERROR-FILE:main.py-FUNC:main-LINE:125-No anime search result on IMDB. https://myanimelist.net/anime/3294: api imdb https://myanimelist.net/anime/3294
-2022-04-12 18:25:04,123-ERROR-FILE:main.py-FUNC:main-LINE:137-Anime not found on IMDB: api imdb https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
-2022-04-12 18:25:06,027-ERROR-FILE:main.py-FUNC:main-LINE:137-No anime search result on IMDB. https://myanimelist.net/anime/9969/Gintama: api imdb https://myanimelist.net/anime/9969/Gintama
-2022-04-12 18:26:35,620-ERROR-FILE:main.py-FUNC:main-LINE:137-(1265, "Data truncated for column 'year' at row 1"): api imdb https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
-2022-04-12 18:26:38,502-ERROR-FILE:main.py-FUNC:main-LINE:137-(1265, "Data truncated for column 'year' at row 1"): api imdb https://myanimelist.net/anime/28977/Gintama°
-2022-04-12 18:28:18,336-ERROR-FILE:main.py-FUNC:main-LINE:137-invalid literal for int() with base 10: '2009–2012': api imdb https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
-2022-04-12 18:28:21,807-ERROR-FILE:main.py-FUNC:main-LINE:137-invalid literal for int() with base 10: '2005–2018': api imdb https://myanimelist.net/anime/28977/Gintama°
-2022-04-12 18:28:24,988-ERROR-FILE:main.py-FUNC:main-LINE:137-invalid literal for int() with base 10: '2011–2015': api imdb https://myanimelist.net/anime/9253/Steins_Gate
-2022-04-12 18:28:29,293-ERROR-FILE:main.py-FUNC:main-LINE:137-Anime not found on IMDB: api imdb https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
-2022-04-12 18:28:32,697-ERROR-FILE:main.py-FUNC:main-LINE:137-invalid literal for int() with base 10: '2005–2018': api imdb https://myanimelist.net/anime/9969/Gintama
-2022-04-12 18:28:39,059-ERROR-FILE:main.py-FUNC:main-LINE:137-invalid literal for int() with base 10: '2011–2014': api imdb https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011
-2022-04-12 18:28:41,093-ERROR-FILE:main.py-FUNC:main-LINE:137-No anime search result on IMDB. https://myanimelist.net/anime/42938/Fruits_Basket__The_Final: api imdb https://myanimelist.net/anime/42938/Fruits_Basket__The_Final
-2022-04-12 18:28:44,291-ERROR-FILE:main.py-FUNC:main-LINE:137-invalid literal for int() with base 10: '2005–2018': api imdb https://myanimelist.net/anime/15417/Gintama__Enchousen
-2022-04-12 18:28:47,823-ERROR-FILE:main.py-FUNC:main-LINE:137-invalid literal for int() with base 10: '1988–1997': api imdb https://myanimelist.net/anime/820/Ginga_Eiyuu_Densetsu
-2022-04-12 18:29:09,629-ERROR-FILE:main.py-FUNC:main-LINE:137-invalid literal for int() with base 10: '2009–2012': api imdb https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
-2022-04-12 18:29:12,905-ERROR-FILE:main.py-FUNC:main-LINE:137-invalid literal for int() with base 10: '2005–2018': api imdb https://myanimelist.net/anime/28977/Gintama°
-2022-04-12 18:29:14,607-ERROR-FILE:main.py-FUNC:main-LINE:137-No anime search result on IMDB. https://myanimelist.net/anime/9253/Steins_Gate: api imdb https://myanimelist.net/anime/9253/Steins_Gate
-2022-04-12 18:29:17,006-ERROR-FILE:main.py-FUNC:main-LINE:137-No anime search result on IMDB. https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2: api imdb https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
-2022-04-12 18:29:18,773-ERROR-FILE:main.py-FUNC:main-LINE:137-No anime search result on IMDB. https://myanimelist.net/anime/9969/Gintama: api imdb https://myanimelist.net/anime/9969/Gintama
-2022-04-12 18:29:24,955-ERROR-FILE:main.py-FUNC:main-LINE:137-invalid literal for int() with base 10: '2011–2014': api imdb https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011
-2022-04-12 18:29:28,334-ERROR-FILE:main.py-FUNC:main-LINE:137-invalid literal for int() with base 10: '2019–2021': api imdb https://myanimelist.net/anime/42938/Fruits_Basket__The_Final
-2022-04-12 18:29:44,916-ERROR-FILE:main.py-FUNC:main-LINE:137-Anime not found on IMDB: api imdb https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
-2022-04-12 18:32:37,366-ERROR-FILE:main.py-FUNC:main-LINE:137-Anime not found on IMDB: api imdb https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
-2022-04-12 18:32:55,320-ERROR-FILE:main.py-FUNC:main-LINE:137-No anime search result on IMDB. https://myanimelist.net/anime/820/Ginga_Eiyuu_Densetsu: api imdb https://myanimelist.net/anime/820/Ginga_Eiyuu_Densetsu
+2022-04-25 16:45:54,352-ERROR-FILE:main.py-FUNC:<module>-LINE:167-(1044, "Access denied for user 'peng_yam'@'%' to database 'db_myanimelist'")
+2022-04-25 16:47:04,070-ERROR-FILE:main.py-FUNC:<module>-LINE:167-(1044, "Access denied for user 'peng_yam'@'%' to database 'db_myanimelist'")
+2022-04-25 16:47:47,202-ERROR-FILE:main.py-FUNC:<module>-LINE:167-(1044, "Access denied for user 'peng_yam'@'%' to database 'db_myanimelist'")
+2022-04-25 16:48:39,081-ERROR-FILE:main.py-FUNC:<module>-LINE:167-(1044, "Access denied for user 'peng_yam'@'%' to database 'db_myanimelist'")
+2022-04-25 17:10:37,333-ERROR-FILE:config.py-FUNC:_get_connection-LINE:48-Error: Database connection error! Please check your connection/username/password is correct!
+2022-04-25 17:11:15,968-ERROR-FILE:config.py-FUNC:_get_connection-LINE:48-Error: Database connection error! Please check your connection/username/password is correct!
+2022-04-25 17:15:18,891-ERROR-FILE:main.py-FUNC:<module>-LINE:167-(pymysql.err.OperationalError) (1049, "Unknown database 'peng_yam'")
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-04-25 17:16:06,201-ERROR-FILE:main.py-FUNC:<module>-LINE:167-(pymysql.err.OperationalError) (1049, "Unknown database 'peng_yam'")
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-04-25 17:17:41,765-ERROR-FILE:main.py-FUNC:<module>-LINE:167-(pymysql.err.OperationalError) (1049, "Unknown database 'peng_yam'")
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-04-25 17:18:15,580-ERROR-FILE:main.py-FUNC:<module>-LINE:167-(pymysql.err.OperationalError) (1049, "Unknown database 'peng_yam'")
+(Background on this error at: https://sqlalche.me/e/14/e3q8)

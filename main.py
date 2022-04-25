@@ -70,7 +70,7 @@ def main():
             os.remove(Path(config.project_dir) / "config.json")
 
         # 1. Setting up config
-        config.set_sql_connection(args.username, args.password, args.host, args.port)
+        config.set_sql_connection(args.username, args.password, host = args.host, port = args.port, db=args.db)
 
         with open(Path(config.project_dir) / "config.json", "w") as write_file:
             json.dump(config.get_json(), write_file, indent=4)

@@ -11,6 +11,9 @@ from googlesearch import get_random_user_agent, search
 from src_files.scraping_src_directory.scrap_imdb import scrap_imdb_score
 from src_files.scraping_src_directory.reformat import _make_data_integrity
 
+GOOGLE_SEARCH_PAUSE=0.5
+GOOGLE_SEARCH_NUM=10
+GOOGLE_SEARCH_STOP=10
 
 def get_imdb_score(anime_link):
     """
@@ -37,11 +40,13 @@ def get_imdb_score(anime_link):
 
     google_search_query = 'imdb ' + anime_title
     uagent = get_random_user_agent()
-    result = search(google_search_query, tld="co.in", num=10, stop=10, pause=0.5, user_agent=uagent)
+    result = search(google_search_query, tld="co.in", num=GOOGLE_SEARCH_NUM, stop=GOOGLE_SEARCH_STOP, pause=GOOGLE_SEARCH_PAUSE, user_agent=uagent)
     try:
         imdb_link = next(result)
-    except:
-        raise Exception(f"No anime search result on IMDB. {anime_link}")
+    except StopIteration:
+        raise Exception(f"No anime search result on IMDB.")
+    except Exception as exc1:
+        raise Exception(exc1)
 
     imdb_id = re.findall("(?<=https://www.imdb.com/title/tt)[0-9]*", imdb_link)
     imdb_id = int(imdb_id[0]) if len(imdb_id) != 0 else None

@@ -48,6 +48,7 @@ def get_parser():
     init_parser.add_argument('password', type=str, help='password for mysql connection, mandatory')
     init_parser.add_argument('--host', type=str, help='host for mysql connection', default='localhost')
     init_parser.add_argument('--port', type=int, help='port for mysql connection', default=3306)
+    init_parser.add_argument('--db', type=str, help='host for mysql connection', default='db_myanimelist')
 
     # create four subparsers to decide what type of info we want to update
     scrap_subparser = scrap_parser.add_subparsers(help='scrap target: anime, people, all', dest='type')

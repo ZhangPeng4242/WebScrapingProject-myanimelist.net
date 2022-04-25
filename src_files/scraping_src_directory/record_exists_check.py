@@ -18,7 +18,7 @@ def is_exist(crit_name, crit_value, tb_name):
 
     with config.connection as connection:
         with connection.cursor() as cursor:
-            cursor.execute("USE db_myanimelist")
+            # cursor.execute("USE db_myanimelist")
             cursor.execute(sql)
             if not int(cursor.fetchall()[0]["result"]):
                 return False
@@ -40,7 +40,7 @@ def is_exist_double(crit1, crit2, tb_name):
 
     with config.connection as connection:
         with connection.cursor() as cursor:
-            cursor.execute("USE db_myanimelist")
+            # cursor.execute("USE db_myanimelist")
             cursor.execute(sql)
             res = cursor.fetchall()[0]["result"]
             if not int(res):

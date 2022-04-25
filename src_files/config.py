@@ -32,6 +32,7 @@ class Configuration:
         self.engine = self._get_engine()
         self.timeout = config_dict['request_timeout']
         self.monkeylearn_key = config_dict['monkeylearn_key']
+        self._initiated = False
 
     def _get_connection(self):
         """
@@ -41,11 +42,11 @@ class Configuration:
         try:
             if self.mysql_connection["password"] and self.mysql_connection["user"]:
                 return pymysql.connect(host=self.mysql_connection["host"], user=self.mysql_connection["user"],
-                                       password=self.mysql_connection["password"], port=self.mysql_connection["port"],
+                                       password=self.mysql_connection["password"], port=self.mysql_connection["port"],db=None if not self._initiated else self.mysql_connection["database"],
                                        cursorclass=pymysql.cursors.DictCursor)
 
         except Exception:
-            print("Error: Database connection error! Please check your connection/username/password is correct!")
+            self.logger.error("Error: Database connection error! Please check your connection/username/password is correct!")
             os._exit(0)
 
     def _get_engine(self):
@@ -54,7 +55,7 @@ class Configuration:
         :return: sqlalchemy engine
         """
         return sqlalchemy.create_engine(
-            f'mysql+pymysql://{self.mysql_connection["user"]}:{self.mysql_connection["password"]}@{self.mysql_connection["host"]}:{self.mysql_connection["port"]}/db_myanimelist?charset=utf8')
+            f'mysql+pymysql://{self.mysql_connection["user"]}:{self.mysql_connection["password"]}@{self.mysql_connection["host"]}:{self.mysql_connection["port"]}/{self.mysql_connection["database"]}?charset=utf8')
 
     def is_connected(self):
         """
@@ -72,7 +73,7 @@ class Configuration:
         """
         self.connection = self._get_connection()
 
-    def set_sql_connection(self, name, password, host='127.0.0.1', port=3306):
+    def set_sql_connection(self, name, password, host='127.0.0.1', port=3306, db="db_myanimelist"):
         """
         Set the sql connection parameters
         :param name: mysql username
@@ -85,6 +86,7 @@ class Configuration:
         self.mysql_connection["password"] = password
         self.mysql_connection["host"] = host
         self.mysql_connection["port"] = port
+        self.mysql_connection["database"] = db
         self.reconnect()
 
     def get_params(self):
@@ -96,6 +98,7 @@ class Configuration:
         if Path(config_path).exists():
             with open(config_path, "r") as config_file:
                 config_json = json.load(config_file)
+
             self.datas_dir = config_json["datas_dir"]
             self.logs_dir = config_json["logs_dir"]
             self.delay_after_request = config_json["delay_after_request"]
@@ -107,6 +110,7 @@ class Configuration:
             self.mysql_connection["password"] = config_json["mysql_connection"]["password"]
             self.mysql_connection["host"] = config_json["mysql_connection"]["host"]
             self.mysql_connection["port"] = config_json["mysql_connection"]["port"]
+            self.mysql_connection["database"] = config_json["mysql_connection"]["database"]
 
             self.engine = self._get_engine()
 
@@ -127,7 +131,8 @@ class Configuration:
                 "host": self.mysql_connection["host"],
                 "port": self.mysql_connection["port"],
                 "user": self.mysql_connection["user"],
-                "password": self.mysql_connection["password"]
+                "password": self.mysql_connection["password"],
+                "database": self.mysql_connection["database"]
             }
         }
 
@@ -207,6 +212,7 @@ config_dict = {
         "port": 3306,
         "user": None,
         "password": None,
+        "database": None
     }
 }
 

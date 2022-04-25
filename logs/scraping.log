@@ -1,556 +1,114 @@
-2022-04-12 17:52:33,649 INFO: Start scraping anime links at year 1977...
-2022-04-12 17:52:34,217 INFO: Successfully retreived all anime links at year 1977, total number: 57
-2022-04-12 17:52:37,767 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0204704/
-2022-04-12 17:52:37,782 INFO: Record update success! Table: api_imdb, ID: 711
-2022-04-12 17:52:40,807 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt2226639/
-2022-04-12 17:52:40,816 INFO: Record update success! Table: api_imdb, ID: 1069
-2022-04-12 17:52:43,917 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0159192/
-2022-04-12 17:52:43,925 INFO: Record update success! Table: api_imdb, ID: 1425
-2022-04-12 17:52:46,342 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0294220/
-2022-04-12 17:52:46,351 INFO: Record update success! Table: api_imdb, ID: 1986
-2022-04-12 17:52:49,419 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0377231/
-2022-04-12 17:52:49,426 INFO: Record update success! Table: api_imdb, ID: 2200
-2022-04-12 17:52:52,276 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0168293/
-2022-04-12 17:52:52,283 INFO: Record update success! Table: api_imdb, ID: 2576
-2022-04-12 17:52:54,848 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/2809
-2022-04-12 17:52:57,627 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0183174/
-2022-04-12 17:52:57,633 INFO: Record update success! Table: api_imdb, ID: 2828
-2022-04-12 17:53:00,723 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0856156/
-2022-04-12 17:53:00,732 INFO: Record update success! Table: api_imdb, ID: 3008
-2022-04-12 17:53:02,550 ERROR: : api imdb https://myanimelist.net/anime/3196
-2022-04-12 17:53:04,350 ERROR: : api imdb https://myanimelist.net/anime/3294
-2022-04-12 17:53:07,127 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0294118/
-2022-04-12 17:53:07,134 INFO: Record update success! Table: api_imdb, ID: 3435
-2022-04-12 17:53:08,626 ERROR: : api imdb https://myanimelist.net/anime/3800
-2022-04-12 17:53:11,421 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt6754718/
-2022-04-12 17:53:11,428 INFO: Record update success! Table: api_imdb, ID: 3827
-2022-04-12 17:53:14,308 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0999910/
-2022-04-12 17:53:14,318 INFO: Record update success! Table: api_imdb, ID: 3847
-2022-04-12 17:53:16,934 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0292813/
-2022-04-12 17:53:16,943 INFO: Record update success! Table: api_imdb, ID: 4073
-2022-04-12 17:53:19,435 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/4218
-2022-04-12 17:53:22,212 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt6921512/
-2022-04-12 17:53:22,220 INFO: Record update success! Table: api_imdb, ID: 4339
-2022-04-12 17:53:25,419 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0298695/
-2022-04-12 17:53:25,424 INFO: Record update success! Table: api_imdb, ID: 4514
-2022-04-12 17:53:28,381 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1653973/
-2022-04-12 17:53:28,389 INFO: Insert new record! Table: api_imdb, ID: 5287
-2022-04-12 17:53:30,968 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt4926606/
-2022-04-12 17:53:30,974 INFO: Record update success! Table: api_imdb, ID: 6087
-2022-04-12 17:53:33,690 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt6920332/
-2022-04-12 17:53:33,697 INFO: Record update success! Table: api_imdb, ID: 6970
-2022-04-12 17:53:39,166 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/7027
-2022-04-12 17:53:41,944 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/7771
-2022-04-12 17:53:43,936 ERROR: : api imdb https://myanimelist.net/anime/8375
-2022-04-12 17:53:46,451 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0142971/
-2022-04-12 17:53:46,457 INFO: Record update success! Table: api_imdb, ID: 8707
-2022-04-12 17:53:48,351 ERROR: : api imdb https://myanimelist.net/anime/9279
-2022-04-12 17:53:51,467 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/9781
-2022-04-12 17:53:54,377 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/9856
-2022-04-12 17:53:58,180 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt5179178/
-2022-04-12 17:53:58,188 INFO: Record update success! Table: api_imdb, ID: 9881
-2022-04-12 17:54:01,263 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt2407122/
-2022-04-12 17:54:01,273 INFO: Insert new record! Table: api_imdb, ID: 10554
-2022-04-12 17:54:04,129 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1888591/
-2022-04-12 17:54:04,134 INFO: Record update success! Table: api_imdb, ID: 11561
-2022-04-12 17:54:06,821 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1867067/
-2022-04-12 17:54:06,828 INFO: Record update success! Table: api_imdb, ID: 14821
-2022-04-12 17:54:10,103 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1661592/
-2022-04-12 17:54:10,112 INFO: Insert new record! Table: api_imdb, ID: 15875
-2022-04-12 17:54:12,811 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1993354/
-2022-04-12 17:54:12,817 INFO: Record update success! Table: api_imdb, ID: 16399
-2022-04-12 17:54:14,676 ERROR: : api imdb https://myanimelist.net/anime/16566
-2022-04-12 17:54:17,511 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt5404966/
-2022-04-12 17:54:17,519 INFO: Record update success! Table: api_imdb, ID: 18007
-2022-04-12 17:54:20,728 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0304999/
-2022-04-12 17:54:20,736 INFO: Record update success! Table: api_imdb, ID: 19959
-2022-04-12 17:54:23,226 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/20115
-2022-04-12 17:54:26,280 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/20125
-2022-04-12 17:54:29,031 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/20183
-2022-04-12 17:54:32,267 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/24861
-2022-04-12 17:54:35,837 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/29629
-2022-04-12 17:54:38,714 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt8637922/
-2022-04-12 17:54:38,721 INFO: Record update success! Table: api_imdb, ID: 29661
-2022-04-12 17:54:42,948 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/30207
-2022-04-12 17:54:45,309 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/30530
-2022-04-12 17:54:48,901 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/32252
-2022-04-12 17:54:52,040 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt2922300/
-2022-04-12 17:54:52,046 INFO: Record update success! Table: api_imdb, ID: 36381
-2022-04-12 17:54:54,739 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/39626
-2022-04-12 17:54:57,720 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0434665/
-2022-04-12 17:54:57,727 INFO: Record update success! Table: api_imdb, ID: 40539
-2022-04-12 17:54:59,425 ERROR: : api imdb https://myanimelist.net/anime/40840
-2022-04-12 17:55:03,645 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/43391
-2022-04-12 17:55:07,114 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/43392
-2022-04-12 17:55:10,239 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt12083320/
-2022-04-12 17:55:10,245 INFO: Record update success! Table: api_imdb, ID: 43393
-2022-04-12 17:55:13,444 ERROR: Anime not found on IMDB.com: api imdb https://myanimelist.net/anime/43395
-2022-04-12 17:55:16,074 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt10288566/
-2022-04-12 17:55:16,081 INFO: Record update success! Table: api_imdb, ID: 50102
-2022-04-12 17:55:20,072 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1143153/
-2022-04-12 17:55:20,081 INFO: Insert new record! Table: api_imdb, ID: 50103
-2022-04-12 17:55:20,081 INFO: Program has ended! Run the main.py again for another action.
-2022-04-12 17:58:46,190 INFO: Start scraping anime links at year 1977...
-2022-04-12 17:58:46,790 INFO: Successfully retreived all anime links at year 1977, total number: 57
-2022-04-12 17:58:50,618 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0204704/
-2022-04-12 17:58:50,627 INFO: Record update success! Table: api_imdb, ID: 711
-2022-04-12 17:58:52,678 ERROR: 'Configuration' object has no attribute 'error': api imdb https://myanimelist.net/anime/1069
-2022-04-12 17:58:56,366 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0159192/
-2022-04-12 17:58:56,372 INFO: Record update success! Table: api_imdb, ID: 1425
-2022-04-12 17:58:59,554 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0294220/
-2022-04-12 17:58:59,562 INFO: Record update success! Table: api_imdb, ID: 1986
-2022-04-12 17:59:00,428 ERROR: 'Configuration' object has no attribute 'error': api imdb https://myanimelist.net/anime/2200
-2022-04-12 17:59:03,540 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0168293/
-2022-04-12 17:59:03,547 INFO: Record update success! Table: api_imdb, ID: 2576
-2022-04-12 17:59:07,209 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/2809
-2022-04-12 17:59:10,235 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0183174/
-2022-04-12 17:59:10,241 INFO: Record update success! Table: api_imdb, ID: 2828
-2022-04-12 17:59:14,207 INFO: Start scraping anime links at year 1977...
-2022-04-12 17:59:14,748 INFO: Successfully retreived all anime links at year 1977, total number: 57
-2022-04-12 17:59:17,861 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1477109/
-2022-04-12 17:59:17,873 INFO: Record update success! Table: api_imdb, ID: 711
-2022-04-12 17:59:21,600 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt2226639/
-2022-04-12 17:59:21,607 INFO: Record update success! Table: api_imdb, ID: 1069
-2022-04-12 17:59:24,406 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0159192/
-2022-04-12 17:59:24,413 INFO: Record update success! Table: api_imdb, ID: 1425
-2022-04-12 17:59:27,587 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0294220/
-2022-04-12 17:59:27,593 INFO: Record update success! Table: api_imdb, ID: 1986
-2022-04-12 17:59:30,690 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0377231/
-2022-04-12 17:59:30,696 INFO: Record update success! Table: api_imdb, ID: 2200
-2022-04-12 17:59:33,614 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0168293/
-2022-04-12 17:59:33,621 INFO: Record update success! Table: api_imdb, ID: 2576
-2022-04-12 17:59:36,620 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/2809
-2022-04-12 17:59:39,015 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0183174/
-2022-04-12 17:59:39,022 INFO: Record update success! Table: api_imdb, ID: 2828
-2022-04-12 17:59:42,272 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0856156/
-2022-04-12 17:59:42,279 INFO: Record update success! Table: api_imdb, ID: 3008
-2022-04-12 17:59:45,351 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0294219/
-2022-04-12 17:59:45,358 INFO: Record update success! Table: api_imdb, ID: 3196
-2022-04-12 17:59:48,367 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1978828/
-2022-04-12 17:59:48,373 INFO: Record update success! Table: api_imdb, ID: 3294
-2022-04-12 17:59:50,344 ERROR: No anime search result on IMDB. https://myanimelist.net/anime/3435
-2022-04-12 17:59:50,345 ERROR: local variable 'imdb_link' referenced before assignment: api imdb https://myanimelist.net/anime/3435
-2022-04-12 17:59:53,318 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt2554054/
-2022-04-12 17:59:53,324 INFO: Record update success! Table: api_imdb, ID: 3800
-2022-04-12 17:59:56,350 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt6754718/
-2022-04-12 17:59:56,356 INFO: Record update success! Table: api_imdb, ID: 3827
-2022-04-12 17:59:59,828 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0999910/
-2022-04-12 17:59:59,835 INFO: Record update success! Table: api_imdb, ID: 3847
-2022-04-12 18:00:03,297 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0292813/
-2022-04-12 18:00:03,304 INFO: Record update success! Table: api_imdb, ID: 4073
-2022-04-12 18:00:06,061 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/4218
-2022-04-12 18:00:06,801 ERROR: No anime search result on IMDB. https://myanimelist.net/anime/4339
-2022-04-12 18:00:06,801 ERROR: local variable 'imdb_link' referenced before assignment: api imdb https://myanimelist.net/anime/4339
-2022-04-12 18:00:10,438 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0298695/
-2022-04-12 18:00:10,445 INFO: Record update success! Table: api_imdb, ID: 4514
-2022-04-12 18:00:13,201 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1653973/
-2022-04-12 18:00:13,207 INFO: Record update success! Table: api_imdb, ID: 5287
-2022-04-12 18:00:16,597 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt4926606/
-2022-04-12 18:00:16,602 INFO: Record update success! Table: api_imdb, ID: 6087
-2022-04-12 18:00:19,725 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt6920332/
-2022-04-12 18:00:19,731 INFO: Record update success! Table: api_imdb, ID: 6970
-2022-04-12 18:00:24,047 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/7027
-2022-04-12 18:00:26,948 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/7771
-2022-04-12 18:00:30,378 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1371593/
-2022-04-12 18:00:30,384 INFO: Record update success! Table: api_imdb, ID: 8375
-2022-04-12 18:00:33,327 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0142971/
-2022-04-12 18:00:33,333 INFO: Record update success! Table: api_imdb, ID: 8707
-2022-04-12 18:00:36,697 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt8906676/
-2022-04-12 18:00:36,707 INFO: Insert new record! Table: api_imdb, ID: 9279
-2022-04-12 18:00:39,854 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/9781
-2022-04-12 18:00:42,749 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/9856
-2022-04-12 18:00:46,011 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt5179178/
-2022-04-12 18:00:46,018 INFO: Record update success! Table: api_imdb, ID: 9881
-2022-04-12 18:00:48,628 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt2407122/
-2022-04-12 18:00:48,635 INFO: Record update success! Table: api_imdb, ID: 10554
-2022-04-12 18:00:50,641 ERROR: No anime search result on IMDB. https://myanimelist.net/anime/11561
-2022-04-12 18:00:50,641 ERROR: local variable 'imdb_link' referenced before assignment: api imdb https://myanimelist.net/anime/11561
-2022-04-12 18:00:53,792 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1867067/
-2022-04-12 18:00:53,799 INFO: Record update success! Table: api_imdb, ID: 14821
-2022-04-12 18:00:56,796 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1661592/
-2022-04-12 18:00:56,801 INFO: Record update success! Table: api_imdb, ID: 15875
-2022-04-12 18:01:00,339 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1993354/
-2022-04-12 18:01:00,347 INFO: Record update success! Table: api_imdb, ID: 16399
-2022-04-12 18:01:02,422 ERROR: No anime search result on IMDB. https://myanimelist.net/anime/16566
-2022-04-12 18:01:02,422 ERROR: local variable 'imdb_link' referenced before assignment: api imdb https://myanimelist.net/anime/16566
-2022-04-12 18:01:05,922 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt5404966/
-2022-04-12 18:01:05,930 INFO: Record update success! Table: api_imdb, ID: 18007
-2022-04-12 18:01:09,242 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0304999/
-2022-04-12 18:01:09,250 INFO: Record update success! Table: api_imdb, ID: 19959
-2022-04-12 18:01:12,444 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/20115
-2022-04-12 18:01:15,376 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/20125
-2022-04-12 18:01:17,327 ERROR: No anime search result on IMDB. https://myanimelist.net/anime/20183
-2022-04-12 18:01:17,327 ERROR: local variable 'imdb_link' referenced before assignment: api imdb https://myanimelist.net/anime/20183
-2022-04-12 18:01:21,048 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/24861
-2022-04-12 18:01:24,359 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/29629
-2022-04-12 18:01:28,145 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt8637922/
-2022-04-12 18:01:28,152 INFO: Record update success! Table: api_imdb, ID: 29661
-2022-04-12 18:01:32,475 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/30207
-2022-04-12 18:01:36,202 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/30530
-2022-04-12 18:01:43,113 INFO: Start scraping anime links at year 1977...
-2022-04-12 18:01:43,685 INFO: Successfully retreived all anime links at year 1977, total number: 57
-2022-04-12 18:01:47,177 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1477109/
-2022-04-12 18:01:47,185 INFO: Record update success! Table: api_imdb, ID: 711
-2022-04-12 18:01:50,096 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt2226639/
-2022-04-12 18:01:50,103 INFO: Record update success! Table: api_imdb, ID: 1069
-2022-04-12 18:01:53,819 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0159192/
-2022-04-12 18:01:53,825 INFO: Record update success! Table: api_imdb, ID: 1425
-2022-04-12 18:01:56,769 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0294220/
-2022-04-12 18:01:56,775 INFO: Record update success! Table: api_imdb, ID: 1986
-2022-04-12 18:01:59,444 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0377231/
-2022-04-12 18:01:59,451 INFO: Record update success! Table: api_imdb, ID: 2200
-2022-04-12 18:02:02,856 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0168293/
-2022-04-12 18:02:02,863 INFO: Record update success! Table: api_imdb, ID: 2576
-2022-04-12 18:02:03,118 ERROR: No anime search result on IMDB. https://myanimelist.net/anime/2809
-2022-04-12 18:02:03,119 ERROR: 'NoneType' object has no attribute 'iterrows': api imdb https://myanimelist.net/anime/2809
-2022-04-12 18:02:05,956 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0183174/
-2022-04-12 18:02:05,980 INFO: Record update success! Table: api_imdb, ID: 2828
-2022-04-12 18:02:09,624 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0856156/
-2022-04-12 18:02:09,631 INFO: Record update success! Table: api_imdb, ID: 3008
-2022-04-12 18:02:12,385 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0294219/
-2022-04-12 18:02:12,393 INFO: Record update success! Table: api_imdb, ID: 3196
-2022-04-12 18:02:15,765 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1978828/
-2022-04-12 18:02:15,770 INFO: Record update success! Table: api_imdb, ID: 3294
-2022-04-12 18:02:22,037 INFO: Start scraping anime links at year 1977...
-2022-04-12 18:02:22,570 INFO: Successfully retreived all anime links at year 1977, total number: 57
-2022-04-12 18:02:25,978 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0204704/
-2022-04-12 18:02:25,987 INFO: Record update success! Table: api_imdb, ID: 711
-2022-04-12 18:02:29,024 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt2226639/
-2022-04-12 18:02:29,031 INFO: Record update success! Table: api_imdb, ID: 1069
-2022-04-12 18:02:32,912 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0159192/
-2022-04-12 18:02:32,919 INFO: Record update success! Table: api_imdb, ID: 1425
-2022-04-12 18:02:37,608 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0294220/
-2022-04-12 18:02:37,614 INFO: Record update success! Table: api_imdb, ID: 1986
-2022-04-12 18:02:42,391 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0377231/
-2022-04-12 18:02:42,397 INFO: Record update success! Table: api_imdb, ID: 2200
-2022-04-12 18:02:45,231 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0168293/
-2022-04-12 18:02:45,238 INFO: Record update success! Table: api_imdb, ID: 2576
-2022-04-12 18:02:48,720 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/2809
-2022-04-12 18:02:51,546 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0183174/
-2022-04-12 18:02:51,552 INFO: Record update success! Table: api_imdb, ID: 2828
-2022-04-12 18:02:54,499 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0856156/
-2022-04-12 18:02:54,505 INFO: Record update success! Table: api_imdb, ID: 3008
-2022-04-12 18:02:56,117 ERROR: No anime search result on IMDB. https://myanimelist.net/anime/3196: api imdb https://myanimelist.net/anime/3196
-2022-04-12 18:02:56,816 ERROR: No anime search result on IMDB. https://myanimelist.net/anime/3294: api imdb https://myanimelist.net/anime/3294
-2022-04-12 18:03:00,599 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0294118/
-2022-04-12 18:03:00,607 INFO: Record update success! Table: api_imdb, ID: 3435
-2022-04-12 18:03:03,673 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt2554054/
-2022-04-12 18:03:03,680 INFO: Record update success! Table: api_imdb, ID: 3800
-2022-04-12 18:03:06,575 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt6754718/
-2022-04-12 18:03:06,582 INFO: Record update success! Table: api_imdb, ID: 3827
-2022-04-12 18:03:09,781 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0999910/
-2022-04-12 18:03:09,787 INFO: Record update success! Table: api_imdb, ID: 3847
-2022-04-12 18:23:39,425 INFO: Start initiating the project...
-2022-04-12 18:23:39,442 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
-2022-04-12 18:23:40,509 INFO: Database successfully created!
-2022-04-12 18:23:41,684 INFO: Successfully initiated table: anime
-2022-04-12 18:23:42,338 INFO: Successfully initiated table: people
-2022-04-12 18:23:44,961 INFO: Successfully initiated table: character
-2022-04-12 18:23:44,983 INFO: Successfully initiated table: genre
-2022-04-12 18:23:45,050 INFO: Successfully initiated table: studio
-2022-04-12 18:23:49,409 INFO: Successfully initiated table: voice_actor
-2022-04-12 18:23:50,189 INFO: Successfully initiated table: anime_genre
-2022-04-12 18:23:50,519 INFO: Successfully initiated table: studio_anime
-2022-04-12 18:23:54,844 INFO: Successfully initiated table: anime_character
-2022-04-12 18:23:55,604 INFO: Successfully initiated table: anime_watch_stats
-2022-04-12 18:23:56,555 INFO: Successfully initiated table: anime_score_stats
-2022-04-12 18:23:57,466 INFO: Successfully initiated table: anime_general_stats
-2022-04-12 18:23:59,959 INFO: Successfully initiated table: staff
-2022-04-12 18:23:59,968 INFO: Successfully initiated table: description
-2022-04-12 18:23:59,973 INFO: Successfully initiated table: api_imdb
-2022-04-12 18:23:59,979 INFO: Successfully initiated table: api_description_sentiment_analysis
-2022-04-12 18:23:59,979 INFO: Successfully initiated database: db_myanimelist!
-2022-04-12 18:23:59,979 INFO: Congratulations! You have successfully initiated the project. Run it again for other commands.
-2022-04-12 18:23:59,979 INFO: Program has ended! Run the main.py again for another action.
-2022-04-12 18:24:47,622 INFO: Start scraping top 10 anime links...
-2022-04-12 18:24:47,623 INFO: Start scraping and retrieving the anime links...
-2022-04-12 18:24:49,223 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
-2022-04-12 18:24:49,223 INFO: Successfully get all the links of anime page! Total number of anime links: 50
-2022-04-12 18:24:49,224 INFO: Successfully retreived all the top 10 anime links.
-2022-04-12 18:24:53,204 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1355642/
-2022-04-12 18:24:53,239 INFO: Insert new record! Table: api_imdb, ID: 5114
-2022-04-12 18:24:57,079 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0988818/
-2022-04-12 18:24:57,087 INFO: Insert new record! Table: api_imdb, ID: 28977
-2022-04-12 18:25:00,371 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1910272/
-2022-04-12 18:25:00,382 INFO: Insert new record! Table: api_imdb, ID: 9253
-2022-04-12 18:25:04,123 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
-2022-04-12 18:25:06,027 ERROR: No anime search result on IMDB. https://myanimelist.net/anime/9969/Gintama: api imdb https://myanimelist.net/anime/9969/Gintama
-2022-04-12 18:25:09,456 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt10766468/
-2022-04-12 18:25:09,464 INFO: Insert new record! Table: api_imdb, ID: 39486
-2022-04-12 18:25:13,381 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt2098220/
-2022-04-12 18:25:13,399 INFO: Insert new record! Table: api_imdb, ID: 11061
-2022-04-12 18:25:17,210 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt9304350/
-2022-04-12 18:25:17,218 INFO: Insert new record! Table: api_imdb, ID: 42938
-2022-04-12 18:25:20,636 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0988818/
-2022-04-12 18:25:20,644 INFO: Insert new record! Table: api_imdb, ID: 15417
-2022-04-12 18:25:24,378 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0096633/
-2022-04-12 18:25:24,398 INFO: Insert new record! Table: api_imdb, ID: 820
-2022-04-12 18:25:24,399 INFO: Program has ended! Run the main.py again for another action.
-2022-04-12 18:26:31,103 INFO: Start scraping top 10 anime links...
-2022-04-12 18:26:31,107 INFO: Start scraping and retrieving the anime links...
-2022-04-12 18:26:32,738 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
-2022-04-12 18:26:32,738 INFO: Successfully get all the links of anime page! Total number of anime links: 50
-2022-04-12 18:26:32,738 INFO: Successfully retreived all the top 10 anime links.
-2022-04-12 18:26:35,594 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1355642/
-2022-04-12 18:26:35,620 ERROR: (1265, "Data truncated for column 'year' at row 1"): api imdb https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
-2022-04-12 18:26:38,494 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0988818/
-2022-04-12 18:26:38,502 ERROR: (1265, "Data truncated for column 'year' at row 1"): api imdb https://myanimelist.net/anime/28977/Gintama°
-2022-04-12 18:26:41,496 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
-2022-04-12 18:27:37,681 INFO: Start scraping top 10 anime links...
-2022-04-12 18:27:37,683 INFO: Start scraping and retrieving the anime links...
-2022-04-12 18:27:39,215 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
-2022-04-12 18:27:39,215 INFO: Successfully get all the links of anime page! Total number of anime links: 50
-2022-04-12 18:27:39,215 INFO: Successfully retreived all the top 10 anime links.
-2022-04-12 18:27:41,933 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1355642/
-2022-04-12 18:27:41,960 INFO: Record update success! Table: api_imdb, ID: 5114
-2022-04-12 18:27:45,314 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0988818/
-2022-04-12 18:27:45,321 INFO: Record update success! Table: api_imdb, ID: 28977
-2022-04-12 18:27:48,259 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
-2022-04-12 18:28:12,637 INFO: Start scraping top 10 anime links...
-2022-04-12 18:28:12,638 INFO: Start scraping and retrieving the anime links...
-2022-04-12 18:28:15,154 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
-2022-04-12 18:28:15,155 INFO: Successfully get all the links of anime page! Total number of anime links: 50
-2022-04-12 18:28:15,155 INFO: Successfully retreived all the top 10 anime links.
-2022-04-12 18:28:18,336 ERROR: invalid literal for int() with base 10: '2009–2012': api imdb https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
-2022-04-12 18:28:21,807 ERROR: invalid literal for int() with base 10: '2005–2018': api imdb https://myanimelist.net/anime/28977/Gintama°
-2022-04-12 18:28:24,988 ERROR: invalid literal for int() with base 10: '2011–2015': api imdb https://myanimelist.net/anime/9253/Steins_Gate
-2022-04-12 18:28:29,293 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
-2022-04-12 18:28:32,697 ERROR: invalid literal for int() with base 10: '2005–2018': api imdb https://myanimelist.net/anime/9969/Gintama
-2022-04-12 18:28:35,501 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt10766468/
-2022-04-12 18:28:35,528 INFO: Record update success! Table: api_imdb, ID: 39486
-2022-04-12 18:28:39,059 ERROR: invalid literal for int() with base 10: '2011–2014': api imdb https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011
-2022-04-12 18:28:41,093 ERROR: No anime search result on IMDB. https://myanimelist.net/anime/42938/Fruits_Basket__The_Final: api imdb https://myanimelist.net/anime/42938/Fruits_Basket__The_Final
-2022-04-12 18:28:44,291 ERROR: invalid literal for int() with base 10: '2005–2018': api imdb https://myanimelist.net/anime/15417/Gintama__Enchousen
-2022-04-12 18:28:47,823 ERROR: invalid literal for int() with base 10: '1988–1997': api imdb https://myanimelist.net/anime/820/Ginga_Eiyuu_Densetsu
-2022-04-12 18:28:47,824 INFO: Program has ended! Run the main.py again for another action.
-2022-04-12 18:29:05,296 INFO: Start scraping top 10 anime links...
-2022-04-12 18:29:05,298 INFO: Start scraping and retrieving the anime links...
-2022-04-12 18:29:06,469 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
-2022-04-12 18:29:06,470 INFO: Successfully get all the links of anime page! Total number of anime links: 50
-2022-04-12 18:29:06,471 INFO: Successfully retreived all the top 10 anime links.
-2022-04-12 18:29:09,629 ERROR: invalid literal for int() with base 10: '2009–2012': api imdb https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
-2022-04-12 18:29:12,905 ERROR: invalid literal for int() with base 10: '2005–2018': api imdb https://myanimelist.net/anime/28977/Gintama°
-2022-04-12 18:29:14,607 ERROR: No anime search result on IMDB. https://myanimelist.net/anime/9253/Steins_Gate: api imdb https://myanimelist.net/anime/9253/Steins_Gate
-2022-04-12 18:29:17,006 ERROR: No anime search result on IMDB. https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2: api imdb https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
-2022-04-12 18:29:18,773 ERROR: No anime search result on IMDB. https://myanimelist.net/anime/9969/Gintama: api imdb https://myanimelist.net/anime/9969/Gintama
-2022-04-12 18:29:21,745 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt10766468/
-2022-04-12 18:29:21,774 INFO: Record update success! Table: api_imdb, ID: 39486
-2022-04-12 18:29:24,955 ERROR: invalid literal for int() with base 10: '2011–2014': api imdb https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011
-2022-04-12 18:29:28,334 ERROR: invalid literal for int() with base 10: '2019–2021': api imdb https://myanimelist.net/anime/42938/Fruits_Basket__The_Final
-2022-04-12 18:29:30,509 INFO: Start scraping top 10 anime links...
-2022-04-12 18:29:30,509 INFO: Start scraping and retrieving the anime links...
-2022-04-12 18:29:31,960 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
-2022-04-12 18:29:31,960 INFO: Successfully get all the links of anime page! Total number of anime links: 50
-2022-04-12 18:29:31,960 INFO: Successfully retreived all the top 10 anime links.
-2022-04-12 18:29:35,089 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1355642/
-2022-04-12 18:29:35,100 INFO: Record update success! Table: api_imdb, ID: 5114
-2022-04-12 18:29:38,282 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0988818/
-2022-04-12 18:29:38,292 INFO: Record update success! Table: api_imdb, ID: 28977
-2022-04-12 18:29:41,512 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1910272/
-2022-04-12 18:29:41,523 INFO: Record update success! Table: api_imdb, ID: 9253
-2022-04-12 18:29:44,916 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
-2022-04-12 18:29:48,394 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0988818/
-2022-04-12 18:29:48,406 INFO: Insert new record! Table: api_imdb, ID: 9969
-2022-04-12 18:29:51,570 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt10766468/
-2022-04-12 18:29:51,579 INFO: Record update success! Table: api_imdb, ID: 39486
-2022-04-12 18:29:54,439 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt2098220/
-2022-04-12 18:29:54,448 INFO: Record update success! Table: api_imdb, ID: 11061
-2022-04-12 18:29:57,322 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt9304350/
-2022-04-12 18:29:57,329 INFO: Record update success! Table: api_imdb, ID: 42938
-2022-04-12 18:30:00,505 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0988818/
-2022-04-12 18:30:00,516 INFO: Record update success! Table: api_imdb, ID: 15417
-2022-04-12 18:30:03,448 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0096633/
-2022-04-12 18:30:03,455 INFO: Record update success! Table: api_imdb, ID: 820
-2022-04-12 18:30:03,455 INFO: Program has ended! Run the main.py again for another action.
-2022-04-12 18:32:22,826 INFO: Start scraping top 10 anime links...
-2022-04-12 18:32:22,827 INFO: Start scraping and retrieving the anime links...
-2022-04-12 18:32:23,784 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
-2022-04-12 18:32:23,784 INFO: Successfully get all the links of anime page! Total number of anime links: 50
-2022-04-12 18:32:23,784 INFO: Successfully retreived all the top 10 anime links.
-2022-04-12 18:32:27,638 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1355642/
-2022-04-12 18:32:27,669 INFO: Record update success! Table: api_imdb, ID: 5114
-2022-04-12 18:32:30,566 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0988818/
-2022-04-12 18:32:30,573 INFO: Record update success! Table: api_imdb, ID: 28977
-2022-04-12 18:32:33,560 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1910272/
-2022-04-12 18:32:33,568 INFO: Record update success! Table: api_imdb, ID: 9253
-2022-04-12 18:32:37,366 ERROR: Anime not found on IMDB: api imdb https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
-2022-04-12 18:32:40,758 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0988818/
-2022-04-12 18:32:40,778 INFO: Record update success! Table: api_imdb, ID: 9969
-2022-04-12 18:32:44,244 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt10766468/
-2022-04-12 18:32:44,251 INFO: Record update success! Table: api_imdb, ID: 39486
-2022-04-12 18:32:47,243 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt2098220/
-2022-04-12 18:32:47,250 INFO: Record update success! Table: api_imdb, ID: 11061
-2022-04-12 18:32:50,223 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt9304350/
-2022-04-12 18:32:50,231 INFO: Record update success! Table: api_imdb, ID: 42938
-2022-04-12 18:32:53,477 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0988818/
-2022-04-12 18:32:53,488 INFO: Record update success! Table: api_imdb, ID: 15417
-2022-04-12 18:32:55,320 ERROR: No anime search result on IMDB. https://myanimelist.net/anime/820/Ginga_Eiyuu_Densetsu: api imdb https://myanimelist.net/anime/820/Ginga_Eiyuu_Densetsu
-2022-04-12 18:32:55,321 INFO: Program has ended! Run the main.py again for another action.
-2022-04-12 19:43:42,130 INFO: Start scraping top 20 anime links...
-2022-04-12 19:43:42,132 INFO: Start scraping and retrieving the anime links...
-2022-04-12 19:43:43,628 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
-2022-04-12 19:43:43,628 INFO: Successfully get all the links of anime page! Total number of anime links: 50
-2022-04-12 19:43:43,628 INFO: Successfully retreived all the top 20 anime links.
-2022-04-12 19:43:45,251 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
-2022-04-12 19:43:45,277 INFO: Record update success! Table: anime, ID: 5114
-2022-04-12 19:43:45,309 INFO: Record update success! Table: anime_general_stats, ID: 5114
-2022-04-12 19:43:45,401 INFO: Insert new record! Table: description, ID: 5114
-2022-04-12 19:43:47,820 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood/stats
-2022-04-12 19:43:47,890 INFO: Insert new record! Table: anime_watch_stats, ID: 5114
-2022-04-12 19:43:47,930 INFO: Insert new record! Table: anime_score_stats, ID: 5114
-2022-04-12 19:43:49,018 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/28977/Gintama°
-2022-04-12 19:43:49,033 INFO: Record update success! Table: anime, ID: 28977
-2022-04-12 19:43:49,051 INFO: Record update success! Table: anime_general_stats, ID: 28977
-2022-04-12 19:43:49,124 INFO: Insert new record! Table: description, ID: 28977
-2022-04-12 19:43:50,026 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/28977/Gintama°/stats
-2022-04-12 19:43:50,039 INFO: Record update success! Table: anime_watch_stats, ID: 28977
-2022-04-12 19:43:50,050 INFO: Record update success! Table: anime_score_stats, ID: 28977
-2022-04-12 19:43:51,191 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/9253/Steins_Gate
-2022-04-12 19:43:51,207 INFO: Record update success! Table: anime, ID: 9253
-2022-04-12 19:43:51,226 INFO: Record update success! Table: anime_general_stats, ID: 9253
-2022-04-12 19:43:51,281 INFO: Insert new record! Table: description, ID: 9253
-2022-04-12 19:43:52,629 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/9253/Steins_Gate/stats
-2022-04-12 19:43:52,641 INFO: Record update success! Table: anime_watch_stats, ID: 9253
-2022-04-12 19:43:52,649 INFO: Record update success! Table: anime_score_stats, ID: 9253
-2022-04-12 19:43:54,483 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
-2022-04-12 19:43:54,493 INFO: Record update success! Table: anime, ID: 38524
-2022-04-12 19:43:54,502 INFO: Record update success! Table: anime_general_stats, ID: 38524
-2022-04-12 19:43:54,522 INFO: Insert new record! Table: description, ID: 38524
-2022-04-12 19:43:55,464 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2/stats
-2022-04-12 19:43:55,472 INFO: Record update success! Table: anime_watch_stats, ID: 38524
-2022-04-12 19:43:55,479 INFO: Record update success! Table: anime_score_stats, ID: 38524
-2022-04-12 19:43:56,452 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/9969/Gintama
-2022-04-12 19:43:56,461 INFO: Record update success! Table: anime, ID: 9969
-2022-04-12 19:43:56,467 INFO: Record update success! Table: anime_general_stats, ID: 9969
-2022-04-12 19:43:56,495 INFO: Insert new record! Table: description, ID: 9969
-2022-04-12 19:43:59,038 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/9969/Gintama/stats
-2022-04-12 19:43:59,107 INFO: Record update success! Table: anime_watch_stats, ID: 9969
-2022-04-12 19:43:59,134 INFO: Record update success! Table: anime_score_stats, ID: 9969
-2022-04-12 19:44:00,441 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/39486/Gintama__The_Final
-2022-04-12 19:44:00,462 INFO: Record update success! Table: anime, ID: 39486
-2022-04-12 19:44:00,472 INFO: Record update success! Table: anime_general_stats, ID: 39486
-2022-04-12 19:44:00,509 INFO: Insert new record! Table: description, ID: 39486
-2022-04-12 19:44:03,312 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/39486/Gintama__The_Final/stats
-2022-04-12 19:44:03,326 INFO: Record update success! Table: anime_watch_stats, ID: 39486
-2022-04-12 19:44:03,335 INFO: Record update success! Table: anime_score_stats, ID: 39486
-2022-04-12 19:44:04,495 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011
-2022-04-12 19:44:04,512 INFO: Record update success! Table: anime, ID: 11061
-2022-04-12 19:44:04,521 INFO: Record update success! Table: anime_general_stats, ID: 11061
-2022-04-12 19:44:04,554 INFO: Insert new record! Table: description, ID: 11061
-2022-04-12 19:44:05,482 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011/stats
-2022-04-12 19:44:05,491 INFO: Record update success! Table: anime_watch_stats, ID: 11061
-2022-04-12 19:44:05,497 INFO: Record update success! Table: anime_score_stats, ID: 11061
-2022-04-12 19:44:06,492 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/42938/Fruits_Basket__The_Final
-2022-04-12 19:44:06,503 INFO: Record update success! Table: anime, ID: 42938
-2022-04-12 19:44:06,510 INFO: Record update success! Table: anime_general_stats, ID: 42938
-2022-04-12 19:44:06,561 INFO: Insert new record! Table: description, ID: 42938
-2022-04-12 19:44:07,439 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/42938/Fruits_Basket__The_Final/stats
-2022-04-12 19:44:07,445 INFO: Record update success! Table: anime_watch_stats, ID: 42938
-2022-04-12 19:44:07,450 INFO: Record update success! Table: anime_score_stats, ID: 42938
-2022-04-12 19:44:08,397 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/15417/Gintama__Enchousen
-2022-04-12 19:44:08,405 INFO: Record update success! Table: anime, ID: 15417
-2022-04-12 19:44:08,410 INFO: Record update success! Table: anime_general_stats, ID: 15417
-2022-04-12 19:44:08,429 INFO: Insert new record! Table: description, ID: 15417
-2022-04-12 19:44:12,988 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/15417/Gintama__Enchousen/stats
-2022-04-12 19:44:13,002 INFO: Record update success! Table: anime_watch_stats, ID: 15417
-2022-04-12 19:44:13,009 INFO: Record update success! Table: anime_score_stats, ID: 15417
-2022-04-12 19:44:14,084 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/820/Ginga_Eiyuu_Densetsu
-2022-04-12 19:44:14,097 INFO: Record update success! Table: anime, ID: 820
-2022-04-12 19:44:14,103 INFO: Record update success! Table: anime_general_stats, ID: 820
-2022-04-12 19:44:14,125 INFO: Insert new record! Table: description, ID: 820
-2022-04-12 19:44:15,064 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/820/Ginga_Eiyuu_Densetsu/stats
-2022-04-12 19:44:15,089 INFO: Record update success! Table: anime_watch_stats, ID: 820
-2022-04-12 19:44:15,118 INFO: Record update success! Table: anime_score_stats, ID: 820
-2022-04-12 19:44:16,218 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/50265/Spy_x_Family
-2022-04-12 19:44:16,232 INFO: Record update success! Table: anime, ID: 50265
-2022-04-12 19:44:16,243 INFO: Record update success! Table: anime_general_stats, ID: 50265
-2022-04-12 19:44:16,300 INFO: Insert new record! Table: description, ID: 50265
-2022-04-12 19:44:17,166 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/50265/Spy_x_Family/stats
-2022-04-12 19:44:17,174 INFO: Record update success! Table: anime_watch_stats, ID: 50265
-2022-04-12 19:44:17,185 INFO: Record update success! Table: anime_score_stats, ID: 50265
-2022-04-12 19:44:18,575 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/43608/Kaguya-sama_wa_Kokurasetai__Ultra_Romantic
-2022-04-12 19:44:18,586 INFO: Record update success! Table: anime, ID: 43608
-2022-04-12 19:44:18,594 INFO: Record update success! Table: anime_general_stats, ID: 43608
-2022-04-12 19:44:18,609 INFO: Insert new record! Table: studio_anime, ID: 56
-2022-04-12 19:44:18,615 INFO: Insert new record! Table: description, ID: 43608
-2022-04-12 19:44:19,680 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/43608/Kaguya-sama_wa_Kokurasetai__Ultra_Romantic/stats
-2022-04-12 19:44:19,692 INFO: Record update success! Table: anime_watch_stats, ID: 43608
-2022-04-12 19:44:19,698 INFO: Record update success! Table: anime_score_stats, ID: 43608
-2022-04-12 19:44:20,848 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/34096/Gintama
-2022-04-12 19:44:20,858 INFO: Record update success! Table: anime, ID: 34096
-2022-04-12 19:44:20,864 INFO: Record update success! Table: anime_general_stats, ID: 34096
-2022-04-12 19:44:20,902 INFO: Insert new record! Table: description, ID: 34096
-2022-04-12 19:44:23,615 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/34096/Gintama/stats
-2022-04-12 19:44:23,623 INFO: Record update success! Table: anime_watch_stats, ID: 34096
-2022-04-12 19:44:23,629 INFO: Record update success! Table: anime_score_stats, ID: 34096
-2022-04-12 19:44:24,733 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/35180/3-gatsu_no_Lion_2nd_Season
-2022-04-12 19:44:24,741 INFO: Record update success! Table: anime, ID: 35180
-2022-04-12 19:44:24,747 INFO: Record update success! Table: anime_general_stats, ID: 35180
-2022-04-12 19:44:24,762 INFO: Insert new record! Table: description, ID: 35180
-2022-04-12 19:44:28,880 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/35180/3-gatsu_no_Lion_2nd_Season/stats
-2022-04-12 19:44:28,893 INFO: Record update success! Table: anime_watch_stats, ID: 35180
-2022-04-12 19:44:28,900 INFO: Record update success! Table: anime_score_stats, ID: 35180
-2022-04-12 19:44:29,896 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/28851/Koe_no_Katachi
-2022-04-12 19:44:29,913 INFO: Record update success! Table: anime, ID: 28851
-2022-04-12 19:44:29,920 INFO: Record update success! Table: anime_general_stats, ID: 28851
-2022-04-12 19:44:29,930 INFO: Insert new record! Table: description, ID: 28851
-2022-04-12 19:44:30,778 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/28851/Koe_no_Katachi/stats
-2022-04-12 19:44:30,785 INFO: Record update success! Table: anime_watch_stats, ID: 28851
-2022-04-12 19:44:30,791 INFO: Record update success! Table: anime_score_stats, ID: 28851
-2022-04-12 19:44:32,222 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/37987/Violet_Evergarden_Movie
-2022-04-12 19:44:32,233 INFO: Record update success! Table: anime, ID: 37987
-2022-04-12 19:44:32,241 INFO: Record update success! Table: anime_general_stats, ID: 37987
-2022-04-12 19:44:32,260 INFO: Insert new record! Table: description, ID: 37987
-2022-04-12 19:44:33,144 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/37987/Violet_Evergarden_Movie/stats
-2022-04-12 19:44:33,150 INFO: Record update success! Table: anime_watch_stats, ID: 37987
-2022-04-12 19:44:33,158 INFO: Record update success! Table: anime_score_stats, ID: 37987
-2022-04-12 19:44:34,400 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/918/Gintama
-2022-04-12 19:44:34,418 INFO: Record update success! Table: anime, ID: 918
-2022-04-12 19:44:34,427 INFO: Record update success! Table: anime_general_stats, ID: 918
-2022-04-12 19:44:34,469 INFO: Insert new record! Table: description, ID: 918
-2022-04-12 19:44:37,243 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/918/Gintama/stats
-2022-04-12 19:44:37,253 INFO: Record update success! Table: anime_watch_stats, ID: 918
-2022-04-12 19:44:37,260 INFO: Record update success! Table: anime_score_stats, ID: 918
-2022-04-12 19:44:38,467 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/4181/Clannad__After_Story
-2022-04-12 19:44:38,479 INFO: Record update success! Table: anime, ID: 4181
-2022-04-12 19:44:38,493 INFO: Record update success! Table: anime_general_stats, ID: 4181
-2022-04-12 19:44:38,550 INFO: Insert new record! Table: description, ID: 4181
-2022-04-12 19:44:39,881 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/4181/Clannad__After_Story/stats
-2022-04-12 19:44:39,888 INFO: Record update success! Table: anime_watch_stats, ID: 4181
-2022-04-12 19:44:39,894 INFO: Record update success! Table: anime_score_stats, ID: 4181
-2022-04-12 19:44:40,935 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2
-2022-04-12 19:44:40,949 INFO: Record update success! Table: anime, ID: 48583
-2022-04-12 19:44:40,955 INFO: Record update success! Table: anime_general_stats, ID: 48583
-2022-04-12 19:44:40,969 INFO: Insert new record! Table: description, ID: 48583
-2022-04-12 19:44:41,830 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2/stats
-2022-04-12 19:44:41,839 INFO: Record update success! Table: anime_watch_stats, ID: 48583
-2022-04-12 19:44:41,844 INFO: Record update success! Table: anime_score_stats, ID: 48583
-2022-04-12 19:44:42,805 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/15335/Gintama_Movie_2__Kanketsu-hen_-_Yorozuya_yo_Eien_Nare
-2022-04-12 19:44:42,813 INFO: Record update success! Table: anime, ID: 15335
-2022-04-12 19:44:42,817 INFO: Record update success! Table: anime_general_stats, ID: 15335
-2022-04-12 19:44:42,835 INFO: Insert new record! Table: description, ID: 15335
-2022-04-12 19:44:47,894 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/15335/Gintama_Movie_2__Kanketsu-hen_-_Yorozuya_yo_Eien_Nare/stats
-2022-04-12 19:44:47,901 INFO: Record update success! Table: anime_watch_stats, ID: 15335
-2022-04-12 19:44:47,905 INFO: Record update success! Table: anime_score_stats, ID: 15335
-2022-04-12 19:44:51,786 INFO: get_synopsis_sentiment: Success! anime_ids: 5114, 28977, 9253, 38524, 9969, 39486, 11061, 42938, 15417, 820, 50265, 43608, 34096, 35180, 28851, 37987, 918, 4181, 48583, 15335
-2022-04-12 19:44:51,845 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 5114.0
-2022-04-12 19:44:51,852 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 28977.0
-2022-04-12 19:44:51,858 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 9253.0
-2022-04-12 19:44:51,864 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 38524.0
-2022-04-12 19:44:51,869 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 9969.0
-2022-04-12 19:44:51,875 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 39486.0
-2022-04-12 19:44:51,880 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 11061.0
-2022-04-12 19:44:51,885 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 42938.0
-2022-04-12 19:44:51,891 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 15417.0
-2022-04-12 19:44:51,897 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 820.0
-2022-04-12 19:44:51,901 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 50265.0
-2022-04-12 19:44:51,906 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 43608.0
-2022-04-12 19:44:51,911 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 34096.0
-2022-04-12 19:44:51,916 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 35180.0
-2022-04-12 19:44:51,922 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 28851.0
-2022-04-12 19:44:51,941 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 37987.0
-2022-04-12 19:44:51,948 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 918.0
-2022-04-12 19:44:51,970 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 4181.0
-2022-04-12 19:44:51,979 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 48583.0
-2022-04-12 19:44:51,987 INFO: Insert new record! Table: api_description_sentiment_analysis, ID: 15335.0
-2022-04-12 19:44:51,987 INFO: Program has ended! Run the main.py again for another action.
+2022-04-25 15:38:55,607 INFO: Start scraping top 20 anime links...
+2022-04-25 15:38:55,607 INFO: Start scraping and retrieving the anime links...
+2022-04-25 15:38:57,698 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 15:38:57,698 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 15:38:57,698 INFO: Successfully retreived all the top 20 anime links.
+2022-04-25 15:39:01,587 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt1355642/
+2022-04-25 15:39:01,722 INFO: Record update success! Table: api_imdb, ID: 5114
+2022-04-25 15:39:05,675 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt0988818/
+2022-04-25 15:39:05,706 INFO: Record update success! Table: api_imdb, ID: 28977
+2022-04-25 15:39:09,455 INFO: scrap_imdb_score: Success! https://www.imdb.com/title/tt13706018/
+2022-04-25 15:39:09,496 INFO: Insert new record! Table: api_imdb, ID: 50265
+2022-04-25 15:39:13,479 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-04-25 16:45:53,056 INFO: Start initiating the project...
+2022-04-25 16:45:54,096 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
+2022-04-25 16:45:54,352 ERROR: (1044, "Access denied for user 'peng_yam'@'%' to database 'db_myanimelist'")
+2022-04-25 16:47:02,771 INFO: Start initiating the project...
+2022-04-25 16:47:03,817 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
+2022-04-25 16:47:04,070 ERROR: (1044, "Access denied for user 'peng_yam'@'%' to database 'db_myanimelist'")
+2022-04-25 16:47:44,896 INFO: Start initiating the project...
+2022-04-25 16:47:46,952 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
+2022-04-25 16:47:47,202 ERROR: (1044, "Access denied for user 'peng_yam'@'%' to database 'db_myanimelist'")
+2022-04-25 16:48:37,694 INFO: Start initiating the project...
+2022-04-25 16:48:38,823 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
+2022-04-25 16:48:39,081 ERROR: (1044, "Access denied for user 'peng_yam'@'%' to database 'db_myanimelist'")
+2022-04-25 17:10:37,294 INFO: Start initiating the project...
+2022-04-25 17:10:37,333 ERROR: Error: Database connection error! Please check your connection/username/password is correct!
+2022-04-25 17:11:15,948 INFO: Start initiating the project...
+2022-04-25 17:11:15,968 ERROR: Error: Database connection error! Please check your connection/username/password is correct!
+2022-04-25 17:14:07,192 INFO: Start initiating the project...
+2022-04-25 17:14:07,213 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
+2022-04-25 17:14:07,763 INFO: Database successfully created!
+2022-04-25 17:14:12,502 INFO: Successfully initiated table: anime
+2022-04-25 17:14:13,719 INFO: Successfully initiated table: people
+2022-04-25 17:14:18,426 INFO: Successfully initiated table: character
+2022-04-25 17:14:18,465 INFO: Successfully initiated table: genre
+2022-04-25 17:14:18,599 INFO: Successfully initiated table: studio
+2022-04-25 17:14:24,585 INFO: Successfully initiated table: voice_actor
+2022-04-25 17:14:25,574 INFO: Successfully initiated table: anime_genre
+2022-04-25 17:14:25,994 INFO: Successfully initiated table: studio_anime
+2022-04-25 17:14:30,560 INFO: Successfully initiated table: anime_character
+2022-04-25 17:14:31,800 INFO: Successfully initiated table: anime_watch_stats
+2022-04-25 17:14:33,041 INFO: Successfully initiated table: anime_score_stats
+2022-04-25 17:14:33,896 INFO: Successfully initiated table: anime_general_stats
+2022-04-25 17:14:37,101 INFO: Successfully initiated table: staff
+2022-04-25 17:14:37,108 INFO: Successfully initiated table: description
+2022-04-25 17:14:37,119 INFO: Successfully initiated table: api_imdb
+2022-04-25 17:14:37,126 INFO: Successfully initiated table: api_description_sentiment_analysis
+2022-04-25 17:14:37,126 INFO: Successfully initiated database: db_myanimelist!
+2022-04-25 17:14:37,126 INFO: Congratulations! You have successfully initiated the project. Run it again for other commands.
+2022-04-25 17:14:37,126 INFO: Program has ended! Run the main.py again for another action.
+2022-04-25 17:15:18,583 INFO: Start initiating the project...
+2022-04-25 17:15:18,600 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
+2022-04-25 17:15:18,734 INFO: Database successfully created!
+2022-04-25 17:15:18,891 ERROR: (pymysql.err.OperationalError) (1049, "Unknown database 'peng_yam'")
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-04-25 17:16:06,030 INFO: Start initiating the project...
+2022-04-25 17:16:06,037 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
+2022-04-25 17:16:06,102 INFO: Database successfully created!
+2022-04-25 17:16:06,201 ERROR: (pymysql.err.OperationalError) (1049, "Unknown database 'peng_yam'")
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-04-25 17:17:41,594 INFO: Start initiating the project...
+2022-04-25 17:17:41,603 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
+2022-04-25 17:17:41,669 INFO: Database successfully created!
+2022-04-25 17:17:41,765 ERROR: (pymysql.err.OperationalError) (1049, "Unknown database 'peng_yam'")
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-04-25 17:18:15,282 INFO: Start initiating the project...
+2022-04-25 17:18:15,300 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
+2022-04-25 17:18:15,409 INFO: Database successfully created!
+2022-04-25 17:18:15,580 ERROR: (pymysql.err.OperationalError) (1049, "Unknown database 'peng_yam'")
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-04-25 17:19:18,394 INFO: Start initiating the project...
+2022-04-25 17:19:18,403 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
+2022-04-25 17:19:18,821 INFO: Database successfully created!
+2022-04-25 17:19:20,200 INFO: Successfully initiated table: anime
+2022-04-25 17:19:20,840 INFO: Successfully initiated table: people
+2022-04-25 17:19:23,848 INFO: Successfully initiated table: character
+2022-04-25 17:19:23,869 INFO: Successfully initiated table: genre
+2022-04-25 17:19:23,934 INFO: Successfully initiated table: studio
+2022-04-25 17:19:28,715 INFO: Successfully initiated table: voice_actor
+2022-04-25 17:19:29,550 INFO: Successfully initiated table: anime_genre
+2022-04-25 17:19:29,926 INFO: Successfully initiated table: studio_anime
+2022-04-25 17:19:33,966 INFO: Successfully initiated table: anime_character
+2022-04-25 17:19:34,696 INFO: Successfully initiated table: anime_watch_stats
+2022-04-25 17:19:35,705 INFO: Successfully initiated table: anime_score_stats
+2022-04-25 17:19:36,610 INFO: Successfully initiated table: anime_general_stats
+2022-04-25 17:19:38,904 INFO: Successfully initiated table: staff
+2022-04-25 17:19:38,917 INFO: Successfully initiated table: description
+2022-04-25 17:19:38,923 INFO: Successfully initiated table: api_imdb
+2022-04-25 17:19:38,928 INFO: Successfully initiated table: api_description_sentiment_analysis
+2022-04-25 17:19:38,928 INFO: Successfully initiated database: db_myanimelist!
+2022-04-25 17:19:38,928 INFO: Congratulations! You have successfully initiated the project. Run it again for other commands.
+2022-04-25 17:19:38,928 INFO: Program has ended! Run the main.py again for another action.
+2022-04-25 17:21:09,077 INFO: Start initiating the project...
+2022-04-25 17:21:10,189 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
+2022-04-25 17:21:17,414 INFO: Database successfully created!
+2022-04-25 17:21:40,946 INFO: Successfully initiated table: anime
+2022-04-25 17:21:49,614 INFO: Successfully initiated table: people
+2022-04-25 17:22:35,915 INFO: Successfully initiated table: character
+2022-04-25 17:22:37,731 INFO: Successfully initiated table: genre
+2022-04-25 17:22:39,648 INFO: Successfully initiated table: studio
+2022-04-25 17:22:54,413 INFO: Successfully initiated table: voice_actor
+2022-04-25 17:22:57,874 INFO: Successfully initiated table: anime_genre
+2022-04-25 17:23:00,092 INFO: Successfully initiated table: studio_anime
+2022-04-25 17:23:18,790 INFO: Successfully initiated table: anime_character
+2022-04-25 17:23:23,681 INFO: Successfully initiated table: anime_watch_stats
+2022-04-25 17:23:32,562 INFO: Successfully initiated table: anime_score_stats
+2022-04-25 17:23:37,861 INFO: Successfully initiated table: anime_general_stats
+2022-04-25 17:23:52,659 INFO: Successfully initiated table: staff
+2022-04-25 17:23:53,330 INFO: Successfully initiated table: description
+2022-04-25 17:23:54,093 INFO: Successfully initiated table: api_imdb
+2022-04-25 17:23:54,773 INFO: Successfully initiated table: api_description_sentiment_analysis
+2022-04-25 17:23:54,774 INFO: Successfully initiated database: db_myanimelist!
+2022-04-25 17:23:54,774 INFO: Congratulations! You have successfully initiated the project. Run it again for other commands.
+2022-04-25 17:23:54,774 INFO: Program has ended! Run the main.py again for another action.

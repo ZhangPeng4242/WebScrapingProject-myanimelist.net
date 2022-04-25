@@ -23,7 +23,7 @@ def scrap_imdb_score(imdb_link):
                                timeout=config.timeout)
                 break
             except Exception:
-                config.logger.warning(f"scrap_anime_page: Change proxy... {imdb_link}")
+                config.logger.warning(f"scrap_imdb_page: Change proxy... {imdb_link}")
                 time.sleep(config.proxy_change_delay)
                 continue
 
@@ -31,6 +31,7 @@ def scrap_imdb_score(imdb_link):
     temp = imdb_soup.find(attrs={'data-testid': 'hero-rating-bar__aggregate-rating__score'})
     if not temp:
         raise Exception("Anime not found on IMDB")
+
     imdb_score = temp.find('span')
     imdb_score = float(imdb_score.text) if imdb_score else np.nan
 

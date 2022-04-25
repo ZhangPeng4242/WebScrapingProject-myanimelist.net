@@ -1,3 +1,7 @@
+"""
+This module is to do anime description sentiment analysis.
+:export:  get_synopsis_sentiment
+"""
 import pandas as pd
 
 from monkeylearn import MonkeyLearn
@@ -8,6 +12,11 @@ from src_files.scraping_src_directory.scrap_and_update import scrap_and_update_a
 
 
 def get_synopsis_sentiment(anime_link_list):
+    """
+    This function uses monkeylearn API to do description sentiment analysis
+    :param anime_link_list:
+    :return: DataFrame: df_sentiment
+    """
     syn_data_list = []
     for anime_link in anime_link_list:
         # if the anime_id not existed, need to scrap and update the anime first

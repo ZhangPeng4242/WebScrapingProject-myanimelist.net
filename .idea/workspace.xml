@@ -2,72 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dab77dd-98be-433c-bb57-5b4e5174e107" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_init_datas_/api_imdb.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_init_datas_/db_EDR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_init_datas_/description.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_init_datas_/sysarg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_files/api_src_directory/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_files/api_src_directory/get_imdb_score.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_files/api_src_directory/get_synopsis_sentiment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_and_update.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_imdb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_init_datas_/db_myanimelist_ERD.mwb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ITC-DataMining-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ITC-DataMining-Project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/anime_character.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/anime_general_stats.csv" beforeDir="false" afterPath="$PROJECT_DIR$/_init_datas_/anime_general_stats.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/anime_links.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/anime_score_stats.csv" beforeDir="false" afterPath="$PROJECT_DIR$/_init_datas_/anime_score_stats.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/anime_watch_stats.csv" beforeDir="false" afterPath="$PROJECT_DIR$/_init_datas_/anime_watch_stats.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/_init_datas_/cover_img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/img1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/img2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/scraping.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/staff.csv" beforeDir="false" afterPath="$PROJECT_DIR$/_init_datas_/staff_old.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/studio_anime.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_init_datas_/voice_actor.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_init_datas_/db_EDR.png" beforeDir="false" afterPath="$PROJECT_DIR$/_init_datas_/db_ERD.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_init_datas_/myanimelist_db_eer_diagram.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/scraping.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scraping.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/_init_datas_/api_description_sentiment_analysis.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/pool_for_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_get_rand_proxy_headers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_scrap_anime_list_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_scrap_anime_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_scrap_people_list_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_scrap_people_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_scrap_stats_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_store_anime_page_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_store_peple_page_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/(not using)scraping_test_directory/test_store_stats_page_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_files/api_src_directory/get_imdb_score.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/api_src_directory/get_imdb_score.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_files/api_src_directory/get_synopsis_sentiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/api_src_directory/get_synopsis_sentiment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_files/argparser_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/argparser_config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_files/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/mysql_db_src_directory/db_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/db_info.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db_myanimelist.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db_myanimelist.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/mysql_db_src_directory/sqlqueries.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src_files/mysql_db_src_directory/update_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/update_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/(not using)main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/(not using)store_anime_page_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/(not using)store_people_page_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/(not using)store_stats_page_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/(not using)store_studios_info_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/get_links_by_commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/get_links_by_commands.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/get_rand_proxy_headers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/get_rand_proxy_headers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/record_exists_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/record_exists_check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/reformat.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/reformat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_list_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_list_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_people_list_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_people_list_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_people_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_people_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_stats_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_stats_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_studio_list_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_studio_list_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_studio_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_studio_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/store_db_to_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/export_db_to_csv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_imdb.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_imdb.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,10 +59,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="exceleditor.install" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/_init_datas_" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_init_datas_" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/_init_datas_" />
       <recent name="$PROJECT_DIR$/src_files/mysql_db_src_directory" />
@@ -195,7 +151,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="api sentiment_analysis --rank 20" />
+      <option name="PARAMETERS" value="init peng_yam peng_yam --db peng_yam --host data-mining-db1.cttpnp4olbpx.us-west-1.rds.amazonaws.com" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -224,27 +180,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scrap_people_page" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ITC-DataMining-Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_files/scraping_src_directory" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_people_page.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="scrape_main_page" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="web_scraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -258,6 +193,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrape_main_page.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ITC-DataMining-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src_files/api_src_directory" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src_files/api_src_directory/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -292,18 +248,18 @@
       <item itemvalue="Python.scrape_main_page" />
       <item itemvalue="Python.test" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.scrap_people_page" />
       <item itemvalue="Python.prectice" />
       <item itemvalue="Python.get_imdb_score" />
       <item itemvalue="Python.get_synopsis_sentiment" />
+      <item itemvalue="Python.test (1)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.test (1)" />
         <item itemvalue="Python.get_synopsis_sentiment" />
         <item itemvalue="Python.get_imdb_score" />
         <item itemvalue="Python.prectice" />
-        <item itemvalue="Python.scrap_people_page" />
       </list>
     </recent_temporary>
   </component>

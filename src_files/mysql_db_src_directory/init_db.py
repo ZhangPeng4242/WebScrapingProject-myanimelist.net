@@ -19,10 +19,11 @@ def create_db():
     sql_list = sqlparse.split(sql_script)
     with config.connection:
         with config.connection.cursor() as cursor:
-            cursor.execute("DROP DATABASE IF EXISTS db_myanimelist")
+            cursor.execute(f"DROP DATABASE IF EXISTS {config.mysql_connection['database']}")
             for sql in sql_list:
+                sql = sql.replace('db_myanimelist', config.mysql_connection["database"])
                 cursor.execute(sql)
-
+            config._initiated = True
     config.logger.info("Database successfully created!")
 
 
@@ -33,7 +34,7 @@ def insert_init_data():
     """
     file_list = ['anime.csv', 'people.csv', 'character.csv', 'genre.csv', 'studio.csv', 'voice_actor.csv',
                  'anime_genre.csv', 'studio_anime.csv', 'anime_character.csv', 'anime_watch_stats.csv',
-                 'anime_score_stats.csv', 'anime_general_stats.csv', 'staff.csv','description.csv','api_imdb.csv',
+                 'anime_score_stats.csv', 'anime_general_stats.csv', 'staff.csv', 'description.csv', 'api_imdb.csv',
                  'api_description_sentiment_analysis.csv']
 
     for file_name in file_list:
@@ -51,4 +52,3 @@ def init_db():
     create_db()
     insert_init_data()
     config.logger.info(f"Successfully initiated database: db_myanimelist!")
-
