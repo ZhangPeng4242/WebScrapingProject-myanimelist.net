@@ -112,3 +112,382 @@
 2022-04-25 17:23:54,774 INFO: Successfully initiated database: db_myanimelist!
 2022-04-25 17:23:54,774 INFO: Congratulations! You have successfully initiated the project. Run it again for other commands.
 2022-04-25 17:23:54,774 INFO: Program has ended! Run the main.py again for another action.
+2022-04-25 18:32:05,299 INFO: Start scraping...
+2022-04-25 18:32:05,304 INFO: Start scraping top 5 anime links...
+2022-04-25 18:32:05,305 INFO: Start scraping and retrieving the anime links...
+2022-04-25 18:32:06,860 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 18:32:06,860 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 18:32:06,860 INFO: Successfully retreived all the top 5 anime links.
+2022-04-25 18:32:10,228 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 18:32:13,095 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/28977/Gintama°
+2022-04-25 18:32:15,930 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/50265/Spy_x_Family
+2022-04-25 18:32:18,756 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
+2022-04-25 18:32:21,647 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/9253/Steins_Gate
+2022-04-25 18:32:21,648 INFO: Program has ended! Run the main.py again for another action.
+2022-04-25 18:32:43,375 INFO: Start scraping...
+2022-04-25 18:32:43,376 INFO: Start scraping top 5 anime links...
+2022-04-25 18:32:43,376 INFO: Start scraping and retrieving the anime links...
+2022-04-25 18:32:44,902 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 18:32:44,903 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 18:32:44,903 INFO: Successfully retreived all the top 5 anime links.
+2022-04-25 18:32:47,627 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 18:32:50,481 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/28977/Gintama°
+2022-04-25 18:32:53,270 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/50265/Spy_x_Family
+2022-04-25 18:32:53,639 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-04-25 18:35:38,380 INFO: Start scraping...
+2022-04-25 18:35:38,381 INFO: Start scraping top 5 anime links...
+2022-04-25 18:35:38,381 INFO: Start scraping and retrieving the anime links...
+2022-04-25 18:35:39,341 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 18:35:39,341 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 18:35:39,341 INFO: Successfully retreived all the top 5 anime links.
+2022-04-25 18:35:42,298 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 18:35:44,960 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/28977/Gintama°
+2022-04-25 18:35:47,930 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/50265/Spy_x_Family
+2022-04-25 18:35:50,503 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
+2022-04-25 18:35:52,946 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/9253/Steins_Gate
+2022-04-25 18:35:52,946 INFO: Program has ended! Run the main.py again for another action.
+2022-04-25 18:36:39,920 INFO: Start scraping...
+2022-04-25 18:36:39,927 INFO: Start scraping top 5 anime links...
+2022-04-25 18:36:39,927 INFO: Start scraping and retrieving the anime links...
+2022-04-25 18:36:41,011 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 18:36:41,011 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 18:36:41,011 INFO: Successfully retreived all the top 5 anime links.
+2022-04-25 18:36:43,874 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 18:36:46,583 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/28977/Gintama°
+2022-04-25 18:36:49,149 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/50265/Spy_x_Family
+2022-04-25 18:36:51,858 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
+2022-04-25 18:36:54,035 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/9253/Steins_Gate
+2022-04-25 18:36:54,036 INFO: Program has ended! Run the main.py again for another action.
+2022-04-25 18:37:24,572 INFO: Start scraping...
+2022-04-25 18:37:24,573 INFO: Start scraping top 5 anime links...
+2022-04-25 18:37:24,573 INFO: Start scraping and retrieving the anime links...
+2022-04-25 18:37:25,570 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 18:37:25,570 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 18:37:25,570 INFO: Successfully retreived all the top 5 anime links.
+2022-04-25 18:37:28,079 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 18:37:28,832 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-04-25 18:56:52,870 INFO: Start scraping...
+2022-04-25 18:56:52,871 WARNING: Start scraping all the pages, this process might take over 30 hours to complete.
+2022-04-25 18:56:52,871 INFO: Start scraping and retrieving the anime links...
+2022-04-25 18:56:53,955 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 18:56:55,347 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=50 
+2022-04-25 18:56:55,901 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-04-25 19:06:40,336 INFO: Start scraping...
+2022-04-25 19:06:40,337 INFO: Start scraping top 10 anime links...
+2022-04-25 19:06:40,337 INFO: Start scraping and retrieving the anime links...
+2022-04-25 19:06:41,695 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 19:06:41,695 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 19:06:41,695 INFO: Successfully retreived all the top 10 anime links.
+2022-04-25 19:06:44,849 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 19:06:47,595 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/28977/Gintama°
+2022-04-25 19:06:48,754 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-04-25 19:10:27,824 INFO: Start scraping...
+2022-04-25 19:10:27,825 INFO: Start scraping top 10 anime links...
+2022-04-25 19:10:27,825 INFO: Start scraping and retrieving the anime links...
+2022-04-25 19:10:28,803 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 19:10:28,804 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 19:10:28,805 INFO: Successfully retreived all the top 10 anime links.
+2022-04-25 19:10:31,285 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 19:10:34,257 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/28977/Gintama°
+2022-04-25 19:10:35,432 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-04-25 19:11:14,360 INFO: Start initiating the project...
+2022-04-25 19:11:14,514 INFO: Successfully created config.json at /Users/peng/PycharmProjects/ITC-DataMining-Project/config.json
+2022-04-25 19:11:17,447 INFO: Database successfully created!
+2022-04-25 19:11:19,520 INFO: Successfully initiated table: anime
+2022-04-25 19:11:20,481 INFO: Successfully initiated table: people
+2022-04-25 19:11:24,439 INFO: Successfully initiated table: character
+2022-04-25 19:11:24,459 INFO: Successfully initiated table: genre
+2022-04-25 19:11:24,543 INFO: Successfully initiated table: studio
+2022-04-25 19:11:30,888 INFO: Successfully initiated table: voice_actor
+2022-04-25 19:11:31,982 INFO: Successfully initiated table: anime_genre
+2022-04-25 19:11:32,451 INFO: Successfully initiated table: studio_anime
+2022-04-25 19:11:37,939 INFO: Successfully initiated table: anime_character
+2022-04-25 19:11:38,911 INFO: Successfully initiated table: anime_watch_stats
+2022-04-25 19:11:40,313 INFO: Successfully initiated table: anime_score_stats
+2022-04-25 19:11:41,263 INFO: Successfully initiated table: anime_general_stats
+2022-04-25 19:11:44,149 INFO: Successfully initiated table: staff
+2022-04-25 19:11:44,158 INFO: Successfully initiated table: description
+2022-04-25 19:11:44,166 INFO: Successfully initiated table: api_imdb
+2022-04-25 19:11:44,173 INFO: Successfully initiated table: api_description_sentiment_analysis
+2022-04-25 19:11:44,173 INFO: Successfully initiated database: peng_yam!
+2022-04-25 19:11:44,173 INFO: Congratulations! You have successfully initiated the project. Run it again for other commands.
+2022-04-25 19:11:44,173 INFO: Program has ended! Run the main.py again for another action.
+2022-04-25 19:12:07,114 INFO: Start scraping...
+2022-04-25 19:12:07,114 INFO: Start scraping top 10 anime links...
+2022-04-25 19:12:07,114 INFO: Start scraping and retrieving the anime links...
+2022-04-25 19:12:09,858 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 19:12:09,858 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 19:12:09,858 INFO: Successfully retreived all the top 10 anime links.
+2022-04-25 19:12:11,654 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 19:12:13,306 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/28977/Gintama°
+2022-04-25 19:12:14,522 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/50265/Spy_x_Family
+2022-04-25 19:12:15,174 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-04-25 19:13:16,702 INFO: Start scraping...
+2022-04-25 19:13:16,704 INFO: Start scraping top 10 anime links...
+2022-04-25 19:13:16,704 INFO: Start scraping and retrieving the anime links...
+2022-04-25 19:13:17,768 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 19:13:17,768 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 19:13:17,768 INFO: Successfully retreived all the top 10 anime links.
+2022-04-25 19:13:19,615 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 19:13:20,419 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-04-25 19:14:56,702 INFO: Start scraping...
+2022-04-25 19:14:56,703 INFO: Start scraping top 10 anime links...
+2022-04-25 19:14:56,703 INFO: Start scraping and retrieving the anime links...
+2022-04-25 19:14:58,301 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 19:14:58,301 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 19:14:58,301 INFO: Successfully retreived all the top 10 anime links.
+2022-04-25 19:15:00,167 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 19:15:01,453 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/28977/Gintama°
+2022-04-25 19:15:03,147 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/50265/Spy_x_Family
+2022-04-25 19:15:04,952 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
+2022-04-25 19:15:06,791 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/9253/Steins_Gate
+2022-04-25 19:15:08,102 ERROR: 'NoneType' object is not subscriptable: scrap anime https://myanimelist.net/anime/9969/Gintama
+2022-04-25 19:15:10,039 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011
+2022-04-25 19:15:10,350 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-04-25 19:16:00,139 INFO: Start scraping...
+2022-04-25 19:16:00,142 INFO: Start scraping top 10 anime links...
+2022-04-25 19:16:00,142 INFO: Start scraping and retrieving the anime links...
+2022-04-25 19:16:01,755 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 19:16:01,755 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 19:16:01,755 INFO: Successfully retreived all the top 10 anime links.
+2022-04-25 19:16:03,110 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 19:16:04,297 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/28977/Gintama°
+2022-04-25 19:16:05,922 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/50265/Spy_x_Family
+2022-04-25 19:16:07,687 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
+2022-04-25 19:16:09,462 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/9253/Steins_Gate
+2022-04-25 19:16:10,450 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-04-25 19:16:58,326 INFO: Start scraping...
+2022-04-25 19:16:58,327 INFO: Start scraping top 10 anime links...
+2022-04-25 19:16:58,327 INFO: Start scraping and retrieving the anime links...
+2022-04-25 19:16:59,835 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 19:16:59,835 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 19:16:59,835 INFO: Successfully retreived all the top 10 anime links.
+2022-04-25 19:17:00,952 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 19:17:02,037 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/28977/Gintama°
+2022-04-25 19:17:03,641 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/50265/Spy_x_Family
+2022-04-25 19:17:04,701 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
+2022-04-25 19:17:04,757 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-04-25 19:18:04,877 INFO: Start scraping...
+2022-04-25 19:18:04,879 INFO: Start scraping top 10 anime links...
+2022-04-25 19:18:04,880 INFO: Start scraping and retrieving the anime links...
+2022-04-25 19:18:06,335 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 19:18:06,335 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 19:18:06,335 INFO: Successfully retreived all the top 10 anime links.
+2022-04-25 19:18:07,613 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 19:18:09,175 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/28977/Gintama°
+2022-04-25 19:18:10,790 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/50265/Spy_x_Family
+2022-04-25 19:18:12,189 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
+2022-04-25 19:18:13,439 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/9253/Steins_Gate
+2022-04-25 19:18:14,609 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-04-25 19:18:42,059 INFO: Start scraping...
+2022-04-25 19:18:42,060 INFO: Start scraping top 10 anime links...
+2022-04-25 19:18:42,060 INFO: Start scraping and retrieving the anime links...
+2022-04-25 19:18:43,564 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 19:18:43,565 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 19:18:43,565 INFO: Successfully retreived all the top 10 anime links.
+2022-04-25 19:18:45,585 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 19:18:47,069 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/28977/Gintama°
+2022-04-25 19:18:48,684 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/50265/Spy_x_Family
+2022-04-25 19:18:49,917 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
+2022-04-25 19:18:51,640 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/9253/Steins_Gate
+2022-04-25 19:18:52,850 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/9969/Gintama
+2022-04-25 19:18:53,392 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-04-25 19:19:10,039 INFO: Start scraping...
+2022-04-25 19:19:10,039 INFO: Start scraping top 10 anime links...
+2022-04-25 19:19:10,039 INFO: Start scraping and retrieving the anime links...
+2022-04-25 19:19:11,574 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 19:19:11,575 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 19:19:11,575 INFO: Successfully retreived all the top 10 anime links.
+2022-04-25 19:19:13,472 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 19:19:15,157 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/28977/Gintama°
+2022-04-25 19:19:16,707 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/50265/Spy_x_Family
+2022-04-25 19:19:18,409 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
+2022-04-25 19:19:20,154 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/9253/Steins_Gate
+2022-04-25 19:19:20,874 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-04-25 19:20:21,179 INFO: Start scraping...
+2022-04-25 19:20:21,180 INFO: Start scraping top 10 anime links...
+2022-04-25 19:20:21,180 INFO: Start scraping and retrieving the anime links...
+2022-04-25 19:20:22,753 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 19:20:22,753 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 19:20:22,753 INFO: Successfully retreived all the top 10 anime links.
+2022-04-25 19:20:24,678 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 19:20:24,704 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 19:20:26,435 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/28977/Gintama°
+2022-04-25 19:20:26,458 ERROR: (1046, 'No database selected'): scrap anime https://myanimelist.net/anime/28977/Gintama°
+2022-04-25 19:20:27,468 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-04-25 19:21:29,772 INFO: Start scraping...
+2022-04-25 19:21:29,773 INFO: Start scraping top 10 anime links...
+2022-04-25 19:21:29,774 INFO: Start scraping and retrieving the anime links...
+2022-04-25 19:21:31,293 INFO: scrap_anime_list_page: Success! https://myanimelist.net/topanime.php?limit=0 
+2022-04-25 19:21:31,293 INFO: Successfully get all the links of anime page! Total number of anime links: 50
+2022-04-25 19:21:31,293 INFO: Successfully retreived all the top 10 anime links.
+2022-04-25 19:21:34,126 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood
+2022-04-25 19:21:34,161 INFO: Record update success! Table: anime, ID: 5114
+2022-04-25 19:21:34,195 INFO: Record update success! Table: anime_general_stats, ID: 5114
+2022-04-25 19:21:34,323 INFO: Insert new record! Table: description, ID: 5114
+2022-04-25 19:21:35,767 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood/stats
+2022-04-25 19:21:35,781 INFO: Insert new record! Table: anime_watch_stats, ID: 5114
+2022-04-25 19:21:35,791 INFO: Insert new record! Table: anime_score_stats, ID: 5114
+2022-04-25 19:21:37,421 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/28977/Gintama°
+2022-04-25 19:21:37,438 INFO: Record update success! Table: anime, ID: 28977
+2022-04-25 19:21:37,462 INFO: Record update success! Table: anime_general_stats, ID: 28977
+2022-04-25 19:21:37,531 INFO: Insert new record! Table: description, ID: 28977
+2022-04-25 19:21:40,113 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/28977/Gintama°/stats
+2022-04-25 19:21:40,156 INFO: Record update success! Table: anime_watch_stats, ID: 28977
+2022-04-25 19:21:40,193 INFO: Record update success! Table: anime_score_stats, ID: 28977
+2022-04-25 19:21:41,849 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/50265/Spy_x_Family
+2022-04-25 19:21:41,888 INFO: Record update success! Table: anime, ID: 50265
+2022-04-25 19:21:41,898 INFO: Record update success! Table: anime_general_stats, ID: 50265
+2022-04-25 19:21:41,927 INFO: Insert new record! Table: description, ID: 50265
+2022-04-25 19:21:43,168 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/50265/Spy_x_Family/stats
+2022-04-25 19:21:43,232 INFO: Record update success! Table: anime_watch_stats, ID: 50265
+2022-04-25 19:21:43,250 INFO: Record update success! Table: anime_score_stats, ID: 50265
+2022-04-25 19:21:44,899 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2
+2022-04-25 19:21:44,917 INFO: Record update success! Table: anime, ID: 38524
+2022-04-25 19:21:44,928 INFO: Record update success! Table: anime_general_stats, ID: 38524
+2022-04-25 19:21:44,967 INFO: Insert new record! Table: description, ID: 38524
+2022-04-25 19:21:46,425 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2/stats
+2022-04-25 19:21:46,441 INFO: Record update success! Table: anime_watch_stats, ID: 38524
+2022-04-25 19:21:46,456 INFO: Record update success! Table: anime_score_stats, ID: 38524
+2022-04-25 19:21:47,897 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/9253/Steins_Gate
+2022-04-25 19:21:47,911 INFO: Record update success! Table: anime, ID: 9253
+2022-04-25 19:21:47,922 INFO: Record update success! Table: anime_general_stats, ID: 9253
+2022-04-25 19:21:47,949 INFO: Insert new record! Table: description, ID: 9253
+2022-04-25 19:21:49,367 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/9253/Steins_Gate/stats
+2022-04-25 19:21:49,383 INFO: Record update success! Table: anime_watch_stats, ID: 9253
+2022-04-25 19:21:49,394 INFO: Record update success! Table: anime_score_stats, ID: 9253
+2022-04-25 19:21:50,752 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/9969/Gintama
+2022-04-25 19:21:50,764 INFO: Record update success! Table: anime, ID: 9969
+2022-04-25 19:21:50,776 INFO: Record update success! Table: anime_general_stats, ID: 9969
+2022-04-25 19:21:50,828 INFO: Insert new record! Table: description, ID: 9969
+2022-04-25 19:21:54,205 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/9969/Gintama/stats
+2022-04-25 19:21:54,220 INFO: Record update success! Table: anime_watch_stats, ID: 9969
+2022-04-25 19:21:54,232 INFO: Record update success! Table: anime_score_stats, ID: 9969
+2022-04-25 19:21:55,907 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011
+2022-04-25 19:21:55,922 INFO: Record update success! Table: anime, ID: 11061
+2022-04-25 19:21:55,934 INFO: Record update success! Table: anime_general_stats, ID: 11061
+2022-04-25 19:21:55,982 INFO: Insert new record! Table: description, ID: 11061
+2022-04-25 19:21:57,420 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011/stats
+2022-04-25 19:21:57,434 INFO: Record update success! Table: anime_watch_stats, ID: 11061
+2022-04-25 19:21:57,444 INFO: Record update success! Table: anime_score_stats, ID: 11061
+2022-04-25 19:21:59,362 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/42938/Fruits_Basket__The_Final
+2022-04-25 19:21:59,375 INFO: Record update success! Table: anime, ID: 42938
+2022-04-25 19:21:59,383 INFO: Record update success! Table: anime_general_stats, ID: 42938
+2022-04-25 19:21:59,417 INFO: Insert new record! Table: description, ID: 42938
+2022-04-25 19:22:02,839 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/42938/Fruits_Basket__The_Final/stats
+2022-04-25 19:22:02,851 INFO: Record update success! Table: anime_watch_stats, ID: 42938
+2022-04-25 19:22:02,859 INFO: Record update success! Table: anime_score_stats, ID: 42938
+2022-04-25 19:22:03,849 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/15417/Gintama__Enchousen
+2022-04-25 19:22:03,861 INFO: Record update success! Table: anime, ID: 15417
+2022-04-25 19:22:03,871 INFO: Record update success! Table: anime_general_stats, ID: 15417
+2022-04-25 19:22:03,895 INFO: Insert new record! Table: description, ID: 15417
+2022-04-25 19:22:09,059 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/15417/Gintama__Enchousen/stats
+2022-04-25 19:22:09,068 INFO: Record update success! Table: anime_watch_stats, ID: 15417
+2022-04-25 19:22:09,075 INFO: Record update success! Table: anime_score_stats, ID: 15417
+2022-04-25 19:22:10,855 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/39486/Gintama__The_Final
+2022-04-25 19:22:10,863 INFO: Record update success! Table: anime, ID: 39486
+2022-04-25 19:22:10,870 INFO: Record update success! Table: anime_general_stats, ID: 39486
+2022-04-25 19:22:10,894 INFO: Insert new record! Table: description, ID: 39486
+2022-04-25 19:22:14,402 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/39486/Gintama__The_Final/stats
+2022-04-25 19:22:14,413 INFO: Record update success! Table: anime_watch_stats, ID: 39486
+2022-04-25 19:22:14,419 INFO: Record update success! Table: anime_score_stats, ID: 39486
+2022-04-25 19:22:14,419 INFO: Program has ended! Run the main.py again for another action.
+2022-04-25 19:22:38,455 INFO: Start scraping...
+2022-04-25 19:22:38,455 INFO: Start scraping all the links for each person...
+2022-04-25 19:22:38,456 INFO: Start scraping and retrieving the people links...
+2022-04-25 19:22:39,374 INFO: scrap_people_list_page: Success! https://myanimelist.net/people.php?limit=0
+2022-04-25 19:22:39,374 INFO: Successfully get all the links of people page! Total number of people page links: 50
+2022-04-25 19:22:39,375 INFO: Successfully retreived all the top 10 people links
+2022-04-25 19:22:44,823 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/51535/Shingeki_no_Kyojin__The_Final_Season_-_Kanketsu-hen
+2022-04-25 19:22:45,932 INFO: scrap_people_page: Success! https://myanimelist.net/people/118/Hiroshi_Kamiya
+2022-04-25 19:22:47,820 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/51535/Shingeki_no_Kyojin__The_Final_Season_-_Kanketsu-hen
+2022-04-25 19:22:47,832 INFO: Insert new record! Table: anime, ID: 51535
+2022-04-25 19:22:47,838 INFO: Insert new record! Table: anime_general_stats, ID: 51535
+2022-04-25 19:22:47,844 INFO: Insert new record! Table: anime_genre, ID: 51535
+2022-04-25 19:22:47,855 INFO: Insert new record! Table: studio_anime, ID: 569
+2022-04-25 19:22:47,861 INFO: Insert new record! Table: description, ID: 51535
+2022-04-25 19:22:52,224 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/51535/Shingeki_no_Kyojin__The_Final_Season_-_Kanketsu-hen/stats
+2022-04-25 19:22:52,236 INFO: Insert new record! Table: anime_watch_stats, ID: 51535
+2022-04-25 19:22:52,246 INFO: Insert new record! Table: anime_score_stats, ID: 51535
+2022-04-25 19:22:52,833 INFO: Record update success! Table: people, ID: 118
+2022-04-25 19:22:52,855 INFO: Insert new record! Table: `character`, ID: 207666
+2022-04-25 19:22:52,950 INFO: Insert new record! Table: `character`, ID: 204569
+2022-04-25 19:22:54,763 INFO: Insert new record! Table: `character`, ID: 173752
+2022-04-25 19:22:54,940 INFO: Insert new record! Table: voice_actor, ID: 207666
+2022-04-25 19:22:54,978 INFO: Insert new record! Table: voice_actor, ID: 202200
+2022-04-25 19:22:55,012 INFO: Insert new record! Table: voice_actor, ID: 204569
+2022-04-25 19:22:55,918 INFO: Insert new record! Table: voice_actor, ID: 173752
+2022-04-25 19:22:55,958 INFO: Insert new record! Table: anime_character, ID: 51535
+2022-04-25 19:22:55,965 INFO: Insert new record! Table: anime_character, ID: 49119
+2022-04-25 19:22:55,972 INFO: Insert new record! Table: anime_character, ID: 49776
+2022-04-25 19:22:55,980 INFO: Insert new record! Table: anime_character, ID: 49283
+2022-04-25 19:22:56,009 INFO: Insert new record! Table: anime_character, ID: 48953
+2022-04-25 19:22:56,017 INFO: Insert new record! Table: anime_character, ID: 42938
+2022-04-25 19:22:56,877 INFO: Insert new record! Table: anime_character, ID: 1019
+2022-04-25 19:23:03,586 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/51495/Shin_Shinka_no_Mi__Shiranai_Uchi_ni_Kachigumi_Jinsei
+2022-04-25 19:23:03,603 INFO: scrap_people_page: Success! https://myanimelist.net/people/185/Kana_Hanazawa
+2022-04-25 19:23:05,279 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/51495/Shin_Shinka_no_Mi__Shiranai_Uchi_ni_Kachigumi_Jinsei
+2022-04-25 19:23:05,295 INFO: Insert new record! Table: anime, ID: 51495
+2022-04-25 19:23:05,315 INFO: Insert new record! Table: anime_general_stats, ID: 51495
+2022-04-25 19:23:05,335 INFO: Insert new record! Table: anime_genre, ID: 51495
+2022-04-25 19:23:05,379 INFO: Insert new record! Table: description, ID: 51495
+2022-04-25 19:23:08,105 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/51495/Shin_Shinka_no_Mi__Shiranai_Uchi_ni_Kachigumi_Jinsei/stats
+2022-04-25 19:23:08,115 INFO: Insert new record! Table: anime_watch_stats, ID: 51495
+2022-04-25 19:23:08,120 INFO: Insert new record! Table: anime_score_stats, ID: 51495
+2022-04-25 19:23:08,959 INFO: Record update success! Table: people, ID: 185
+2022-04-25 19:23:08,966 INFO: Insert new record! Table: `character`, ID: 61127
+2022-04-25 19:23:08,977 INFO: Insert new record! Table: `character`, ID: 189354
+2022-04-25 19:23:08,988 INFO: Insert new record! Table: `character`, ID: 208778
+2022-04-25 19:23:08,993 INFO: Insert new record! Table: `character`, ID: 121129
+2022-04-25 19:23:11,090 INFO: Insert new record! Table: `character`, ID: 206409
+2022-04-25 19:23:11,133 INFO: Insert new record! Table: staff, ID: 185
+2022-04-25 19:23:11,208 INFO: Insert new record! Table: voice_actor, ID: 61127
+2022-04-25 19:23:11,214 INFO: Insert new record! Table: voice_actor, ID: 189354
+2022-04-25 19:23:11,220 INFO: Insert new record! Table: voice_actor, ID: 208778
+2022-04-25 19:23:11,225 INFO: Insert new record! Table: voice_actor, ID: 121129
+2022-04-25 19:23:12,117 INFO: Insert new record! Table: voice_actor, ID: 206409
+2022-04-25 19:23:12,133 INFO: Insert new record! Table: anime_character, ID: 50668
+2022-04-25 19:23:12,139 INFO: Insert new record! Table: anime_character, ID: 45653
+2022-04-25 19:23:12,143 INFO: Insert new record! Table: anime_character, ID: 48548
+2022-04-25 19:23:12,147 INFO: Insert new record! Table: anime_character, ID: 48643
+2022-04-25 19:23:12,151 INFO: Insert new record! Table: anime_character, ID: 40356
+2022-04-25 19:23:12,155 INFO: Insert new record! Table: anime_character, ID: 49291
+2022-04-25 19:23:12,161 INFO: Insert new record! Table: anime_character, ID: 42886
+2022-04-25 19:23:12,187 INFO: Insert new record! Table: anime_character, ID: 42587
+2022-04-25 19:23:12,232 INFO: Insert new record! Table: anime_character, ID: 40902
+2022-04-25 19:23:12,325 INFO: Insert new record! Table: anime_character, ID: 36962
+2022-04-25 19:23:13,026 INFO: Insert new record! Table: anime_character, ID: 1889
+2022-04-25 19:23:13,038 INFO: Insert new record! Table: anime_character, ID: 51495
+2022-04-25 19:23:17,276 INFO: scrap_people_page: Success! https://myanimelist.net/people/65/Mamoru_Miyano
+2022-04-25 19:23:18,594 INFO: Record update success! Table: people, ID: 65
+2022-04-25 19:23:18,633 INFO: Insert new record! Table: `character`, ID: 206514
+2022-04-25 19:23:18,651 INFO: Insert new record! Table: `character`, ID: 208654
+2022-04-25 19:23:20,969 INFO: Insert new record! Table: `character`, ID: 170152
+2022-04-25 19:23:21,073 INFO: Insert new record! Table: voice_actor, ID: 206514
+2022-04-25 19:23:21,083 INFO: Insert new record! Table: voice_actor, ID: 208654
+2022-04-25 19:23:21,090 INFO: Insert new record! Table: voice_actor, ID: 4836
+2022-04-25 19:23:21,929 INFO: Insert new record! Table: voice_actor, ID: 170152
+2022-04-25 19:23:21,937 INFO: Insert new record! Table: anime_character, ID: 50552
+2022-04-25 19:23:21,948 INFO: Insert new record! Table: anime_character, ID: 50549
+2022-04-25 19:23:21,954 INFO: Insert new record! Table: anime_character, ID: 48830
+2022-04-25 19:23:21,958 INFO: Insert new record! Table: anime_character, ID: 41595
+2022-04-25 19:23:21,965 INFO: Insert new record! Table: anime_character, ID: 50710
+2022-04-25 19:23:22,076 INFO: Insert new record! Table: anime_character, ID: 37997
+2022-04-25 19:23:22,884 INFO: Insert new record! Table: anime_character, ID: 51019
+2022-04-25 19:23:29,803 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/6793/Kuroshitsuji__Sono_Shitsuji_Kougyou
+2022-04-25 19:23:29,868 INFO: scrap_people_page: Success! https://myanimelist.net/people/672/Yuuki_Kaji
+2022-04-25 19:23:32,511 INFO: scrap_anime_page: Success! https://myanimelist.net/anime/6793/Kuroshitsuji__Sono_Shitsuji_Kougyou
+2022-04-25 19:23:32,521 INFO: Insert new record! Table: anime, ID: 6793
+2022-04-25 19:23:32,532 INFO: Insert new record! Table: anime_general_stats, ID: 6793
+2022-04-25 19:23:32,542 INFO: Insert new record! Table: anime_genre, ID: 6793
+2022-04-25 19:23:32,554 INFO: Insert new record! Table: studio_anime, ID: 56
+2022-04-25 19:23:32,561 INFO: Insert new record! Table: description, ID: 6793
+2022-04-25 19:23:33,935 INFO: scrap_anime_stats_page: Success! https://myanimelist.net/anime/6793/Kuroshitsuji__Sono_Shitsuji_Kougyou/stats
+2022-04-25 19:23:33,947 INFO: Insert new record! Table: anime_watch_stats, ID: 6793
+2022-04-25 19:23:33,955 INFO: Insert new record! Table: anime_score_stats, ID: 6793
+2022-04-25 19:23:34,329 INFO: Record update success! Table: people, ID: 672
+2022-04-25 19:23:34,341 INFO: Insert new record! Table: `character`, ID: 206739
+2022-04-25 19:23:34,353 INFO: Insert new record! Table: `character`, ID: 206515
+2022-04-25 19:23:34,443 INFO: Insert new record! Table: `character`, ID: 207409
+2022-04-25 19:23:34,451 INFO: Insert new record! Table: `character`, ID: 207261
+2022-04-25 19:23:36,124 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.

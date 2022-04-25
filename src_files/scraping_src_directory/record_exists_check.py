@@ -11,20 +11,18 @@ def is_exist(crit_name, crit_value, tb_name):
     :param tb_name: str, the name of the table
     :return: Boolean, True: record exist, False: record not exist
     """
-
     sql = f"""SELECT EXISTS( SELECT * FROM {tb_name} WHERE {crit_name} = {f"'{crit_value}'" if type(crit_value) != int else crit_value}) AS result"""
     if not config.is_connected():
         config.reconnect()
 
     with config.connection as connection:
         with connection.cursor() as cursor:
-            # cursor.execute("USE db_myanimelist")
+            cursor.execute(f"USE {config.mysql_connection['database']}")
             cursor.execute(sql)
             if not int(cursor.fetchall()[0]["result"]):
                 return False
             else:
                 return True
-
 
 def is_exist_double(crit1, crit2, tb_name):
     """
@@ -40,7 +38,7 @@ def is_exist_double(crit1, crit2, tb_name):
 
     with config.connection as connection:
         with connection.cursor() as cursor:
-            # cursor.execute("USE db_myanimelist")
+            cursor.execute(f"USE {config.mysql_connection['database']}")
             cursor.execute(sql)
             res = cursor.fetchall()[0]["result"]
             if not int(res):

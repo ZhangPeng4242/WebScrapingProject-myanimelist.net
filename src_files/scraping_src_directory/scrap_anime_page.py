@@ -23,7 +23,7 @@ def scrap_anime_page(anime_page_link):
     :return: str: anime_full_link, DataFrame: formatted_anime_data, formatted_anime_general_stats_data, formatted_anime_genre_data,
             formatted_studio_anime_data, formatted_description_data
     """
-
+    # print(config.mysql_connection,config.engine)
     with requests.Session() as res:
         while True:
             try:
@@ -85,6 +85,7 @@ def scrap_anime_page(anime_page_link):
     site_stats["score"] = np.nan if site_stats["score"] == "N/A" else site_stats["score"]
 
     stats_containers = soup.find_all('span', string=['Ranked:', 'Popularity:', 'Members:', 'Favorites:'])
+
     for stat_container in stats_containers:
         stat_list = stat_container.parent.text.split(":")
         key, val = stat_list

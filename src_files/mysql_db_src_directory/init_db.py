@@ -51,4 +51,4 @@ def init_db():
     """
     create_db()
     insert_init_data()
-    config.logger.info(f"Successfully initiated database: db_myanimelist!")
+    config.logger.info(f"Successfully initiated database: {config.mysql_connection['database']}!")

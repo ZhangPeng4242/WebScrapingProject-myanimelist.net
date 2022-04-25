@@ -54,12 +54,14 @@ def get_people_link_list(args):
     return people_link_list
 
 
-def main():
+def main(parser=None):
     """
     Main function for the project, handle different kind of commands.
     :return: None
     """
-    parser = get_parser()
+    if not parser:
+        parser = get_parser()
+
     args = parser.parse_args()
 
     # init
