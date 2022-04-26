@@ -491,3 +491,12 @@
 2022-04-25 19:23:34,443 INFO: Insert new record! Table: `character`, ID: 207409
 2022-04-25 19:23:34,451 INFO: Insert new record! Table: `character`, ID: 207261
 2022-04-25 19:23:36,124 WARNING: You have manually stopped the program, all the scrapping process conducted has been updated in the database.
+2022-04-26 11:18:51,670 INFO: Start scraping...
+2022-04-26 11:18:51,671 INFO: Start scraping all the links for each person...
+2022-04-26 11:18:51,672 INFO: Start scraping and retrieving the people links...
+2022-04-26 11:18:53,301 INFO: scrap_people_list_page: Success! https://myanimelist.net/people.php?limit=0
+2022-04-26 11:18:53,301 INFO: Successfully get all the links of people page! Total number of people page links: 50
+2022-04-26 11:18:53,301 INFO: Successfully retreived all the top 1 people links
+2022-04-26 11:18:58,203 INFO: scrap_people_page: Success! https://myanimelist.net/people/118/Hiroshi_Kamiya
+2022-04-26 11:18:58,951 INFO: Record update success! Table: people, ID: 118
+2022-04-26 11:19:01,434 INFO: Program has ended! Run the main.py again for another action.

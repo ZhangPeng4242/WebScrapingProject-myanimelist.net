@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8dab77dd-98be-433c-bb57-5b4e5174e107" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/scraping.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scraping.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/init_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/mysql_db_src_directory/update_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/mysql_db_src_directory/update_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/record_exists_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/record_exists_check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_list_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_anime_list_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_people_list_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_people_list_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_studio_list_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_files/scraping_src_directory/scrap_studio_list_page.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +137,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="scrap people --rank 10" />
+      <option name="PARAMETERS" value="scrap people --rank 1" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />

@@ -6,6 +6,7 @@ import math
 import time
 from bs4 import BeautifulSoup
 import requests
+import random
 from src_files.scraping_src_directory.get_rand_proxy_headers import get_rand_headers, get_rand_proxy
 from src_files.config import config
 
@@ -58,7 +59,7 @@ def get_people_links(_crit=math.inf):
         config.logger.info(f"scrap_people_list_page: Success! {people_search_link}")
         limit += 1
         loop = 0
-
+        time.sleep(config.delay_after_request * random.random())
     config.logger.info(
         f"Successfully get all the links of people page! Total number of people page links: {len(people_link_list)}")
 

@@ -1,6 +1,9 @@
 """This is the main function for the project, and the only python file the user should run."""
 import json
 import os
+import random
+import time
+
 from src_files.mysql_db_src_directory.init_db import init_db
 from pathlib2 import Path
 from src_files.argparser_config import get_parser
@@ -103,6 +106,7 @@ def main(parser=None):
                     scrap_and_update_anime(anime_link)
                 except Exception as exc1:
                     config.logger.error(f"{exc1}: {args.main} {args.type} {anime_link}")
+                time.sleep(config.delay_after_request * random.random())
 
         elif args.type == 'people':
             people_link_list = get_people_link_list(args)
@@ -111,6 +115,7 @@ def main(parser=None):
                     scrap_and_update_people(people_link)
                 except Exception as exc1:
                     config.logger.error(f"{exc1}: {args.main} {args.type} {people_link}")
+                time.sleep(config.delay_after_request * random.random())
 
         else:
             config.logger.warning("Start scraping all the pages, this process might take over 30 hours to complete.")
@@ -120,6 +125,7 @@ def main(parser=None):
                     scrap_and_update_anime(anime_link)
                 except Exception as exc1:
                     config.logger.error(f"{exc1}: {args.main} {args.type} {anime_link}")
+                time.sleep(config.delay_after_request * random.random())
 
             people_link_list = get_people_links()
             for people_link in people_link_list:
@@ -127,6 +133,7 @@ def main(parser=None):
                     scrap_and_update_people(people_link)
                 except Exception as exc1:
                     config.logger.error(f"{exc1}: {args.main} {args.type} {people_link}")
+                time.sleep(config.delay_after_request * random.random())
     # api
     elif args.main == 'api':
         if args.type == 'imdb':
@@ -137,7 +144,7 @@ def main(parser=None):
                     update_table(df_imdb_score, "anime_id", "api_imdb")
                 except Exception as exc1:
                     config.logger.error(f"{exc1}: {args.main} {args.type} {anime_link}")
-
+                time.sleep(config.delay_after_request * random.random())
         elif args.type == 'sentiment_analysis':
             anime_link_list = get_anime_link_list(args)
             try:
@@ -145,7 +152,7 @@ def main(parser=None):
                 update_table(df_synopsis_sentiment, "anime_id", "api_description_sentiment_analysis")
             except Exception as exc1:
                 config.logger.error(f"{exc1}: {args.main} {args.type}")
-
+            time.sleep(config.delay_after_request * random.random())
         else:
             config.logger.error(f"Api commands incorrect")
 

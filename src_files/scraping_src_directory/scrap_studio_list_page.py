@@ -4,6 +4,7 @@ This module is to scrap the page that contains the list of studios and get the s
 """
 import math
 import time
+import random
 from bs4 import BeautifulSoup
 import requests
 from src_files.scraping_src_directory.get_rand_proxy_headers import get_rand_headers, get_rand_proxy
@@ -69,6 +70,7 @@ def scrap_studio_info(_crit=math.inf):
         limit += 1
         loop = 0
         config.logger.info(f"Successfully get all the info of studios on this page: {studio_search_link}")
+        time.sleep(config.delay_after_request * random.random())
 
     formatted_studio_data = reformat.format_studio_data(studios_info)
     return formatted_studio_data

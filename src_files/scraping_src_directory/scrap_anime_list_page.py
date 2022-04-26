@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 import requests
 from src_files.scraping_src_directory.get_rand_proxy_headers import get_rand_headers, get_rand_proxy
 from src_files.config import config
-
+import random
 
 
 
@@ -54,6 +54,7 @@ def get_anime_links(_crit=math.inf):
         anime_link_list += [link['href'] for link in a_tag_list]
         config.logger.info(f"scrap_anime_list_page: Success! {anime_search_link} ")
         limit += 1
+        time.sleep(config.delay_after_request * random.random())
 
     config.logger.info(
         f"Successfully get all the links of anime page! Total number of anime links: {len(anime_link_list)}")
